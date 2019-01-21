@@ -9,14 +9,6 @@ According to the latest
 24% of Node.js developers use Windows locally, 41% use Mac locally and 39% use
 Linux in production.
 
-# Feedback
-
-This document is based on my personal experience running cross-OS Node.js.
-Please submit an issue or PR if you find any errors or want to add more
-information.
-
-If you find this document too long, you can jump to the [summary](#summary).
-
 # Table of contents
 
 - [Why you should care](#why-you-should-care)
@@ -46,6 +38,14 @@ If you find this document too long, you can jump to the [summary](#summary).
 - [Errors](#errors)
 - [Summary](#summary)
 - [Further reading](#further-reading)
+
+# Feedback
+
+This document is based on my personal experience running cross-OS Node.js.
+Please submit an issue or PR if you find any errors or want to add more
+information.
+
+If you find this document too long, you can jump to the [summary](#summary).
 
 # Installing and updating Node
 
