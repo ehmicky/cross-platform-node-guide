@@ -41,7 +41,7 @@ Linux in production.
 
 # Feedback
 
-This document is based on my personal experience running cross-OS Node.js.
+This document is based on my personal experience running cross-platform Node.js.
 Please submit an issue or PR if you find any errors or want to add more
 information.
 
@@ -91,7 +91,7 @@ There are several approaches to solve this:
 - some projects like [`opn`](https://github.com/sindresorhus/opn) abstract
   common user applications.
 
-Few lower-level tools attempt to bring cross-OS compatibility by emulating or
+Few lower-level tools attempt to bring cross-platform compatibility by emulating or
 translating system calls:
 
 - [Wine](https://www.winehq.org/): to run Windows API calls on Unix.
