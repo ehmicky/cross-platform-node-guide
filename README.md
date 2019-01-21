@@ -520,8 +520,9 @@ triggered with different mechanisms. One can use
 
 # Time resolution
 
+The resolution of
 [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
-is nanoseconds-precise on Unix but is 100 times less precise on Windows.
+is hardware-specific and varies between 1 nanosecond and 1 millisecond.
 
 # OS identification
 
