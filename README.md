@@ -116,7 +116,7 @@ providers now do.
 
 Windows users must first run
 [`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
-as an admin before being to install
+as an admin before being able to install
 [C/C++ addons](https://nodejs.org/api/addons.html).
 
 # Directory locations
