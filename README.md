@@ -1,0 +1,615 @@
+Practical guide on how to write portable/cross-OS Node.js code.
+
+# Why you should care
+
+According to the latest
+[Node.js user survey](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro),
+24% of Node.js developers use Windows locally, 41% use Mac locally and 39% use
+Linux in production.
+
+# Feedback
+
+This document is based on my personal experience running cross-OS Node.js.
+Please submit an issue or PR if you find any errors or want to add more
+information.
+
+# Summary
+
+# Installing and updating Node
+
+Installers for each major OS are available on the
+[Node.js website](https://nodejs.org/en/download/).
+
+To install, switch and update Node.js versions
+[`nvm`](https://github.com/creationix/nvm) can be used on Linux/Mac. It
+[does not support Windows](https://github.com/creationix/nvm/issues/284)
+but [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
+[`nvs`](https://github.com/jasongin/nvs) are alternatives that do.
+
+To upgrade `npm` on Windows, it is convenient to use
+[`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade).
+
+# Core utilities
+
+Each OS has its own set of (from the lowest to the highest level):
+  - [system calls](https://en.wikipedia.org/wiki/System_call) like
+    [`fork`](http://man7.org/linux/man-pages/man2/fork.2.html).
+  - [core utilities](https://www.gnu.org/software/coreutils/) like
+    [`sed`](https://www.gnu.org/software/sed/manual/sed.html).
+  - common user applications like [`vim`](https://www.vim.org/) or
+    [`Notepad`](https://en.wikipedia.org/wiki/Microsoft_Notepad).
+
+Directly executing one of those binaries (e.g. calling `sed`) won't usually
+work on every OS.
+
+There are several approaches to solve this:
+  - Most Node.js API core modules abstract this. E.g. the
+    [`child_process`](https://nodejs.org/api/child_process.html) methods are
+    executing OS-specific system calls under the hood.
+  - some projects abstract OS-specific core utilities like:
+     - [`MinGW`](http://www.mingw.org/) for
+       [gcc](https://www.gnu.org/software/gcc/) on Windows.
+     - [`msys`](http://www.mingw.org/wiki/msys) for
+       [Bash](https://www.gnu.org/software/bash/) on Windows.
+       Shipped with [Git for Windows](https://gitforwindows.org/).
+     - [`shelljs`](https://github.com/shelljs/shelljs)
+     - [`node-windows`](https://github.com/coreybutler/node-windows)
+  - some projects like [`opn`](https://github.com/sindresorhus/opn) abstract
+    common user applications.
+
+Few lower-level tools attempt to bring cross-OS compatibility by emulating or
+translating system calls:
+  - [Wine](https://www.winehq.org/): to run Windows API calls on Unix.
+  - [Cygwin](https://www.cygwin.com/): to run POSIX on Windows.
+  - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
+    to run Linux system calls on Windows.
+
+# Testing
+
+Any OS can be run locally using
+[virtual machines](https://en.wikipedia.org/wiki/Virtual_machine).
+Windows provides with
+[official images](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines).
+
+It is recommended to run automated tests on a
+[continuous integration](https://en.wikipedia.org/wiki/Continuous_integration)
+provider that supports Linux, Mac and Windows, which most high-profile
+providers now do.
+
+# C/C++ addons
+
+Windows users must first run
+[`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
+as an admin before being to install
+[C/C++ addons](https://nodejs.org/api/addons.html).
+
+# Directory locations
+
+Typical directory locations are OS-specific:
+  - the main temporary directory could for example be `/tmp` on Linux,
+    `/var/folders/.../T` on Mac or `C:\Users\USER\AppData\Local\Temp` on
+    Windows. [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) can be
+    used to retrieve it on any OS.
+  - the user's home directory could for example be `/home/USER` on Linux,
+    `/Users/USER` on Mac or `C:\Users\USER` on Windows.
+    [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
+    to retrieve it on any OS.
+
+# System configuration
+
+While Unix usually stores system configuration as files, Windows uses the
+[registry](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry),
+a central key-value database. Some projects like
+[node-winreg](https://github.com/fresc81/node-winreg),
+[rage-edit](https://github.com/MikeKovarik/rage-edit) or
+[windows-registry-node](https://github.com/CatalystCode/windows-registry-node)
+can be used to access it from Node.
+
+This should only be done when accessing OS-specific settings. Otherwise storing
+configuration as files or remotely is easier and more portable.
+
+# Newlines
+
+The character representation of a
+[newline](https://en.wikipedia.org/wiki/Newline) is OS-specific. On Unix it
+is `\n` (line feed) while on Windows it is `\r\n` (carriage return followed by
+line feed).
+
+Newlines inside a template string translate to `\n` on any OS.
+
+```js
+const string = `this is
+an example`
+```
+
+Some Windows applications, including the `cmd.exe` terminal, print `\n` as
+newlines, so using `\n` will work just fine. However some Windows applications
+don't, which is why when writing to a file the OS-specific newline
+[`os.EOL`](https://nodejs.org/api/os.html#os_os_eol) should be used instead of
+`\n`.
+
+# File paths
+
+While `/` is used as a file path delimiter on Unix (`/file/to/path`), `\` is
+used on Windows instead (`\file\to\path`). The path delimiter can be retrieved
+with [`path.sep`](https://nodejs.org/api/path.html#path_path_sep). Windows
+actually allows using or mixing in `/` delimiters in file paths most of the
+time, but not always so this should not be relied on.
+
+Furthermore absolute paths always start with `/` on Unix, but on Windows they
+can take
+[many shapes](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file):
+  - `\`: the current drive.
+  - `C:\`: a specific drive (here `C:`). This can also be used with relative
+    paths like `C:file\to\path`.
+  - `\\HOST\`: UNC path, for remote hosts.
+  - `\\?\`: allows to overcome file path length limit of 260 characters.
+    Those can be produced in Node.js with
+    [`path.toNamespacedPath()`](https://nodejs.org/api/path.html#path_path_tonamespacedpath_path).
+  - `\\.\`: device path.
+
+When file paths are used as arguments to Node.js core methods:
+  - for example as arguments to
+    [`require(path)`](https://nodejs.org/api/modules.html#modules_require_id),
+    [`fs.*(path)`](https://nodejs.org/api/fs.html) methods,
+    [`path.*()`](https://nodejs.org/api/path.html) methods or
+    [`process.chdir(path)`](https://nodejs.org/api/process.html#process_process_chdir_directory).
+  - only Unix paths are allowed on Unix. Both Unix and Windows paths are
+    allowed on Windows (including mixed).
+
+When file paths are returned by Node.js core methods:
+  - for example the return values of
+    [`path.*()`](https://nodejs.org/api/path.html) methods,
+    [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd),
+    [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir),
+    [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir)
+    or the value of
+    [`__dirname`](https://nodejs.org/api/globals.html#globals_dirname),
+    [`process.argv`](https://nodejs.org/api/process.html#process_process_argv)
+    and [`process.execPath`](https://nodejs.org/api/process.html#process_process_execpath).
+  - Unix paths are returned on Unix and Windows paths on Windows.
+  - exceptions:
+    - using
+      [`path.win32.*()`](https://nodejs.org/api/path.html#path_path_win32) or
+      [`path.posix.*()`](https://nodejs.org/api/path.html#path_path_posix)
+      instead of [`path.*()`](https://nodejs.org/api/path.html) will return
+      Windows or Unix paths.
+    - methods where the path is present both as argument and as return value
+      depend on whether the input path is Windows-like or Unix-like. This
+      includes
+      [`fs.createReadStream()`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)
+      and
+      [`fs.mkdtemp()`](https://nodejs.org/api/fs.html#fs_fs_mkdtemp_prefix_options_callback).
+
+Outside of Node.js, i.e. when the path is input from (or output to) the terminal
+or a file, its syntax is OS-specific.
+
+To summarize:
+  - if a path must be output outside of Node.js (e.g. terminal or file),
+    [`path.normalize()`](https://nodejs.org/api/path.html#path_path_normalize_path)
+    should be used to make it OS-specific.
+  - if a path comes from outside of Node.js or from a core method, it will be
+    OS-specific. However all Node.js core methods will properly handle it.
+  - in all other cases using Unix paths will just work.
+
+# Filenames
+
+Each OS tends to use its own
+[file system](https://en.wikipedia.org/wiki/File_system):
+Windows uses [NTFS](https://en.wikipedia.org/wiki/NTFS), Mac
+uses [APFS](https://en.wikipedia.org/wiki/Apple_File_System)
+(previously [HFS+](https://en.wikipedia.org/wiki/HFS_Plus)) and
+Linux tends to use [ext4](https://en.wikipedia.org/wiki/Ext4),
+[Btrfs](https://en.wikipedia.org/wiki/Btrfs) or
+[XFS](https://en.wikipedia.org/wiki/XFS). Each file system has its
+[own restrictions](https://en.wikipedia.org/wiki/Comparison_of_file_systems#Limits)
+when it comes to naming files and paths.
+
+Portable filenames need to avoid:
+  - any other characters but `a-z`, `0-9` and `-._,=()`
+  - starting with `-`
+  - ending with a `.`
+  - uppercase characters (Mac and Windows are case-insensitive).
+  - being more than 255 characters long.
+  - being one of
+    [those names](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#naming-conventions):
+    `com1`, `com2`, `com3`, `com4`, `com5`, `com6`, `com7`,
+    `com8`, `com9`, `lpt1`, `lpt2`, `lpt3`, `lpt4`, `lpt5`,
+    `lpt6`, `lpt7`, `lpt8`, `lpt9`, `con`, `nul`, `prn`.
+
+Portable file paths need to avoid being
+[more than 260
+characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
+
+# Shell
+
+Unix usually comes with [Bash](https://www.gnu.org/software/bash/) but not
+always. Popular alternatives include [Fish](https://fishshell.com/),
+[Dash](http://man7.org/linux/man-pages/man1/dash.1.html),
+[tcsh](https://linux.die.net/man/1/tcsh), [ksh](http://www.kornshell.com/) and
+[zsh](http://www.zsh.org/).
+
+Writing interoperable shell code can be somewhat achieved by using either:
+  - [sh](https://en.wikipedia.org/wiki/Bourne_shell) the ancestor of most of
+    those shells.
+  - projects like [modernish](https://github.com/modernish/modernish).
+
+However this won't work on Windows which uses two other shells:
+  - [`cmd.exe`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
+    which comes by default.
+  - [Powershell](https://docs.microsoft.com/en-us/powershell/scripting/overview)
+    which is more recent, featureful and complex.
+
+`cmd.exe` is very different from Bash and has quite many limitations:
+  - `;` cannot be used to separate statements. However `&&` can be used like
+    in Bash.
+  - CLI flags often use slashes (`/opt`) instead of dashes (`-opt`). But
+    Node.js binaries can still use `-opt`.
+  - By default the [CP866](https://en.wikipedia.org/wiki/Code_page_866)
+    character set is used instead of
+    [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This means Unicode characters
+    won't be displayed properly. Projects like
+    [figures](https://github.com/sindresorhus/figures) and
+    [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
+    solve this.
+  - [Escaping](https://ss64.com/nt/syntax-esc.html) is done differently with
+    double quotes and `^`. This is partially solved with the
+    [`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+    option `windowsVerbatimArguments` which defaults to `true` when `cmd.exe` is
+    used.
+
+When the option `shell` of
+[`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+is `true`, `/bin/sh` will be used on Unix and `cmd.exe` (or the environment
+variable `ComSpec`) will be used on Windows. `false` won't work on Windows
+because it does not support shebangs.
+
+As a consequence it is recommended to:
+  - keep shell commands to simple `command arguments...` calls, optionally
+    chained with `&&`.
+  - use [`execa`](https://github.com/sindresorhus/execa) to fire those.
+
+Note that
+[`os.userInfo().shell`](https://nodejs.org/api/os.html#os_os_userinfo_options)
+returns `null` on Windows.
+
+# Files execution
+
+[Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) like `#!/usr/bin/node`
+do not work on Windows, where only files ending with `.exe`, `.com`, `.cmd`
+or `.bat` can be directly executed. Portable file execution must either:
+  - use an interpreter, e.g. `node file.js` instead of `./file.js`.
+  - use [`cross-spawn`](https://github.com/moxystudio/node-cross-spawn)
+    (which is included in [`execa`](https://github.com/sindresorhus/execa)).
+
+During file execution the extension can be omitted on Windows if it is listed
+in the [`PATHEXT`](http://environmentvariables.org/PathExt) environment
+variable, which defaults to
+`.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC`. This won't work on
+Unix.
+
+The [`PATH`](https://en.wikipedia.org/wiki/PATH_(variable)) environment variable
+uses `;` instead of `:` as delimiter on Windows. This can be retrieved with
+[`path.delimiter`](https://nodejs.org/api/path.html#path_path_delimiter).
+
+When the option
+[`detached: false`](https://nodejs.org/api/child_process.html#child_process_options_detached)
+of
+[`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) is used, the child process will be terminated
+when its parent is on Windows, but not on Unix.
+
+When the option
+[`detached: true`](https://nodejs.org/api/child_process.html#child_process_options_detached)
+is used instead, a new terminal window will appear on Windows unless the option
+[`windowsHide: true`](https://nodejs.org/api/child_process.html#child_process_options_detached)
+is used (requires Node `>= 8.8.0`).
+
+Finally the option
+[`argv0`](https://nodejs.org/api/child_process.html#child_process_options_detached)
+does not modify `process.title` on Windows.
+
+Many of those differences can be solved by using
+[`execa`](https://github.com/sindresorhus/execa).
+
+# Environment variables
+
+The syntax to
+[reference environment variables](https://ss64.com/nt/syntax-variables.html) is
+`$VARIABLE` on Unix but `%VARIABLE%` on Windows. Also if the variable is
+missing, its value will be `''` on Unix but `'%VARIABLE%'` on Windows.
+
+To pass
+[environment variables](https://docs.microsoft.com/en-us/windows/desktop/procthread/environment-variables)
+to a command, it must be prepended with `VARIABLE=value ...` on Unix. However on
+Windows one must use `Set VARIABLE=value` or `setx VARIABLE value` as separate
+statements. [`cross-env`](https://github.com/kentcdodds/cross-env) can be used
+to both reference and pass environment variables on any OS.
+
+To list the current
+[environment variables](https://en.wikipedia.org/wiki/Environment_variable)
+`env` must be used on Unix and `set` on Windows. However
+[`process.env`](https://nodejs.org/api/process.html#process_process_env) will
+work on any OS.
+
+Environment variables are case insensitive on Windows but not on Unix.
+[`path-key`](https://github.com/sindresorhus/path-key) can be used to solve this
+for the `PATH` environment variable.
+
+Finally most environment variables names are OS-specific:
+  - `SHELL` on Unix is `ComSpec` on Windows.
+  - `PS1` on Unix is `PROMPT` on Windows.
+  - `PWD` on Unix is `CD` on Windows.
+  - `HOME` on Unix is `HOMEDRIVE` and `HOMEPATH` on Windows
+  - `TMPDIR` in Unix is `TMP` or `TEMP` on Windows.
+  - `USER` on Unix is `USERDOMAIN` and `USERNAME` on Windows.
+    Only `USERNAME` is returned by
+    [`os.userInfo().username`](https://nodejs.org/api/os.html#os_os_userinfo_options).
+  - `HOSTNAME` on Unix is `COMPUTERNAME` on Windows. The `hostname` CLI command
+    can also be used on any OS.
+
+The project [`osenv`](https://github.com/npm/osenv) can be used to retrieve
+OS-specific environment variables names.
+
+# Symlinks
+
+Creating symlinks on Windows will most likely fail because it requires a
+["create symlink" permission](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
+which by default is off for non-admins.
+
+Windows cannot create hard links on folders.
+
+Windows (but not Unix) can use
+[junctions](https://docs.microsoft.com/en-us/windows/desktop/fileio/hard-links-and-junctions).
+[`fs.symlink()`](https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback)
+allows creating these.
+
+Finally some file systems like
+[FAT](https://en.wikipedia.org/wiki/File_Allocation_Table) do not allow
+symlinks.
+
+As a consequence it is more portable to copy files instead of symlinking them.
+
+# File metadata
+
+The [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize) and
+[`blocks`](https://nodejs.org/api/fs.html#fs_stats_blocks) values of
+[`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback)
+are `undefined` on Windows. On the other hand the
+[`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
+[`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) values are
+`undefined` on Unix.
+
+The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag
+of
+[`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)
+only works on Linux.
+
+[`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very portable.
+For example the option `recursive` does not work on Linux.
+[`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
+
+# Permissions
+
+Unix uses [POSIX permissions](https://linux.die.net/man/1/chmod) but Windows is
+based on a combination of:
+  - [file attributes](https://docs.microsoft.com/en-us/windows/desktop/fileio/file-attribute-constants)
+    like `readonly`, `hidden` and `system`.
+    [`winattr`](https://github.com/stevenvachon/winattr) and
+    [`hidefile`](https://github.com/stevenvachon/hidefile) can be used to
+    manipulate those.
+  - [ACLs](https://docs.microsoft.com/en-us/windows/desktop/secauthz/access-control-lists)
+    (also called NTFS permissions or just "file permissions").
+  - share permissions.
+
+Node.js does not support Windows permissions.
+[`fs.chmod()`](https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback),
+[`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback)'s
+[`mode`](https://nodejs.org/api/fs.html#fs_stats_mode),
+[`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback),
+[`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)'s
+`mode`,
+[`fs.mkdir()`](https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback)'s
+`options.mode` and
+[`process.umask()`](https://nodejs.org/api/process.html#process_process_umask_mask) only work on
+Unix with some minor exceptions:
+  - [`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
+    [`F_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants) works.
+  - [`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
+    [`W_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants) checks
+    the `readonly` file attribute on Windows. This is quite limited as it does
+    not check other file attributes nor ACLs.
+  - The `readonly` file attribute is checked on Windows when the `write` POSIX
+    permission is missing for any user class (`user`, `group` or `others`).
+
+On the other hand
+[`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)
+works correctly on Windows where
+[flags](https://nodejs.org/api/fs.html#fs_file_system_flags) are being
+translated to Windows-specific file attributes and permissions.
+
+Another difference on Windows: to execute files their extension must be listed
+in the environment variable
+[`PATHEXT`](http://environmentvariables.org/PathExt).
+
+Finally
+[`fs.lchmod()`](https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback)
+is only available on Mac.
+
+# Users
+
+Unix users are identified with a
+[`UID`](https://en.wikipedia.org/wiki/User_identifier) and a
+[`GID`](https://en.wikipedia.org/wiki/Group_identifier) while Windows users
+are identified with a
+[`SID`](https://en.wikipedia.org/wiki/Security_Identifier).
+
+Consequently all methods based on
+[`UID`](https://en.wikipedia.org/wiki/User_identifier) or
+[`GID`](https://en.wikipedia.org/wiki/Group_identifier) fail on Windows:
+  - [`os.userInfo().uid|gid`](https://nodejs.org/api/os.html#os_os_userinfo_options) return `-1`.
+  - [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback)'s
+    [`uid`](https://nodejs.org/api/fs.html#fs_stats_uid) and
+    [`gid`](https://nodejs.org/api/fs.html#fs_stats_gid) return `0`.
+  - The `process` methods [`getuid()`](https://nodejs.org/api/process.html#process_process_getuid),
+    [`geteuid()`](https://nodejs.org/api/process.html#process_process_geteuid),
+    [`getgid()`](https://nodejs.org/api/process.html#process_process_getgid),
+    [`getegid()`](https://nodejs.org/api/process.html#process_process_getegid),
+    [`setuid()`](https://nodejs.org/api/process.html#process_process_setuid_id),
+    [`seteuid()`](https://nodejs.org/api/process.html#process_process_seteuid_id),
+    [`setgid()`](https://nodejs.org/api/process.html#process_process_setgid_id),
+    [`setegid()`](https://nodejs.org/api/process.html#process_process_setegid_id),
+    [`getgroups()`](https://nodejs.org/api/process.html#process_process_getgroups),
+    [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
+    [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup)
+    throw an error.
+  - [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
+    does not do anything.
+
+The privileged user is `root` on Unix and `admin` on Windows. Those are
+triggered with different mechanisms. One can use
+[`is-elevated`](https://github.com/sindresorhus/is-elevated) (and the related
+[`is-admin`](https://github.com/sindresorhus/is-admin) and
+[`is-root`](https://github.com/sindresorhus/is-root)) to check it on any OS.
+
+# Time resolution
+
+[`process.htime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
+is nanoseconds-precise on Unix but is 100 times less precise on Windows.
+
+# OS identification
+
+The main way to identify the current OS is to use
+[`process.platform`](https://nodejs.org/api/process.html#process_process_platform) (or the identical [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform)).
+
+The [`os`](https://nodejs.org/api/os.html) core module offers some
+finer-grained identification methods but those are rarely needed:
+  - [`os.type()`](https://nodejs.org/api/os.html#os_os_type) is similar but
+    slighly more precise.
+  - [`os.release()`](https://nodejs.org/api/os.html#os_os_release) returns the
+    OS version number, e.g. `3.11.0-14-generic` (Linux), `18.0.0` (Mac) or
+    `10.0.17763` (Windows).
+  - [`os.arch()`](https://nodejs.org/api/os.html#os_os_arch) (or the identical
+    [`process.arch`](https://nodejs.org/api/process.html#process_process_arch))
+    returns the CPU architecture, e.g. `arm` or `x64`.
+  - [`os.endianness()`](https://nodejs.org/api/os.html#os_os_endianness)
+    returns the CPU endianness, i.e. `BE` or `LE`.
+
+Some projects allow retrieving:
+  - [`getos`](https://github.com/retrohacker/getos): the Linux distribution
+    name.
+  - [`osname`](https://github.com/sindresorhus/os-name) (and the related
+    [`windows-release`](https://github.com/sindresorhus/windows-release) and
+    [`macos-release`](https://github.com/sindresorhus/macos-release)): the OS
+    name and version in a human-friendly way.
+  - [`is-windows`](https://github.com/jonschlinkert/is-windows): whether current
+    OS is Windows, including through [MSYS](http://www.mingw.org/wiki/msys) and
+    [Cygwin](https://www.cygwin.com/).
+  - [`is-wsl`](https://github.com/sindresorhus/is-wsl): whether current OS is
+    Windows though
+    [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+
+# Device information
+
+Uptime, memory and CPUs can be retrieved on any OS using
+[`os.uptime()`](https://nodejs.org/api/os.html#os_os_uptime),
+[`process.uptime()`](https://nodejs.org/api/process.html#process_process_uptime),
+[`os.freemem()`](https://nodejs.org/api/os.html#os_os_freemem),
+[`os.totalmem()`](https://nodejs.org/api/os.html#os_os_totalmem),
+[`process.memoryUsage()`](https://nodejs.org/api/process.html#process_process_memoryusage),
+[`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) and
+[`process.cpuUsage()`](https://nodejs.org/api/process.html#process_process_cpuusage_previousvalue).
+
+However:
+  - [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus)'s `times.nice` is
+    `0` on Windows.
+  - [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg) is an array
+    of `0` on Windows.
+
+[`systeminformation`](https://github.com/sebhildebrandt/systeminformation) can
+be used for more device information.
+
+# Networking
+
+[`os.networkInterfaces()`](https://nodejs.org/api/os.html#os_os_networkinterfaces)
+and [`os.hostname()`](https://nodejs.org/api/os.html#os_os_networkinterfaces)
+work on any OS.
+
+However on Windows:
+  - sockets / named pipes must be prefixed with `\\.\pipe\`
+  - TCP servers cannot
+    [`listen()`](https://nodejs.org/api/net.html#net_server_listen_handle_backlog_callback)
+    on a file descriptor.
+  - [`cluster.schedulingPolicy`](https://nodejs.org/api/cluster.html#cluster_cluster_schedulingpolicy)
+    cannot be `SCHED_RR` and defaults to `SCHED_NONE`.
+
+# Processes
+
+[`os.getPriority()`](https://nodejs.org/api/os.html#os_os_getpriority_pid) and
+[`os.setPriority()`](https://nodejs.org/api/os.html#os_os_setpriority_pid_priority)
+work on any OS.
+
+Other projects can be used to manipulate processes:
+  - [`ps-list`](https://github.com/sindresorhus/ps-list): list processes.
+    [`tasklist`](https://github.com/sindresorhus/tasklist) and
+    [`fastlist`](https://github.com/MarkTiedemann/fastlist) can also be used
+    for Windows only.
+  - [`pid-from-port`](https://github.com/kevva/pid-from-port): find processes
+    by port.
+  - [`process-exists`](https://github.com/sindresorhus/process-exists): check
+    if a process is running.
+
+# Signals
+
+Windows do not use signals like Unix does.
+
+However processes can be terminated using the
+[`taskkill`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill)
+command. The [`taskkill`](https://github.com/sindresorhus/taskkill) project can
+be used to do it from Node.js. [`fkill`](https://github.com/sindresorhus/fkill)
+builds on it to terminate processes on any OS.
+
+Which signals can be used is OS-specific:
+  - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
+    and
+    [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
+    can
+    [only use the following signals on Windows](https://nodejs.org/api/process.html#process_signal_events):
+    `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
+  - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
+    (but not
+    [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal))
+    can be used on Windows with `SIGWINCH`, `SIGILL`, `SIGABRT`, `SIGFPE`,
+    `SIGSEGV`, `SIGHUP` (closing `cmd.exe`) and `SIGBREAK` (`CTRL-BREAK` on
+    `cmd.exe`).
+  - `SIGPOLL`, `SIGPWR` and `SIGUNUSED` can only be used on Linux.
+  - `SIGINFO` can only be used on Mac.
+
+Each signal has both an OS-agnostic name and an OS-specific integer constant.
+[`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
+can use either. It is possible to convert between both using
+[`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants).
+However it is more portable to use signal names instead of integer constants.
+
+# Errors
+
+Node errors can be identified with either:
+  - [`error.code`](https://nodejs.org/api/errors.html#errors_error_code): an
+    OS-agnostic string (more portable).
+  - [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno): an
+    OS-specific integer constant.
+
+It is possible to convert between both using
+[`os.constants.errno`](https://nodejs.org/api/os.html#os_error_constants) and
+[`util.getSystemErrorName`](https://nodejs.org/api/util.html#util_util_getsystemerrorname_err).
+
+Most available `error.code`
+[start with `E`](https://nodejs.org/api/os.html#os_posix_error_constants) and
+can be fired on any OS. However few
+[start with `W`](https://nodejs.org/api/os.html#os_windows_specific_error_constants)
+and can only be fired on Windows.
+
+# Further reading
+
+  - https://github.com/bcoe/awesome-cross-platform-nodejs
+  - https://github.com/Microsoft/nodejs-guidelines
+  - https://shapeshed.com/writing-cross-platform-node/
