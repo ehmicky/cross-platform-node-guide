@@ -757,7 +757,7 @@ and can only be fired on Windows.
 - only use
   [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
   with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`,
-  `SIGILL`, `SIGABRT`, `SIGFPE`, `SIGSEGV`, `SIGHUP` and `SIGBREAK`.
+  `SIGABRT`, `SIGHUP` and `SIGBREAK`.
 - prefer [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
   over [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 
