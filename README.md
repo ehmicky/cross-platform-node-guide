@@ -591,7 +591,7 @@ However on Windows:
   [`listen()`](https://nodejs.org/api/net.html#net_server_listen_handle_backlog_callback)
   on a file descriptor.
 - [`cluster.schedulingPolicy`](https://nodejs.org/api/cluster.html#cluster_cluster_schedulingpolicy)
-  cannot be `SCHED_RR` and defaults to `SCHED_NONE`.
+  `SCHED_RR` is inefficient, so the default value is `SCHED_NONE`.
 
 # Processes
 
