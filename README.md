@@ -631,9 +631,15 @@ Which signals can be used is OS-specific:
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
   (but not
   [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal))
-  can be used on Windows with `SIGWINCH`, `SIGILL`, `SIGABRT`, `SIGFPE`,
-  `SIGSEGV`, `SIGHUP` (closing `cmd.exe`) and `SIGBREAK` (`CTRL-BREAK` on
-  `cmd.exe`).
+  can be used on Windows with:
+  - `SIGABRT`
+  - `SIGHUP`: closing `cmd.exe`
+  - `SIGBREAK`: `CTRL-BREAK` on `cmd.exe`
+  - `SIGWINCH`: resizing the temrinal. This will only
+    [be triggered](https://nodejs.org/api/process.html#process_signal_events)
+    on Windows when the cursor moves on when a terminal in raw mode is used.
+  - `SIGILL`, `SIGFPE` and `SIGSEGV` but listening to those signals is
+    [not recommended](https://nodejs.org/api/process.html#process_signal_events)
 - `SIGPOLL`, `SIGPWR` and `SIGUNUSED` can only be used on Linux.
 - `SIGINFO` can only be used on Mac.
 
