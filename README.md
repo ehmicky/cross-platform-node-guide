@@ -17,6 +17,36 @@ information.
 
 If you find this document too long, you can jump to the [summary](#summary).
 
+# Table of contents
+
+- [Why you should care](#why-you-should-care)
+- [Feedback](#feedback)
+- [Installing and updating Node](#installing-and-updating-node)
+- [Core utilities](#core-utilities)
+- [Testing](#testing)
+- [C/C++ addons](#cc-addons)
+- [Directory locations](#directory-locations)
+- [System configuration](#system-configuration)
+- [Newlines](#newlines)
+- [File paths](#file-paths)
+- [Filenames](#filenames)
+- [Shell](#shell)
+- [Files execution](#files-execution)
+- [Environment variables](#environment-variables)
+- [Symlinks](#symlinks)
+- [File metadata](#file-metadata)
+- [Permissions](#permissions)
+- [Users](#users)
+- [Time resolution](#time-resolution)
+- [OS identification](#os-identification)
+- [Device information](#device-information)
+- [Networking](#networking)
+- [Processes](#processes)
+- [Signals](#signals)
+- [Errors](#errors)
+- [Summary](#summary)
+- [Further reading](#further-reading)
+
 # Installing and updating Node
 
 Installers for each major OS are available on the
