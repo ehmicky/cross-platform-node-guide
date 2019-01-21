@@ -13,6 +13,8 @@ This document is based on my personal experience running cross-OS Node.js.
 Please submit an issue or PR if you find any errors or want to add more
 information.
 
+If you find this document too long, you can jump to the [summary](#summary).
+
 # Installing and updating Node
 
 Installers for each major OS are available on the
