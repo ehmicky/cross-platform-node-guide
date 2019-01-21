@@ -78,7 +78,7 @@ work on every OS.
 There are several approaches to solve this:
 
 - Most Node.js API core modules abstract this (mostly through 
-  [libuv](http://libuv.org). E.g. the
+  [libuv](http://libuv.org)). E.g. the
   [`child_process`](https://nodejs.org/api/child_process.html) methods are
   executing OS-specific system calls under the hood.
 - some projects abstract OS-specific core utilities like:
