@@ -637,7 +637,7 @@ Which signals can be used is OS-specific:
   - `SIGABRT`
   - `SIGHUP`: closing `cmd.exe`
   - `SIGBREAK`: `CTRL-BREAK` on `cmd.exe`
-  - `SIGWINCH`: resizing the temrinal. This will only
+  - `SIGWINCH`: resizing the terminal. This will only
     [be triggered](https://nodejs.org/api/process.html#process_signal_events)
     on Windows when the cursor moves on when a terminal in raw mode is used.
   - `SIGILL`, `SIGFPE` and `SIGSEGV` but listening to those signals is
