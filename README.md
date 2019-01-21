@@ -13,8 +13,6 @@ This document is based on my personal experience running cross-OS Node.js.
 Please submit an issue or PR if you find any errors or want to add more
 information.
 
-# Summary
-
 # Installing and updating Node
 
 Installers for each major OS are available on the
@@ -128,9 +126,9 @@ an example`
 
 Some Windows applications, including the `cmd.exe` terminal, print `\n` as
 newlines, so using `\n` will work just fine. However some Windows applications
-don't, which is why when writing to a file the OS-specific newline
-[`os.EOL`](https://nodejs.org/api/os.html#os_os_eol) should be used instead of
-`\n`.
+don't, which is why when reading from or writing to a file the OS-specific
+newline [`os.EOL`](https://nodejs.org/api/os.html#os_os_eol) should be used
+instead of `\n`.
 
 # File paths
 
@@ -632,6 +630,99 @@ Most available `error.code`
 can be fired on any OS. However few
 [start with `W`](https://nodejs.org/api/os.html#os_windows_specific_error_constants)
 and can only be fired on Windows.
+
+# Summary
+
+- instead of [`nvm`](https://github.com/creationix/nvm) use
+  [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
+  [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
+  on Windows.
+- do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
+  or [core utilities](https://www.gnu.org/software/coreutils/) without using
+  an abstraction layer.
+- test of each OS with
+  [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine) and
+  [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
+- run
+  [`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
+  on Windows when installing [C/C++ addons](https://nodejs.org/api/addons.html).
+- use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed.
+- use [`os.EOL`](https://nodejs.org/api/os.html#os_os_eol) when reading from or
+  writing to a file, `\n` otherwise.
+- use
+  [`path.normalize()`](https://nodejs.org/api/path.html#path_path_normalize_path)
+  when writing a file path to a terminal or file. Otherwise use Unix paths
+  (slashes).
+- only use lowercase `a-z`, `0-9` and `-._,=()` in filenames.
+- avoid paths longer than 260 characters.
+- fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
+- keep shell commands to simple `command arguments...` calls, optionally
+  chained with `&&`.
+- reference and pass environment variables to shell commands using
+  [`cross-env`](https://github.com/kentcdodds/cross-env).
+- copy files instead of symlinking them.
+- use [`chokidar`](https://github.com/paulmillr/chokidar) to watch files.
+- avoid [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize),
+  [`blocks`](https://nodejs.org/api/fs.html#fs_stats_blocks),
+  [`mode`](https://nodejs.org/api/fs.html#fs_stats_mode),
+  [`uid`](https://nodejs.org/api/fs.html#fs_stats_uid),
+  [`gid`](https://nodejs.org/api/fs.html#fs_stats_gid),
+  [`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
+  [`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) returned
+  by
+  [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback).
+- avoid
+  [`fs.chmod()`](https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback),
+  [`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
+  (except [`F_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants)),
+  [`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)'s
+  `mode`,
+  [`fs.mkdir()`](https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback)'s
+  `options.mode` and
+  [`process.umask()`](https://nodejs.org/api/process.html#process_process_umask_mask).
+- avoid
+  [`os.userInfo().uid|gid`](https://nodejs.org/api/os.html#os_os_userinfo_options),
+  [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
+  and the [`process`](https://nodejs.org/api/process.html) methods
+  [`getuid()`](https://nodejs.org/api/process.html#process_process_getuid),
+  [`geteuid()`](https://nodejs.org/api/process.html#process_process_geteuid),
+  [`getgid()`](https://nodejs.org/api/process.html#process_process_getgid),
+  [`getegid()`](https://nodejs.org/api/process.html#process_process_getegid),
+  [`setuid()`](https://nodejs.org/api/process.html#process_process_setuid_id),
+  [`seteuid()`](https://nodejs.org/api/process.html#process_process_seteuid_id),
+  [`setgid()`](https://nodejs.org/api/process.html#process_process_setgid_id),
+  [`setegid()`](https://nodejs.org/api/process.html#process_process_setegid_id),
+  [`getgroups()`](https://nodejs.org/api/process.html#process_process_getgroups),
+  [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
+  [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
+- assume
+  [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
+  is `100ns`-precise.
+- when using OS-specific logic identify the current OS with
+  [`process.platform`](https://nodejs.org/api/process.html#process_process_platform).
+- avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice` and
+  [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
+- use [`systeminformation`](https://github.com/sebhildebrandt/systeminformation)
+  to retrieve any device information not available through the
+  [`os`](https://nodejs.org/api/os.html) core module.
+- sockets / named pipes must be prefixed with `\\.\pipe\` on Windows.
+- TCP servers should not
+  [`listen()`](https://nodejs.org/api/net.html#net_server_listen_handle_backlog_callback)
+  on a file descriptor.
+- use [`ps-list`](https://github.com/sindresorhus/ps-list),
+  [`pid-from-port`](https://github.com/kevva/pid-from-port) and
+  [`process-exists`](https://github.com/sindresorhus/process-exists) to find
+  and check for processes.
+- use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
+- only use
+  [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
+  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
+- only use
+  [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
+  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`,
+  `SIGILL`, `SIGABRT`, `SIGFPE`, `SIGSEGV`, `SIGHUP` and `SIGBREAK`.
+- prefer [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
+  over [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 
 # Further reading
 
