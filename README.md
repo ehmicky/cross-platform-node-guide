@@ -734,9 +734,9 @@ and can only be fired on Windows.
   [`getgroups()`](https://nodejs.org/api/process.html#process_process_getgroups),
   [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
   [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
-- assume
+- do not assume
   [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
-  is `100ns`-precise.
+  is nanoseconds-precise.
 - when using OS-specific logic identify the current OS with
   [`process.platform`](https://nodejs.org/api/process.html#process_process_platform).
 - avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice` and
