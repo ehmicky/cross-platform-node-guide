@@ -520,7 +520,7 @@ triggered with different mechanisms. One can use
 
 # Time resolution
 
-[`process.htime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
+[`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
 is nanoseconds-precise on Unix but is 100 times less precise on Windows.
 
 # OS identification
