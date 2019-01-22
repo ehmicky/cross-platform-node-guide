@@ -605,6 +605,9 @@ However on Windows:
 
 # Processes
 
+[`process.pid`](https://nodejs.org/api/process.html#process_process_pid),
+[`process.ppid`](https://nodejs.org/api/process.html#process_process_ppid),
+[`process.title`](https://nodejs.org/api/process.html#process_process_title),
 [`os.getPriority()`](https://nodejs.org/api/os.html#os_os_getpriority_pid) and
 [`os.setPriority()`](https://nodejs.org/api/os.html#os_os_setpriority_pid_priority)
 work on any OS.
