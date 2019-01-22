@@ -264,9 +264,10 @@ Portable filenames need to avoid:
 Portable file paths need to avoid being
 [more than 260
 characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
-This used to be
-[an issue](https://github.com/nodejs/node-v0.x-archive/issues/6960) in older
-`npm` versions which deeply nested `node_modules`.
+This used to
+[create issues](https://github.com/nodejs/node-v0.x-archive/issues/6960) with
+`npm` deeply nesting `node_modules` but not anymore with the latest `npm`
+versions.
 
 # Shell
 
