@@ -4,7 +4,7 @@
   "files": [
     "README.md"
   ],
-  "description": "Practical guide on how to write portable/cross-OS Node.js code",
+  "description": "Practical guide on how to write portable/cross-platform Node.js code",
   "keywords": [
     "node",
     "windows",
