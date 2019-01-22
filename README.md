@@ -388,6 +388,8 @@ Finally most environment variables names are OS-specific:
 - `PS1` on Unix is `PROMPT` on Windows.
 - `PWD` on Unix is `CD` on Windows.
   [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd)
+  and
+  [`process.chdir()`](https://nodejs.org/api/process.html#process_process_chdir_directory)
   should be used instead.
 - `HOME` on Unix is `USERPROFILE` on Windows.
   [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) (faster)
