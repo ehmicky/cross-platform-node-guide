@@ -317,10 +317,6 @@ As a consequence it is recommended to:
   chained with `&&`.
 - use [`execa`](https://github.com/sindresorhus/execa) to fire those.
 
-Note that
-[`os.userInfo().shell`](https://nodejs.org/api/os.html#os_os_userinfo_options)
-returns `null` on Windows.
-
 # Files execution
 
 [Shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like `#!/usr/bin/node`
@@ -386,7 +382,9 @@ for the `PATH` environment variable.
 
 Finally most environment variables names are OS-specific:
 
-- `SHELL` on Unix is `ComSpec` on Windows.
+- `SHELL` on Unix is `ComSpec` on Windows. Unfortunately
+  [`os.userInfo().shell`](https://nodejs.org/api/os.html#os_os_userinfo_options)
+  returns `null` on Windows.
 - `PS1` on Unix is `PROMPT` on Windows.
 - `PWD` on Unix is `CD` on Windows.
   [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd)
