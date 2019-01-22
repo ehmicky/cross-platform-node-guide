@@ -389,7 +389,12 @@ Finally most environment variables names are OS-specific:
 - `SHELL` on Unix is `ComSpec` on Windows.
 - `PS1` on Unix is `PROMPT` on Windows.
 - `PWD` on Unix is `CD` on Windows.
-- `HOME` on Unix is `HOMEDRIVE` and `HOMEPATH` on Windows
+  [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd)
+  should be used instead.
+- `HOME` on Unix is `USERPROFILE` on Windows.
+  [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) (faster)
+  [`os.userInfo().homedir`](https://nodejs.org/api/os.html#os_os_userinfo_options)
+  (more accurate) should be used instead.
 - `TMPDIR` in Unix is `TMP` or `TEMP` on Windows.
 - `USER` on Unix is `USERDOMAIN` and `USERNAME` on Windows.
   Only `USERNAME` is returned by
