@@ -6,8 +6,8 @@
 
 According to the latest
 [Node.js user survey](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro),
-24% of Node.js developers use Windows locally, 41% use Mac locally and 39% use
-Linux in production.
+24% of Node.js developers use Windows locally, 41% use Mac locally and at least
+76% use Linux in production.
 
 # Table of contents
 
@@ -77,7 +77,7 @@ work on every OS.
 
 There are several approaches to solve this:
 
-- Most Node.js API core modules abstract this (mostly through 
+- Most Node.js API core modules abstract this (mostly through
   [libuv](http://libuv.org)). E.g. the
   [`child_process`](https://nodejs.org/api/child_process.html) methods are
   executing OS-specific system calls under the hood.
