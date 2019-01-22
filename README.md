@@ -399,8 +399,9 @@ Finally most environment variables names are OS-specific:
 - `USER` on Unix is `USERDOMAIN` and `USERNAME` on Windows.
   Only `USERNAME` is returned by
   [`os.userInfo().username`](https://nodejs.org/api/os.html#os_os_userinfo_options).
-- `HOSTNAME` on Unix is `COMPUTERNAME` on Windows. The `hostname` CLI command
-  can also be used on any OS.
+- `HOSTNAME` on Unix is `COMPUTERNAME` on Windows.
+  [`os.hostname()`](https://nodejs.org/api/os.html#os_os_hostname) should be
+  used instead.
 
 The project [`osenv`](https://github.com/npm/osenv) can be used to retrieve
 OS-specific environment variables names.
