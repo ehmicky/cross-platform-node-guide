@@ -4,10 +4,12 @@
 
 # Why you should care
 
-According to the latest
-[Node.js user survey](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro),
-24% of Node.js developers use Windows locally, 41% use Mac locally and at least
-76% use Linux in production.
+According to the
+[2018 Node.js user survey](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro)
+(using the
+[raw data](https://nodejs.org/en/user-survey-report/2018-nodejs-user-survey-raw-data.xlsx)),
+24% of Node.js developers use Windows locally and 41% use Mac. In production
+85% use Linux and 1% use BSD.
 
 # Table of contents
 
