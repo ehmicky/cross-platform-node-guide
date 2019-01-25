@@ -38,6 +38,7 @@ According to the
 - [Processes](#processes)
 - [Signals](#signals)
 - [Errors](#errors)
+- [Anti-virus](#anti-virus)
 - [Summary](#summary)
 - [Further reading](#further-reading)
 
@@ -692,6 +693,14 @@ Most available `error.code`
 can be fired on any OS. However few
 [start with `W`](https://nodejs.org/api/os.html#os_windows_specific_error_constants)
 and can only be fired on Windows.
+
+# Anti-virus
+
+Some anti-virus software on Windows
+[have been reported](https://github.com/isaacs/node-graceful-fs/pull/97) to lock
+directories and make `fs.rename()` fail.
+[`graceful-fs`](https://github.com/isaacs/node-graceful-fs) solves this by
+retrying few milliseconds later.
 
 # Summary
 
