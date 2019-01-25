@@ -254,7 +254,8 @@ when it comes to naming files and paths.
 
 Portable filenames need to avoid:
 
-- any other characters but `a-z`, `0-9` and `-._,=()`
+- any other characters but `a-z`, `0-9`, `-._,=()` and (providing it is not
+  the only character) `~`
 - starting with `-`
 - ending with a `.`
 - uppercase characters (Mac and Windows are case-insensitive).
