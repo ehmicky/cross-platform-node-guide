@@ -100,7 +100,7 @@ translating system calls:
 - [Wine](https://www.winehq.org/): to run Windows API calls on Unix.
 - [Cygwin](https://www.cygwin.com/): to run POSIX on Windows.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
-  to run Linux on Windows
+  to run the Linux command line on Windows
   ([ELF binary execution](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format),
   system calls, filesystem, [Bash](https://www.gnu.org/software/bash/),
   core utilities, common applications).
