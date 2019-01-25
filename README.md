@@ -254,8 +254,7 @@ when it comes to naming files and paths.
 
 Portable filenames need to avoid:
 
-- any other characters but `a-z`, `0-9`, `-._,=()` and (providing it is not
-  the only character) `~`
+- any other characters but `a-z`, `0-9`, `-._,=()~`
 - starting with `-`
 - ending with a `.`
 - uppercase characters (Mac and Windows are case-insensitive).
@@ -266,13 +265,17 @@ Portable filenames need to avoid:
   `com8`, `com9`, `lpt1`, `lpt2`, `lpt3`, `lpt4`, `lpt5`,
   `lpt6`, `lpt7`, `lpt8`, `lpt9`, `con`, `nul`, `prn`, `aux`.
 
-Portable file paths need to avoid being
-[more than 260
-characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
-This used to
-[create issues](https://github.com/nodejs/node-v0.x-archive/issues/6960) with
-`npm` deeply nesting `node_modules` but not anymore with the latest `npm`
-versions.
+Portable file paths need to avoid:
+
+- being
+  [more than 260
+  characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
+  This used to
+  [create issues](https://github.com/nodejs/node-v0.x-archive/issues/6960)
+  with `npm` deeply nesting `node_modules` but not anymore with the latest
+  `npm` versions.
+- use the `~` or `~user`
+  [home directory shorthand](https://en.wikipedia.org/wiki/Home_directory#Unix).
 
 # Shell
 
