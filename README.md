@@ -668,6 +668,9 @@ can use either. It is possible to convert between both using
 [`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants).
 However it is more portable to use signal names instead of integer constants.
 
+[`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
+does not work on Windows.
+
 # Errors
 
 Node errors can be identified with either:
@@ -777,6 +780,8 @@ and can only be fired on Windows.
   [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
   with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`,
   `SIGABRT`, `SIGHUP` and `SIGBREAK`.
+- do not use
+  [`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
 - prefer [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
   over [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 
