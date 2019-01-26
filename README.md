@@ -715,7 +715,7 @@ retrying few milliseconds later.
 - do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
   or [core utilities](https://www.gnu.org/software/coreutils/) without using
   an abstraction layer.
-- test of each OS with
+- test each OS with
   [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine) and
   [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
 - run
