@@ -50,6 +50,10 @@ information.
 
 If you find this document too long, you can jump to the [summary](#summary).
 
+If you want to learn about portability issues introduced with each new Node.js
+release, follow
+[@ehmicky on Twitter](https://twitter.com/intent/follow?screen_name=ehmicky).
+
 # Installing and updating Node
 
 Installers for each major OS are available on the
