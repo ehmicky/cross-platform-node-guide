@@ -96,8 +96,8 @@ There are several approaches to solve this:
 - some projects like [`opn`](https://github.com/sindresorhus/opn) abstract
   common user applications.
 
-Few lower-level tools attempt to bring cross-platform compatibility by emulating or
-translating system calls:
+Few lower-level tools attempt to bring cross-platform compatibility by
+emulating or translating system calls:
 
 - [Wine](https://www.winehq.org/): to run Windows API calls on Unix.
 - [Cygwin](https://www.cygwin.com/): to run POSIX on Windows.
@@ -346,15 +346,16 @@ variable, which defaults to
 `.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC`. This won't work on
 Unix.
 
-The [`PATH`](<https://en.wikipedia.org/wiki/PATH_(variable)>) environment variable
-uses `;` instead of `:` as delimiter on Windows. This can be retrieved with
+The [`PATH`](<https://en.wikipedia.org/wiki/PATH_(variable)>) environment
+variable uses `;` instead of `:` as delimiter on Windows. This can be retrieved
+with
 [`path.delimiter`](https://nodejs.org/api/path.html#path_path_delimiter).
 
 When the option
 [`detached: false`](https://nodejs.org/api/child_process.html#child_process_options_detached)
 of
-[`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) is used, the child process will be terminated
-when its parent is on Windows, but not on Unix.
+[`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+is used, the child process will be terminated when its parent is on Windows, but not on Unix.
 
 When the option
 [`detached: true`](https://nodejs.org/api/child_process.html#child_process_options_detached)
@@ -551,7 +552,9 @@ is hardware-specific and varies between 1 nanosecond and 1 millisecond.
 # OS identification
 
 The main way to identify the current OS is to use
-[`process.platform`](https://nodejs.org/api/process.html#process_process_platform) (or the identical [`os.platform()`](https://nodejs.org/api/os.html#os_os_platform)).
+[`process.platform`](https://nodejs.org/api/process.html#process_process_platform)
+(or the identical
+[`os.platform()`](https://nodejs.org/api/os.html#os_os_platform)).
 
 The [`os`](https://nodejs.org/api/os.html) core module offers some
 finer-grained identification methods but those are rarely needed:
