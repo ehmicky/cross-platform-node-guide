@@ -11,10 +11,19 @@ According to the
 24% of Node.js developers use Windows locally and 41% use Mac. In production
 85% use Linux and 1% use BSD.
 
+# About this guide
+
+If you find this document too long, you can jump to the [summary](#summary).
+
+If you want to keep up to date on portability issues introduced with each new
+Node.js release, follow
+[@ehmicky on Twitter](https://twitter.com/intent/follow?screen_name=ehmicky).
+
+Feel free to submit an issue or PR if you find any errors or want to add more
+information.
+
 # Table of contents
 
-- [Why you should care](#why-you-should-care)
-- [Feedback](#feedback)
 - [Installing and updating Node](#installing-and-updating-node)
 - [Core utilities](#core-utilities)
 - [Testing](#testing)
@@ -41,18 +50,6 @@ According to the
 - [Anti-virus](#anti-virus)
 - [Summary](#summary)
 - [Further reading](#further-reading)
-
-# Feedback
-
-This document is based on my personal experience running cross-platform Node.js.
-Please submit an issue or PR if you find any errors or want to add more
-information.
-
-If you find this document too long, you can jump to the [summary](#summary).
-
-If you want to learn about portability issues introduced with each new Node.js
-release, follow
-[@ehmicky on Twitter](https://twitter.com/intent/follow?screen_name=ehmicky).
 
 # Installing and updating Node
 
