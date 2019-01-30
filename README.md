@@ -306,6 +306,8 @@ However this won't work on Windows which uses two other shells:
   in Bash.
 - CLI flags often use slashes (`/opt`) instead of dashes (`-opt`). But
   Node.js binaries can still use `-opt`.
+- [Exit code](https://en.wikipedia.org/wiki/Exit_status) are accessed with
+  `%errorlevel%` instead of `$?`.
 - By default the [CP866](https://en.wikipedia.org/wiki/Code_page_866)
   character set is used instead of
   [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This means Unicode characters
