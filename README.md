@@ -99,7 +99,8 @@ There are several approaches to solve this:
 Few lower-level tools attempt to bring cross-platform compatibility by
 emulating or translating system calls:
 
-- [Wine](https://www.winehq.org/): to run Windows API calls on Unix.
+- [Wine](https://www.winehq.org/): to run Windows API calls on Linux, Mac, BSD
+  and Solaris.
 - [Cygwin](https://www.cygwin.com/): to run POSIX on Windows.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
   to run the Linux command line on Windows
