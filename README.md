@@ -309,7 +309,8 @@ However this won't work on Windows which uses two other shells:
 - By default the [CP866](https://en.wikipedia.org/wiki/Code_page_866)
   character set is used instead of
   [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This means Unicode characters
-  won't be displayed properly. Projects like
+  (including [emoji](https://en.wikipedia.org/wiki/Emoji)) won't be displayed
+  properly. Projects like
   [figures](https://github.com/sindresorhus/figures) and
   [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
   solve this.
@@ -738,6 +739,10 @@ retrying few milliseconds later.
 - fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - keep shell commands to simple `command arguments...` calls, optionally
   chained with `&&`.
+- avoid printing Unicode characters (including
+  [emoji](https://en.wikipedia.org/wiki/Emoji)) except through projects like
+  [figures](https://github.com/sindresorhus/figures) and
+  [log-symbols](https://github.com/sindresorhus/log-symbols).
 - reference and pass environment variables to shell commands using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - copy files instead of symlinking them.
