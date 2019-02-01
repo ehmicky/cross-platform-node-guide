@@ -38,6 +38,7 @@ information.
 - [Environment variables](#environment-variables)
 - [Symlinks](#symlinks)
 - [File metadata](#file-metadata)
+- [Character encoding](#character-encoding)
 - [Permissions](#permissions)
 - [Users](#users)
 - [Time resolution](#time-resolution)
@@ -308,14 +309,6 @@ However this won't work on Windows which uses two other shells:
   Node.js binaries can still use `-opt`.
 - [Exit code](https://en.wikipedia.org/wiki/Exit_status) are accessed with
   `%errorlevel%` instead of `$?`.
-- By default the [CP866](https://en.wikipedia.org/wiki/Code_page_866)
-  character set is used instead of
-  [UTF-8](https://en.wikipedia.org/wiki/UTF-8). This means Unicode characters
-  (including [emoji](https://en.wikipedia.org/wiki/Emoji)) won't be displayed
-  properly. Projects like
-  [figures](https://github.com/sindresorhus/figures) and
-  [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
-  solve this.
 - [Escaping](https://ss64.com/nt/syntax-esc.html) is done differently with
   double quotes and `^`. This is partially solved with the
   [`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
@@ -460,6 +453,79 @@ only works on Linux.
 [`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very portable.
 For example the option `recursive` does not work on Linux.
 [`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
+
+# Character encoding
+
+The [character encoding](https://en.wikipedia.org/wiki/Character_encoding) on
+Unix is usually [UTF-8](https://en.wikipedia.org/wiki/UTF-8). However on Windows
+it is usually either [UTF-16](https://en.wikipedia.org/wiki/UTF-16) or one of
+the [Windows code pages](https://en.wikipedia.org/wiki/Windows_code_page).
+Few non-[Unicode](https://unicode.org/) character encodings are also popular in
+some countries. This can result in characters not being printed properly,
+especially high
+[Unicode code points](https://en.wikipedia.org/wiki/Unicode#Code_point_planes_and_blocks) and
+[emoji](https://en.wikipedia.org/wiki/Emoji).
+
+The character encoding can be specified using an `encoding` option with most
+[relevant Node.js core methods](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback).
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8) is always the default value except
+for
+[readable streams](https://nodejs.org/api/stream.html#stream_readable_streams)
+(including
+[`fs.createReadStream()`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)),
+[`fs.readFile()`](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback) and
+most [`crypto`](https://nodejs.org/api/crypto.html) methods where `buffer` is
+the default instead.
+
+To convert between character encodings
+[`string_encoder`](https://nodejs.org/api/string_decoder.html) (decoding only),
+[`Buffer.transcode()`](https://nodejs.org/api/buffer.html#buffer_buffer_transcode_source_fromenc_toenc),
+[`TextDecoder`](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+and
+[`TextEncoder`](https://nodejs.org/api/util.html#util_class_util_textencoder)
+can be used.
+
+Node.js
+[supports](https://nodejs.org/api/buffer.html#buffer_buffers_and_character_encodings)
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8),
+[UTF-16 little endian](https://en.wikipedia.org/wiki/UTF-16),
+[Latin-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1) and
+[ASCII](https://en.wikipedia.org/wiki/ASCII), except for
+[`TextDecoder`](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+and
+[`TextEncoder`](https://nodejs.org/api/util.html#util_class_util_textencoder)
+which support
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8),
+[UTF-16 little endian](https://en.wikipedia.org/wiki/UTF-16) and
+[UTF-16 big endian](https://en.wikipedia.org/wiki/UTF-16) by default. If
+Node.js is built with
+[full internationalization support](https://nodejs.org/api/intl.html#intl_internationalization_support)
+or provided with it at runtime,
+[many more character encodings](https://nodejs.org/api/util.html#util_encodings_requiring_full_icu_data)
+are supported by
+[`TextDecoder`](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+and
+[`TextEncoder`](https://nodejs.org/api/util.html#util_class_util_textencoder).
+If doing so is inconvenient,
+[iconv-lite](https://github.com/ashtuchkin/iconv-lite) or
+[iconv](https://github.com/bnoordhuis/node-iconv) can be used instead.
+
+It is recommended to always use [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+When reading from a file or terminal, one should either:
+
+- detect the character encoding using
+  [`node-chardet`](https://github.com/runk/node-chardet) or
+  [`jschardet`](https://github.com/aadsm/jschardet) and convert to
+  [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+- validate and/or document that the input should be in
+  [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+
+When writing to a terminal the character encoding will almost always be
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8) on Unix and
+[CP866](https://en.wikipedia.org/wiki/Code_page_866) on Windows (`cmd.exe`).
+[figures](https://github.com/sindresorhus/figures) and
+[log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
+print common symbols consistently accross platforms.
 
 # Permissions
 
@@ -741,10 +807,6 @@ retrying few milliseconds later.
 - fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - keep shell commands to simple `command arguments...` calls, optionally
   chained with `&&`.
-- avoid printing Unicode characters (including
-  [emoji](https://en.wikipedia.org/wiki/Emoji)) except through projects like
-  [figures](https://github.com/sindresorhus/figures) and
-  [log-symbols](https://github.com/sindresorhus/log-symbols).
 - reference and pass environment variables to shell commands using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - copy files instead of symlinking them.
@@ -782,6 +844,13 @@ retrying few milliseconds later.
   [`getgroups()`](https://nodejs.org/api/process.html#process_process_getgroups),
   [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
   [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
+- use [`UTF-8`](https://en.wikipedia.org/wiki/UTF-8). File/terminal input
+  should either be validated or converted to it
+  ([`node-chardet`](https://github.com/runk/node-chardet)).
+- avoid printing Unicode characters (including
+  [emoji](https://en.wikipedia.org/wiki/Emoji)) except through projects like
+  [figures](https://github.com/sindresorhus/figures) and
+  [log-symbols](https://github.com/sindresorhus/log-symbols).
 - do not assume
   [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
   is nanoseconds-precise.
