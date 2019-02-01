@@ -525,7 +525,7 @@ When writing to a terminal the character encoding will almost always be
 [CP866](https://en.wikipedia.org/wiki/Code_page_866) on Windows (`cmd.exe`).
 [figures](https://github.com/sindresorhus/figures) and
 [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
-print common symbols consistently accross platforms.
+print common symbols consistently across platforms.
 
 # Permissions
 
