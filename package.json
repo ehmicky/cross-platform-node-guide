@@ -5,6 +5,7 @@
     "README.md"
   ],
   "scripts": {
+    "test": "true",
     "release": "npm test && release-it"
   },
   "description": "Practical guide on how to write portable/cross-platform Node.js code",
