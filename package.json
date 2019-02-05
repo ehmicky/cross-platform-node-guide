@@ -4,6 +4,9 @@
   "files": [
     "README.md"
   ],
+  "scripts": {
+    "release": "npm test && release-it"
+  },
   "description": "Practical guide on how to write portable/cross-platform Node.js code",
   "keywords": [
     "node",
@@ -28,5 +31,7 @@
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "release-it": "^10.0.7"
+  }
 }

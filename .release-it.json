@@ -1,0 +1,11 @@
+{
+  "non-interactive": true,
+  "disable-metrics": true,
+  "pkgFiles": ["package.json", "package-lock.json"],
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false
+  }
+}
