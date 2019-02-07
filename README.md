@@ -142,6 +142,10 @@ Typical directory locations are OS-specific:
   [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
   to retrieve it on any OS.
 
+[Man pages](https://www.kernel.org/doc/man-pages/) are Unix-specific so the
+[`package.json`'s `man` field](https://docs.npmjs.com/files/package.json#man)
+does not have any effects on Windows.
+
 # System configuration
 
 While Unix usually stores system configuration as files, Windows uses the
