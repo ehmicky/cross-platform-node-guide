@@ -37,6 +37,7 @@ information.
 - [Filenames](#filenames)
 - [Shell](#shell)
 - [Files execution](#files-execution)
+- [Package binaries](#package-binaries)
 - [Environment variables](#environment-variables)
 - [Symlinks](#symlinks)
 - [File metadata](#file-metadata)
@@ -474,6 +475,24 @@ does not modify `process.title` on Windows.
 
 Many of those differences can be solved by using
 [`execa`](https://github.com/sindresorhus/execa).
+
+# Package binaries
+
+Package binaries
+([`package.json`'s `bin` field](https://docs.npmjs.com/files/package.json#bin))
+are installed in the `node_modules/.bin` folder by `npm install`.
+
+On Unix those are symlinks pointing to the executable files. They can be
+executed directly inside a terminal.
+
+On Windows, each package binary
+[creates instead two files](https://github.com/npm/cmd-shim) for the same
+purpose:
+
+- a Windows batch file ending with `.cmd` which can be executed directly
+  inside `cmd.exe`.
+- a Unix shell file with no file extension which can be executed with `sh` or
+  `bash`.
 
 # Environment variables
 
