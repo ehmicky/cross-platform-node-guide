@@ -536,9 +536,10 @@ Finally most environment variables names are OS-specific:
 - `TMPDIR` in Unix is `TMP` or `TEMP` on Windows.
   [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) should be used
   instead.
-- `USER` on Unix is `USERDOMAIN` and `USERNAME` on Windows.
-  Only `USERNAME` is returned by
-  [`os.userInfo().username`](https://nodejs.org/api/os.html#os_os_userinfo_options).
+- `USER` or `LOGNAME` on Unix is `USERDOMAIN` and `USERNAME` on Windows.
+  [`username`](https://github.com/sindresorhus/username) or
+  [`os.userInfo().username`](https://nodejs.org/api/os.html#os_os_userinfo_options)
+  should be used instead.
 - `HOSTNAME` on Unix is `COMPUTERNAME` on Windows.
   [`os.hostname()`](https://nodejs.org/api/os.html#os_os_hostname) should be
   used instead.
