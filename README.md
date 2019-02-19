@@ -834,8 +834,9 @@ and can only be fired on Windows.
 Some anti-virus software on Windows
 [have been reported](https://github.com/isaacs/node-graceful-fs/pull/97) to lock
 directories and make `fs.rename()` fail.
-[`graceful-fs`](https://github.com/isaacs/node-graceful-fs) solves this by
-retrying few milliseconds later.
+[`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
+[`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
+milliseconds later.
 
 # Summary
 
