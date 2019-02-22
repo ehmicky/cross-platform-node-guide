@@ -10,4 +10,3 @@ core
 .nyc_output
 coverage
 dist
-localpack
