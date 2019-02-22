@@ -416,6 +416,7 @@ However this won't work on Windows which uses two other shells:
   in Bash.
 - CLI flags often use slashes (`/opt`) instead of dashes (`-opt`). But
   Node.js binaries can still use `-opt`.
+- Globbing (e.g. wildcard `*`) does not work.
 - [Exit code](https://en.wikipedia.org/wiki/Exit_status) are accessed with
   `%errorlevel%` instead of `$?`.
 - [Escaping](https://ss64.com/nt/syntax-esc.html) is done differently with
@@ -427,14 +428,14 @@ However this won't work on Windows which uses two other shells:
 When the option `shell` of
 [`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
 is `true`, `/bin/sh` will be used on Unix and `cmd.exe` (or the environment
-variable `ComSpec`) will be used on Windows. `false` won't work on Windows
-because it does not support shebangs.
+variable `ComSpec`) will be used on Windows. Since those shells behave
+differently it is better to avoid that option.
 
 As a consequence it is recommended to:
 
-- keep shell commands to simple `command arguments...` calls, optionally
-  chained with `&&`.
-- use [`execa`](https://github.com/sindresorhus/execa) to fire those.
+- keep shell commands to simple `command arguments...` calls
+- use [`execa()`](https://github.com/sindresorhus/execa) (not `execa.shell()`)
+  to fire those.
 
 # Files execution
 
