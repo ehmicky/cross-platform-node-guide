@@ -2,6 +2,8 @@
 
 [![last commit](https://img.shields.io/github/last-commit/ehmicky/portable-node-guide.svg?logo=github&logoColor=white)](https://github.com/ehmicky/portable-node-guide/graphs/contributors) [![license](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github&logoColor=white)](https://creativecommons.org/licenses/by-sa/4.0/) [![Gitter](https://img.shields.io/gitter/room/ehmicky/portable-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/portable-node-guide)
 
+Practical guide on how to write portable/cross-platform Node.js code.
+
 # Why you should care
 
 According to the
