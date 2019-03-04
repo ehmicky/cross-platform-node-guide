@@ -8,5 +8,5 @@ core
 .npmrc
 .yarn-error.log
 .nyc_output
-coverage
-build
+/coverage
+/build
