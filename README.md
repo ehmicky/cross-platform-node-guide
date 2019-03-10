@@ -959,6 +959,6 @@ milliseconds later.
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky" title="Documentation">📖</a></td></tr></table>
-
+| [<img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub>](https://twitter.com/ehmicky)<br />[💻](https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky "Code") [🎨](#design-ehmicky "Design") [🤔](#ideas-ehmicky "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/1481643?v=4" width="100px;" alt="thatalextaylor"/><br /><sub><b>thatalextaylor</b></sub>](https://github.com/thatalextaylor)<br />[🤔](#ideas-thatalextaylor "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=thatalextaylor "Documentation") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
