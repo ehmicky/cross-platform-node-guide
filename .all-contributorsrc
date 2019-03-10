@@ -51,6 +51,15 @@
         "doc",
         "talk"
       ]
+    },
+    {
+      "login": "tracker1",
+      "name": "Michael J. Ryan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/444316?v=4",
+      "profile": "http://tracker1.info/",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
