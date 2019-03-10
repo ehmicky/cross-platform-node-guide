@@ -21,8 +21,8 @@ If you want to keep up to date on portability issues introduced with each new
 Node.js release, follow
 [@ehmicky on Twitter](https://twitter.com/intent/follow?screen_name=ehmicky).
 
-Feel free to submit an issue or PR if you find any errors or want to add more
-information.
+Did you find an error or want to add more information?
+[Issues and PRs are welcome!](#contributing)
 
 # Table of contents
 
@@ -955,10 +955,26 @@ milliseconds later.
 - https://github.com/Microsoft/nodejs-guidelines
 - https://shapeshed.com/writing-cross-platform-node/
 
+# Contributing
+
+Did you find an error or want to add more information? Did you have problems
+understanding a specific section?
+[Issues](https://github.com/ehmicky/portable-node-guide/issues) and
+[PRs](https://github.com/ehmicky/portable-node-guide/pulls) are welcome!
+
+We also invite you to submit links to related projects but only if:
+
+- it's specific to Node.js
+- it provides cross-platform support that is not available in core Node.js
+- it's maintained
+
 # Contributors
+
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
 | [<img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub>](https://twitter.com/ehmicky)<br />[💻](https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky "Code") [🎨](#design-ehmicky "Design") [🤔](#ideas-ehmicky "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky "Documentation") | [<img src="https://avatars3.githubusercontent.com/u/1481643?v=4" width="100px;" alt="thatalextaylor"/><br /><sub><b>thatalextaylor</b></sub>](https://github.com/thatalextaylor)<br />[🤔](#ideas-thatalextaylor "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=thatalextaylor "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/275871?v=4" width="100px;" alt="Ben Noordhuis"/><br /><sub><b>Ben Noordhuis</b></sub>](https://github.com/bnoordhuis)<br />[🤔](#ideas-bnoordhuis "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=bnoordhuis "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/618922?v=4" width="100px;" alt="Steve Lee"/><br /><sub><b>Steve Lee</b></sub>](http://opendirective.com)<br />[🤔](#ideas-SteveALee "Ideas, Planning, & Feedback") [📖](https://github.com/ehmicky/portable-node-guide/commits?author=SteveALee "Documentation") [📢](#talk-SteveALee "Talks") | [<img src="https://avatars3.githubusercontent.com/u/444316?v=4" width="100px;" alt="Michael J. Ryan"/><br /><sub><b>Michael J. Ryan</b></sub>](http://tracker1.info/)<br />[🤔](#ideas-tracker1 "Ideas, Planning, & Feedback") |
 | :---: | :---: | :---: | :---: | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
