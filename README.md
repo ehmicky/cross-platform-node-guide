@@ -1,5 +1,7 @@
 <img src="https://raw.githubusercontent.com/ehmicky/design/master/portable-node-guide/portable-node-guide.png?sanitize=true" width="550"/>
 
+I am gyfnice
+
 [![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github&logoColor=white)](https://creativecommons.org/licenses/by-sa/4.0/) [![Gitter](https://img.shields.io/gitter/room/ehmicky/portable-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/portable-node-guide)
 
 Practical guide on how to write portable/cross-platform Node.js code.
