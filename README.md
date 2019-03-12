@@ -576,8 +576,9 @@ The [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize) and
 [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback)
 are `undefined` on Windows. On the other hand the
 [`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
-[`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) values are
-`undefined` on Unix.
+[`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) do not
+properly work on Linux as they always reflect the
+[`ctime`](https://nodejs.org/api/fs.html#fs_stat_time_values) field instead.
 
 The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag
 of
