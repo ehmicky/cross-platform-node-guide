@@ -27,6 +27,8 @@
     "url": "https://github.com/ehmicky/portable-node-guide/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-shared-tasks": "^0.19.1"
+  },
   "devDependencies": {}
 }
