@@ -99,8 +99,10 @@ There are several approaches to solve this:
     Shipped with [Git for Windows](https://gitforwindows.org/).
   - [`shelljs`](https://github.com/shelljs/shelljs)
   - [`node-windows`](https://github.com/coreybutler/node-windows)
-- some projects like [`opn`](https://github.com/sindresorhus/opn) abstract
-  common user applications.
+- some projects abstract common user applications:
+  - [`opn`](https://github.com/sindresorhus/opn) for opening files.
+  - [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) for
+    copy/pasting.
 
 Few lower-level tools attempt to bring cross-platform compatibility by
 emulating or translating system calls:
