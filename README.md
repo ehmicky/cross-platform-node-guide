@@ -486,7 +486,7 @@ Many of those differences can be solved by using
 
 Package binaries
 ([`package.json`'s `bin` field](https://docs.npmjs.com/files/package.json#bin))
-are installed in the `node_modules/.bin` folder by `npm install`.
+are installed in the `node_modules/.bin` directory by `npm install`.
 
 On Unix those are symlinks pointing to the executable files. They can be
 executed directly inside a terminal.
