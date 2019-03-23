@@ -10,6 +10,8 @@ Thanks for reporting this issue!
 
 Please search other issues to make sure this issue has not already been reported.
 
+Please make sure the title is clear and descriptive.
+
 If this is related to a typo or the documentation being unclear, please click on
 the relevant page's `Edit` button (pencil icon) and suggest a correction
 instead.
