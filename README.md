@@ -54,8 +54,9 @@ Did you find an error or want to add more information?
 - [Errors](#errors)
 - [Anti-virus](#anti-virus)
 - [Summary](#summary)
-- [Further reading](#further-reading)
-- [Contributors](#contributors)
+- [See also](#see-also)
+- [Support](#support)
+- [Contributing](#contributing)
 
 # Installing and updating Node
 
@@ -952,26 +953,34 @@ milliseconds later.
 - prefer [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
   over [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 
-# Further reading
+# See also
 
 - https://github.com/bcoe/awesome-cross-platform-nodejs
 - https://github.com/Microsoft/nodejs-guidelines
 - https://shapeshed.com/writing-cross-platform-node/
 
+# Support
+
+If you found an error or would like to add more information, _don't hesitate_ to
+[submit an issue on GitHub](../../issues).
+
+For other questions, feel free to
+[chat with us on Gitter](https://gitter.im/ehmicky/portable-node-guide).
+
+Everyone is welcome regardless of personal background. We enforce a
+[Code of conduct](CODE_OF_CONDUCT.md) in order to promote a positive and
+inclusive environment.
+
 # Contributing
 
-Did you find an error or want to add more information? Did you have problems
-understanding a specific section?
-[Issues](https://github.com/ehmicky/portable-node-guide/issues) and
-[PRs](https://github.com/ehmicky/portable-node-guide/pulls) are welcome!
+This project was made with ❤️. The simplest way to give back is by starring and
+sharing it online.
 
-We also invite you to submit links to related projects but only if:
+If the documentation is unclear or has a typo, please click on the page's `Edit`
+button (pencil icon) and suggest a correction.
 
-- it's specific to Node.js
-- it provides cross-platform support that is not available in core Node.js
-- it's maintained
-
-# Contributors
+If you would like to help us fix an error or add more information, please check
+our [guidelines](CONTRIBUTING.md). Pull requests are welcome!
 
 Thanks goes to these wonderful people:
 
