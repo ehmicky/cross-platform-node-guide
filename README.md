@@ -522,7 +522,8 @@ purpose:
 The syntax to
 [reference environment variables](https://ss64.com/nt/syntax-variables.html) is
 `$VARIABLE` on Unix but `%VARIABLE%` on Windows. Also if the variable is
-missing, its value will be `''` on Unix but `'%VARIABLE%'` on Windows.
+missing, its value will be `''` on Unix and in Windows batch files, but
+`'%VARIABLE%'` in `cmd.exe`.
 
 To pass
 [environment variables](https://docs.microsoft.com/en-us/windows/desktop/procthread/environment-variables)
