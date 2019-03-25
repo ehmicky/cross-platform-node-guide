@@ -101,7 +101,6 @@ There are several approaches to solve this:
   - [`shelljs`](https://github.com/shelljs/shelljs)
   - [`node-windows`](https://github.com/coreybutler/node-windows)
 - some projects abstract common user applications:
-  - [`opn`](https://github.com/sindresorhus/opn) for opening files.
   - [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) for
     copy/pasting.
 
@@ -454,13 +453,21 @@ As a consequence it is recommended to:
 
 # Files execution
 
-[Shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like `#!/usr/bin/node`
-do not work on Windows, where only files ending with `.exe`, `.com`, `.cmd`
-or `.bat` can be directly executed. Portable file execution must either:
+To decide which program should execute a file:
 
-- use an interpreter, e.g. `node file.js` instead of `./file.js`.
+- Unix uses [Shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like
+  `#!/usr/bin/node`
+- Windows uses
+  [filename](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ftype)
+  [extensions](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/assoc).
+
+Portable file execution must either:
+
+- explicitly specify the program, e.g. `node ./file.js` instead of `./file.js`.
 - use [`cross-spawn`](https://github.com/moxystudio/node-cross-spawn)
-  (which is included in [`execa`](https://github.com/sindresorhus/execa)).
+  (which is included in [`execa`](https://github.com/sindresorhus/execa))
+  which polyfills shebangs on Windows.
+- use [`opn`](https://github.com/sindresorhus/opn).
 
 During file execution the extension can be omitted on Windows if it is listed
 in the [`PATHEXT`](http://environmentvariables.org/PathExt) environment
