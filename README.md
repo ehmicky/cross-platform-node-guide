@@ -816,6 +816,11 @@ can use either. It is possible to convert between both using
 [`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants).
 However it is more portable to use signal names instead of integer constants.
 
+Using a negative argument with
+[`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
+to [target a process group ID](https://linux.die.net/man/2/kill) (as opposed to
+a PID) does not work on Windows.
+
 [`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
 does not work on Windows.
 
