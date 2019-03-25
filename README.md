@@ -237,7 +237,8 @@ When reading from a file or terminal, one should either:
 
 When writing to a terminal the character encoding will almost always be
 [UTF-8](https://en.wikipedia.org/wiki/UTF-8) on Unix and
-[CP866](https://en.wikipedia.org/wiki/Code_page_866) on Windows (`cmd.exe`).
+[CP437](https://en.wikipedia.org/wiki/Code_page_437) /
+[CP850](https://en.wikipedia.org/wiki/Code_page_850) on Windows (`cmd.exe`).
 [figures](https://github.com/sindresorhus/figures) and
 [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
 print common symbols consistently across platforms.
