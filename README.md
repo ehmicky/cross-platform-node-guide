@@ -52,7 +52,6 @@ Did you find an error or want to add more information?
 - [Processes](#processes)
 - [Signals](#signals)
 - [Errors](#errors)
-- [Anti-virus](#anti-virus)
 - [Summary](#summary)
 - [See also](#see-also)
 - [Support](#support)
@@ -655,6 +654,13 @@ Another difference on Windows: to execute files their extension must be listed
 in the environment variable
 [`PATHEXT`](http://environmentvariables.org/PathExt).
 
+Directories can
+[be locked](https://github.com/isaacs/node-graceful-fs/pull/97) on Windows
+which make erasing or removing them fail.
+[`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
+[`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
+milliseconds later.
+
 Finally
 [`fs.lchmod()`](https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback)
 is only available on Mac.
@@ -860,15 +866,6 @@ Most available `error.code`
 can be fired on any OS. However few
 [start with `W`](https://nodejs.org/api/os.html#os_windows_specific_error_constants)
 and can only be fired on Windows.
-
-# Anti-virus
-
-Some anti-virus software on Windows
-[have been reported](https://github.com/isaacs/node-graceful-fs/pull/97) to lock
-directories and make `fs.rename()` fail.
-[`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
-[`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
-milliseconds later.
 
 # Summary
 
