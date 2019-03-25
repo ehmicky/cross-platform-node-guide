@@ -544,7 +544,7 @@ for the `PATH` environment variable.
 
 Finally most environment variables names are OS-specific:
 
-- `SHELL` on Unix is `ComSpec` on Windows. Unfortunately
+- `SHELL` on Unix is `ComSpec` on Windows.
   [`os.userInfo().shell`](https://nodejs.org/api/os.html#os_os_userinfo_options)
   returns `null` on Windows.
 - `PS1` on Unix is `PROMPT` on Windows.
