@@ -274,9 +274,10 @@ on some Windows commands when in text mode. This includes the
 [`type` command](https://ss64.com/nt/type.html) in `cmd.exe`. As a consequence
 that character should be avoided in non-binary files.
 
-As opposed to Windows, Unix does not implicitely add a newline at the end of
-files. Thus it is recommended to end files with a
-[newline character](#newlines). However please remember that Windows will print
+As opposed to Windows, Unix
+[requires text files](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_206)
+to end with a
+[newline character](#newlines). However please remember that Windows might print
 these as if two newlines were present instead.
 
 The [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) is a special character
