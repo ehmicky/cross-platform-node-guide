@@ -379,9 +379,13 @@ when it comes to naming files and paths.
 
 Portable filenames need to avoid:
 
-- any other characters but `a-z`, `0-9`, `-._,=()~`
+- any other characters but `a-z`, `0-9`, `-._,=()`
 - starting with `-`
 - ending with a `.`
+- [starting](https://support.microsoft.com/en-us/help/211632/description-of-how-word-creates-temporary-files)
+  or
+  [ending](https://vim.fandom.com/wiki/Remove_swap_and_backup_files_from_your_working_directory)
+  [with `~`](https://en.wikipedia.org/wiki/Home_directory#Unix).
 - uppercase characters (Mac and Windows are case-insensitive).
 - being more than 255 characters long.
 - being one of
@@ -399,8 +403,6 @@ Portable file paths need to avoid:
   [create issues](https://github.com/nodejs/node-v0.x-archive/issues/6960)
   with `npm` deeply nesting `node_modules` but not anymore with the latest
   `npm` versions.
-- use the `~` or `~user`
-  [home directory shorthand](https://en.wikipedia.org/wiki/Home_directory#Unix).
 
 # Shell
 
