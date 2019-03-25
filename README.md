@@ -690,7 +690,7 @@ Consequently all methods based on
 - [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
   does not do anything.
 
-The privileged user is `root` on Unix and `admin` on Windows. Those are
+The privileged user is `root` on Unix and `Administrator` on Windows. Those are
 triggered with different mechanisms. One can use
 [`is-elevated`](https://github.com/sindresorhus/is-elevated) (and the related
 [`is-admin`](https://github.com/sindresorhus/is-admin) and
