@@ -136,16 +136,25 @@ as an admin before being able to install
 
 # Directory locations
 
-Typical directory locations are OS-specific:
+Typical directory locations are OS-specific.
 
-- the main temporary directory could for example be `/tmp` on Linux,
-  `/var/folders/.../T` on Mac or `C:\Users\USER\AppData\Local\Temp` on
-  Windows. [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) can be
-  used to retrieve it on any OS.
-- the user's home directory could for example be `/home/USER` on Linux,
-  `/Users/USER` on Mac or `C:\Users\USER` on Windows.
-  [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
-  to retrieve it on any OS. Application-specific settings are stored into
+The main temporary directory:
+
+- could for example be `/tmp` on Linux, `/var/folders/.../T` on Mac or
+  `C:\Users\USER\AppData\Local\Temp` on Windows.
+- [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) can be used to
+  retrieve it on any OS.
+- different terminal sessions on the same machine
+  [might have different temporary directories](https://github.com/ehmicky/portable-node-guide/pull/17#issuecomment-476209345)
+  on Windows.
+
+The user's home directory:
+
+- could for example be `/home/USER` on Linux, `/Users/USER` on Mac or
+  `C:\Users\USER` on Windows.
+- [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
+  to retrieve it on any OS.
+- application-specific settings are stored into
   [subdirectories on Windows](<https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx>):
   `Roaming` (`APPDATA` environment variable) and `Local` (`LOCALAPPDATA`
   environment variable).
