@@ -767,7 +767,8 @@ work on any OS.
 
 Other projects can be used to manipulate processes:
 
-- [`ps-list`](https://github.com/sindresorhus/ps-list): list processes.
+- [`ps-list`](https://github.com/sindresorhus/ps-list) or
+  [`ps-tree`](https://github.com/indexzero/ps-tree): list processes.
   [`tasklist`](https://github.com/sindresorhus/tasklist) and
   [`fastlist`](https://github.com/MarkTiedemann/fastlist) can also be used
   for Windows only.
