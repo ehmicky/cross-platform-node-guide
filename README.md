@@ -173,7 +173,7 @@ configuration as files or remotely is easier and more portable.
 
 The [character encoding](https://en.wikipedia.org/wiki/Character_encoding) on
 Unix is usually [UTF-8](https://en.wikipedia.org/wiki/UTF-8). However on Windows
-it is usually either [UTF-16](https://en.wikipedia.org/wiki/UTF-16) or one of
+it can also be [UTF-16](https://en.wikipedia.org/wiki/UTF-16) or one of
 the [Windows code pages](https://en.wikipedia.org/wiki/Windows_code_page).
 Few non-[Unicode](https://unicode.org/) character encodings are also popular in
 some countries. This can result in characters not being printed properly,
