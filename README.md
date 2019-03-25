@@ -147,7 +147,10 @@ Typical directory locations are OS-specific:
 - the user's home directory could for example be `/home/USER` on Linux,
   `/Users/USER` on Mac or `C:\Users\USER` on Windows.
   [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
-  to retrieve it on any OS.
+  to retrieve it on any OS. Application-specific settings are stored into
+  [subdirectories on Windows](<https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx>):
+  `Roaming` (`APPDATA` environment variable) and `Local` (`LOCALAPPDATA`
+  environment variable).
 
 [Man pages](https://www.kernel.org/doc/man-pages/) are Unix-specific so the
 [`package.json`'s `man` field](https://docs.npmjs.com/files/package.json#man)
