@@ -603,7 +603,8 @@ properly work on Linux as they always reflect the
 The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag
 of
 [`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)
-only works on Linux.
+only works on Linux. Access times can also be disabled on Windows but through
+[the registry](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior#remarks).
 
 [`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very portable.
 For example the option `recursive` does not work on Linux.
