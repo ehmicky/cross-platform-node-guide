@@ -454,8 +454,8 @@ As a consequence it is recommended to:
 
 To decide which program should execute a file:
 
-- Unix uses [Shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like
-  `#!/usr/bin/node`
+- Unix uses [shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like
+  `#!/usr/bin/node`.
 - Windows uses
   [filename](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ftype)
   [extensions](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/assoc).
