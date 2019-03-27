@@ -475,7 +475,7 @@ Portable file execution must either:
 - use [`cross-spawn`](https://github.com/moxystudio/node-cross-spawn)
   (which is included in [`execa`](https://github.com/sindresorhus/execa))
   which polyfills shebangs on Windows.
-- use [`opn`](https://github.com/sindresorhus/opn).
+- use [`open`](https://github.com/sindresorhus/open).
 
 During file execution the extension can be omitted on Windows if it is listed
 in the [`PATHEXT`](http://environmentvariables.org/PathExt) environment
