@@ -503,6 +503,13 @@ Finally the option
 [`argv0`](https://nodejs.org/api/child_process.html#child_process_options_detached)
 does not modify `process.title` on Windows.
 
+Redirecting to a file descriptor with the
+[`stdio` option](https://nodejs.org/api/child_process.html#child_process_options_stdio)
+of
+[`child_process.spawn()`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+is
+[not supported on Windows](https://nodejs.org/api/child_process.html#child_process_options_stdio).
+
 Many of those differences can be solved by using
 [`execa`](https://github.com/sindresorhus/execa).
 
@@ -914,6 +921,9 @@ and can only be fired on Windows.
 - fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - keep shell commands to simple `command arguments...` calls, optionally
   chained with `&&`.
+- avoid redirecting to a file descriptor with the
+  [`stdio` option](https://nodejs.org/api/child_process.html#child_process_options_stdio)
+  of [`child_process`](https://nodejs.org/api/child_process.html) methods.
 - reference and pass environment variables to shell commands using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - copy files instead of symlinking them.
