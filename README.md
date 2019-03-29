@@ -458,6 +458,13 @@ As a consequence it is recommended to:
 - use [`execa()`](https://github.com/sindresorhus/execa) (not `execa.shell()`)
   to fire those.
 
+Finally how many colors a terminal supports (if any) depends on both the
+operating system and the terminal itself. You can use
+[`process.stdout.getColorsDepth()`](https://nodejs.org/api/tty.html#tty_writestream_getcolordepth_env), [`process.stdout.hasColors()`](https://nodejs.org/api/tty.html#tty_writestream_hascolors_count_env) or
+[`supports-color`](https://github.com/chalk/supports-color) to detect these.
+However this is usually not necessary as colors library like
+[`chalk`](https://github.com/chalk/chalk) automatically do this.
+
 # Files execution
 
 To decide which program should execute a file:
