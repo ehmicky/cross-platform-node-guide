@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ehmicky/design/master/portable-node-guide/portable-node-guide.png" width="550"/>
 
-[![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github&logoColor=white&style=popout-square)](https://creativecommons.org/licenses/by-sa/4.0/) [![Gitter](https://img.shields.io/gitter/room/ehmicky/portable-node-guide.svg?logo=gitter&style=popout-square)](https://gitter.im/ehmicky/portable-node-guide) [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter&style=popout-square)](https://twitter.com/intent/follow?screen_name=ehmicky) [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium&style=popout-square)](https://medium.com/@ehmicky)
+[![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github&logoColor=cccccc&style=popout-square)](https://creativecommons.org/licenses/by-sa/4.0/) [![Gitter](https://img.shields.io/gitter/room/ehmicky/portable-node-guide.svg?logo=gitter&logoColor=cccccc&style=popout-square)](https://gitter.im/ehmicky/portable-node-guide) [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter&style=popout-square)](https://twitter.com/intent/follow?screen_name=ehmicky) [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium&logoColor=cccccc&style=popout-square)](https://medium.com/@ehmicky)
 
 Practical guide on how to write portable/cross-platform Node.js code.
 
