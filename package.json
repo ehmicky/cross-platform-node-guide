@@ -1,11 +1,11 @@
 {
-  "name": "portable-node-guide",
+  "name": "cross-platform-node-guide",
   "version": "1.4.0",
   "files": [
     "README.md",
     "!~"
   ],
-  "description": "🕮 Practical guide on how to write portable/cross-platform Node.js code",
+  "description": "🕮 How to write cross-platform Node.js code",
   "keywords": [
     "node",
     "windows",
@@ -23,9 +23,9 @@
   ],
   "license": "CC-BY-SA-4.0",
   "homepage": "https://git.io/fhzz5",
-  "repository": "ehmicky/portable-node-guide",
+  "repository": "ehmicky/cross-platform-node-guide",
   "bugs": {
-    "url": "https://github.com/ehmicky/portable-node-guide/issues"
+    "url": "https://github.com/ehmicky/cross-platform-node-guide/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "dependencies": {

@@ -1,11 +1,11 @@
 <img src="https://raw.githubusercontent.com/ehmicky/design/master/portable-node-guide/portable-node-guide.png" width="550"/>
 
 [![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Gitter](https://img.shields.io/gitter/room/ehmicky/portable-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/portable-node-guide)
+[![Gitter](https://img.shields.io/gitter/room/ehmicky/cross-platform-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/cross-platform-node-guide)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
 
-Practical guide on how to write portable/cross-platform Node.js code.
+How to write cross-platform Node.js code.
 
 # Why you should care
 
@@ -144,7 +144,7 @@ The main temporary directory:
 - [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) can be used to
   retrieve it on any OS.
 - different terminal sessions on the same machine
-  [might have different temporary directories](https://github.com/ehmicky/portable-node-guide/pull/17#issuecomment-476209345)
+  [might have different temporary directories](https://github.com/ehmicky/cross-platform-node-guide/pull/17#issuecomment-476209345)
   on Windows.
 
 The user's home directory:
@@ -173,7 +173,7 @@ a central key-value database. Some projects like
 can be used to access it from Node.
 
 This should only be done when accessing OS-specific settings. Otherwise storing
-configuration as files or remotely is easier and more portable.
+configuration as files or remotely is easier and more cross-platform.
 
 # Character encoding
 
@@ -383,7 +383,7 @@ Linux tends to use [ext4](https://en.wikipedia.org/wiki/Ext4),
 [own restrictions](https://en.wikipedia.org/wiki/Comparison_of_file_systems#Limits)
 when it comes to naming files and paths.
 
-Portable filenames need to avoid:
+Cross-platform filenames need to avoid:
 
 - any other characters but `a-z`, `0-9`, `-._,=()`
 - starting with `-`
@@ -400,7 +400,7 @@ Portable filenames need to avoid:
   `com8`, `com9`, `lpt1`, `lpt2`, `lpt3`, `lpt4`, `lpt5`,
   `lpt6`, `lpt7`, `lpt8`, `lpt9`, `con`, `nul`, `prn`, `aux`.
 
-Portable file paths need to avoid:
+Cross-platform file paths need to avoid:
 
 - being
   [more than 260
@@ -475,7 +475,7 @@ To decide which program should execute a file:
   [filename](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ftype)
   [extensions](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/assoc).
 
-Portable file execution must either:
+Cross-platform file execution must either:
 
 - explicitly specify the program, e.g. `node ./file.js` instead of `./file.js`.
 - use [`cross-spawn`](https://github.com/moxystudio/node-cross-spawn)
@@ -603,7 +603,7 @@ Creating regular symlinks on Windows will most likely fail because it requires a
 ["create symlink" permission](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
 which by default is off for non-admins. Also some file systems like
 [FAT](https://en.wikipedia.org/wiki/File_Allocation_Table) do not allow
-symlinks. As a consequence it is more portable to copy files instead of
+symlinks. As a consequence it is more cross-platform to copy files instead of
 symlinking them.
 
 Neither junctions nor hard links
@@ -627,8 +627,8 @@ of
 only works on Linux. Access times can also be disabled on Windows but through
 [the registry](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior#remarks).
 
-[`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very portable.
-For example the option `recursive` does not work on Linux.
+[`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very
+cross-platform. For example the option `recursive` does not work on Linux.
 [`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
 
 # Permissions
@@ -860,7 +860,8 @@ Each signal has both an OS-agnostic name and an OS-specific integer constant.
 [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
 can use either. It is possible to convert between both using
 [`os.constants.signals`](https://nodejs.org/api/os.html#os_signal_constants).
-However it is more portable to use signal names instead of integer constants.
+However it is more cross-platform to use signal names instead of integer
+constants.
 
 Using a negative argument with
 [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
@@ -875,7 +876,7 @@ does not work on Windows.
 Node errors can be identified with either:
 
 - [`error.code`](https://nodejs.org/api/errors.html#errors_error_code): an
-  OS-agnostic string (more portable).
+  OS-agnostic string (more cross-platform).
 - [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno): an
   OS-specific integer constant.
 
@@ -1011,7 +1012,7 @@ If you found an error or would like to add more information, _don't hesitate_ to
 [submit an issue on GitHub](../../issues).
 
 For other questions, feel free to
-[chat with us on Gitter](https://gitter.im/ehmicky/portable-node-guide).
+[chat with us on Gitter](https://gitter.im/ehmicky/cross-platform-node-guide).
 
 Everyone is welcome regardless of personal background. We enforce a
 [Code of conduct](CODE_OF_CONDUCT.md) in order to promote a positive and
@@ -1032,6 +1033,6 @@ Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/portable-node-guide/commits?author=ehmicky" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/thatalextaylor"><img src="https://avatars3.githubusercontent.com/u/1481643?v=4" width="100px;" alt="thatalextaylor"/><br /><sub><b>thatalextaylor</b></sub></a><br /><a href="#ideas-thatalextaylor" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/portable-node-guide/commits?author=thatalextaylor" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/bnoordhuis"><img src="https://avatars0.githubusercontent.com/u/275871?v=4" width="100px;" alt="Ben Noordhuis"/><br /><sub><b>Ben Noordhuis</b></sub></a><br /><a href="#ideas-bnoordhuis" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/portable-node-guide/commits?author=bnoordhuis" title="Documentation">📖</a></td><td align="center"><a href="http://opendirective.com"><img src="https://avatars2.githubusercontent.com/u/618922?v=4" width="100px;" alt="Steve Lee"/><br /><sub><b>Steve Lee</b></sub></a><br /><a href="#ideas-SteveALee" title="Ideas, Planning, & Feedback">🤔</a> <a href="#talk-SteveALee" title="Talks">📢</a></td><td align="center"><a href="http://tracker1.info/"><img src="https://avatars3.githubusercontent.com/u/444316?v=4" width="100px;" alt="Michael J. Ryan"/><br /><sub><b>Michael J. Ryan</b></sub></a><br /><a href="#ideas-tracker1" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="http://twitter.com/fabiospampinato"><img src="https://avatars1.githubusercontent.com/u/1812093?v=4" width="100px;" alt="Fabio Spampinato"/><br /><sub><b>Fabio Spampinato</b></sub></a><br /><a href="#ideas-fabiospampinato" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/AyrA"><img src="https://avatars0.githubusercontent.com/u/1301960?v=4" width="100px;" alt="AyrA"/><br /><sub><b>AyrA</b></sub></a><br /><a href="#ideas-AyrA" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
+<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/cross-platform-node-guide/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/cross-platform-node-guide/commits?author=ehmicky" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/thatalextaylor"><img src="https://avatars3.githubusercontent.com/u/1481643?v=4" width="100px;" alt="thatalextaylor"/><br /><sub><b>thatalextaylor</b></sub></a><br /><a href="#ideas-thatalextaylor" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/cross-platform-node-guide/commits?author=thatalextaylor" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/bnoordhuis"><img src="https://avatars0.githubusercontent.com/u/275871?v=4" width="100px;" alt="Ben Noordhuis"/><br /><sub><b>Ben Noordhuis</b></sub></a><br /><a href="#ideas-bnoordhuis" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/cross-platform-node-guide/commits?author=bnoordhuis" title="Documentation">📖</a></td><td align="center"><a href="http://opendirective.com"><img src="https://avatars2.githubusercontent.com/u/618922?v=4" width="100px;" alt="Steve Lee"/><br /><sub><b>Steve Lee</b></sub></a><br /><a href="#ideas-SteveALee" title="Ideas, Planning, & Feedback">🤔</a> <a href="#talk-SteveALee" title="Talks">📢</a></td><td align="center"><a href="http://tracker1.info/"><img src="https://avatars3.githubusercontent.com/u/444316?v=4" width="100px;" alt="Michael J. Ryan"/><br /><sub><b>Michael J. Ryan</b></sub></a><br /><a href="#ideas-tracker1" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="http://twitter.com/fabiospampinato"><img src="https://avatars1.githubusercontent.com/u/1812093?v=4" width="100px;" alt="Fabio Spampinato"/><br /><sub><b>Fabio Spampinato</b></sub></a><br /><a href="#ideas-fabiospampinato" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://github.com/AyrA"><img src="https://avatars0.githubusercontent.com/u/1301960?v=4" width="100px;" alt="AyrA"/><br /><sub><b>AyrA</b></sub></a><br /><a href="#ideas-AyrA" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
