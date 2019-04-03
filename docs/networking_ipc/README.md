@@ -9,4 +9,4 @@
 
 [➡ Next _(Networking / IPC > Networking)_](networking.md)<br>
 [⬅️ Previous _(Security > Users)_](../security/users.md)<br>
-[⬆️ Top _(Table of contents)_](../../README.md)<br>
+[⬆️ Top _(Table of contents)_](../../README.md#table-of-contents)<br>

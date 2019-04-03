@@ -9,4 +9,4 @@
 
 [➡ Next _(Development environment > Node setup)_](node_setup.md)<br>
 [⬅️ Previous _(Summary)_](../summary.md)<br>
-[⬆️ Top _(Table of contents)_](../../README.md)<br>
+[⬆️ Top _(Table of contents)_](../../README.md#table-of-contents)<br>
