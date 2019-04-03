@@ -21,6 +21,6 @@ cross-platform. For example the option `recursive` does not work on Linux.
 
 <hr>
 
-[➡ Next _(Shell commands)_](../shell_commands/README.md)<br>
-[⬅️ Previous _(Filesystem > Symlinks)_](symlinks.md)<br>
-[⬆️ Top _(Filesystem)_](README.md)<br>
+[🡲 Next _(Shell commands)_](../shell_commands/README.md)<br>
+[🡰 Previous _(Filesystem > Symlinks)_](symlinks.md)<br>
+[🡱 Top _(Filesystem)_](README.md)<br>

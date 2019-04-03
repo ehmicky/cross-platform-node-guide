@@ -21,6 +21,6 @@ be used for more device information.
 
 <hr>
 
-[➡ Next _(System > Time resolution)_](time_resolution.md)<br>
-[⬅️ Previous _(System > System configuration)_](system_configuration.md)<br>
-[⬆️ Top _(System)_](README.md)<br>
+[🡲 Next _(System > Time resolution)_](time_resolution.md)<br>
+[🡰 Previous _(System > System configuration)_](system_configuration.md)<br>
+[🡱 Top _(System)_](README.md)<br>

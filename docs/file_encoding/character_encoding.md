@@ -76,6 +76,6 @@ print common symbols consistently across platforms.
 
 <hr>
 
-[➡ Next _(File encoding > Newlines)_](newlines.md)<br>
-[⬅️ Previous _(File encoding)_](README.md)<br>
-[⬆️ Top _(File encoding)_](README.md)<br>
+[🡲 Next _(File encoding > Newlines)_](newlines.md)<br>
+[🡰 Previous _(File encoding)_](README.md)<br>
+[🡱 Top _(File encoding)_](README.md)<br>

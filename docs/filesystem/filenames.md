@@ -40,6 +40,6 @@ Cross-platform file paths need to avoid:
 
 <hr>
 
-[➡ Next _(Filesystem > Symlinks)_](symlinks.md)<br>
-[⬅️ Previous _(Filesystem > File paths)_](file_paths.md)<br>
-[⬆️ Top _(Filesystem)_](README.md)<br>
+[🡲 Next _(Filesystem > Symlinks)_](symlinks.md)<br>
+[🡰 Previous _(Filesystem > File paths)_](file_paths.md)<br>
+[🡱 Top _(Filesystem)_](README.md)<br>

@@ -129,5 +129,5 @@
 
 <hr>
 
-[➡ Next _(Development environment)_](development_environment/README.md)<br>
-[⬆️ Top _(Table of contents)_](../README.md#table-of-contents)<br>
+[🡲 Next _(Development environment)_](development_environment/README.md)<br>
+[🡱 Top _(Table of contents)_](../README.md#table-of-contents)<br>

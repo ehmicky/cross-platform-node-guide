@@ -36,6 +36,6 @@ Some projects allow retrieving:
 
 <hr>
 
-[➡ Next _(System > System configuration)_](system_configuration.md)<br>
-[⬅️ Previous _(System)_](README.md)<br>
-[⬆️ Top _(System)_](README.md)<br>
+[🡲 Next _(System > System configuration)_](system_configuration.md)<br>
+[🡰 Previous _(System)_](README.md)<br>
+[🡱 Top _(System)_](README.md)<br>

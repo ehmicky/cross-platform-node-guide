@@ -54,6 +54,6 @@ OS-specific environment variables names.
 
 <hr>
 
-[➡ Next _(Security)_](../security/README.md)<br>
-[⬅️ Previous _(Shell commands > Package binaries)_](package_binaries.md)<br>
-[⬆️ Top _(Shell commands)_](README.md)<br>
+[🡲 Next _(Security)_](../security/README.md)<br>
+[🡰 Previous _(Shell commands > Package binaries)_](package_binaries.md)<br>
+[🡱 Top _(Shell commands)_](README.md)<br>

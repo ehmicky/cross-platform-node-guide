@@ -31,6 +31,6 @@ like [ESLint](https://eslint.org/docs/rules/eol-last) and
 
 <hr>
 
-[➡ Next _(Filesystem)_](../filesystem/README.md)<br>
-[⬅️ Previous _(File encoding > Newlines)_](newlines.md)<br>
-[⬆️ Top _(File encoding)_](README.md)<br>
+[🡲 Next _(Filesystem)_](../filesystem/README.md)<br>
+[🡰 Previous _(File encoding > Newlines)_](newlines.md)<br>
+[🡱 Top _(File encoding)_](README.md)<br>

@@ -15,6 +15,6 @@ However on Windows:
 
 <hr>
 
-[➡ Next _(Networking / IPC > Processes)_](processes.md)<br>
-[⬅️ Previous _(Networking / IPC)_](README.md)<br>
-[⬆️ Top _(Networking / IPC)_](README.md)<br>
+[🡲 Next _(Networking / IPC > Processes)_](processes.md)<br>
+[🡰 Previous _(Networking / IPC)_](README.md)<br>
+[🡱 Top _(Networking / IPC)_](README.md)<br>
