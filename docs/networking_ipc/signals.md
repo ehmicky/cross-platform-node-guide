@@ -46,6 +46,8 @@ a PID) does not work on Windows.
 [`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
 does not work on Windows.
 
+<hr>
+
 [➡ Next _(Networking / IPC > Errors)_](errors.md)<br>
 [⬅️ Previous _(Networking / IPC > Processes)_](processes.md)<br>
 [⬆️ Top _(Networking / IPC)_](README.md)<br>

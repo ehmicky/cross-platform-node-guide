@@ -127,5 +127,7 @@
 - Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice` and
   [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
 
+<hr>
+
 [➡ Next _(Development environment)_](development_environment/README.md)<br>
 [⬆️ Top _(Table of contents)_](../README.md#table-of-contents)<br>

@@ -16,6 +16,8 @@ purpose:
 - a Unix shell file with no file extension which can be executed with `sh` or
   `bash`.
 
+<hr>
+
 [➡ Next _(Shell commands > Environment variables)_](environment_variables.md)<br>
 [⬅️ Previous _(Shell commands > File execution)_](file_execution.md)<br>
 [⬆️ Top _(Shell commands)_](README.md)<br>

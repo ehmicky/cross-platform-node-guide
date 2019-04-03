@@ -19,6 +19,8 @@ only works on Linux. Access times can also be disabled on Windows but through
 cross-platform. For example the option `recursive` does not work on Linux.
 [`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
 
+<hr>
+
 [➡ Next _(Shell commands)_](../shell_commands/README.md)<br>
 [⬅️ Previous _(Filesystem > Symlinks)_](symlinks.md)<br>
 [⬆️ Top _(Filesystem)_](README.md)<br>

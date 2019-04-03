@@ -29,6 +29,8 @@ Character encoding, newlines and EOF behavior should be specified with
 like [ESLint](https://eslint.org/docs/rules/eol-last) and
 [Prettier](https://github.com/prettier/prettier).
 
+<hr>
+
 [➡ Next _(Filesystem)_](../filesystem/README.md)<br>
 [⬅️ Previous _(File encoding > Newlines)_](newlines.md)<br>
 [⬆️ Top _(File encoding)_](README.md)<br>

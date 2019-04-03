@@ -54,6 +54,8 @@ Finally
 [`fs.lchmod()`](https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback)
 is only available on Mac.
 
+<hr>
+
 [➡ Next _(Security > Users)_](users.md)<br>
 [⬅️ Previous _(Security)_](README.md)<br>
 [⬆️ Top _(Security)_](README.md)<br>

@@ -38,6 +38,8 @@ Cross-platform file paths need to avoid:
   with `npm` deeply nesting `node_modules` but not anymore with the latest
   `npm` versions.
 
+<hr>
+
 [➡ Next _(Filesystem > Symlinks)_](symlinks.md)<br>
 [⬅️ Previous _(Filesystem > File paths)_](file_paths.md)<br>
 [⬆️ Top _(Filesystem)_](README.md)<br>

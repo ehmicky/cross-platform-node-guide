@@ -10,6 +10,8 @@ It is recommended to run automated tests on a
 provider that supports Linux, Mac and Windows, which most high-profile
 providers now do.
 
+<hr>
+
 [➡ Next _(Development environment > C/C++ addons)_](cpp_addons.md)<br>
 [⬅️ Previous _(Development environment > Core utilities)_](core_utilities.md)<br>
 [⬆️ Top _(Development environment)_](README.md)<br>

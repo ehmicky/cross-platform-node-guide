@@ -7,6 +7,8 @@
 - [Package binaries](package_binaries.md)
 - [Environment variables](environment_variables.md)
 
+<hr>
+
 [➡ Next _(Shell commands > Shell)_](shell.md)<br>
 [⬅️ Previous _(Filesystem > File metadata)_](../filesystem/file_metadata.md)<br>
 [⬆️ Top _(Table of contents)_](../../README.md#table-of-contents)<br>

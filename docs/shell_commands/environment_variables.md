@@ -52,6 +52,8 @@ Finally most environment variables names are OS-specific:
 The project [`osenv`](https://github.com/npm/osenv) can be used to retrieve
 OS-specific environment variables names.
 
+<hr>
+
 [➡ Next _(Security)_](../security/README.md)<br>
 [⬅️ Previous _(Shell commands > Package binaries)_](package_binaries.md)<br>
 [⬆️ Top _(Shell commands)_](README.md)<br>

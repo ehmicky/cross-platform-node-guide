@@ -53,6 +53,8 @@ operating system and the terminal itself. You can use
 However this is usually not necessary as colors library like
 [`chalk`](https://github.com/chalk/chalk) automatically do this.
 
+<hr>
+
 [➡ Next _(Shell commands > File execution)_](file_execution.md)<br>
 [⬅️ Previous _(Shell commands)_](README.md)<br>
 [⬆️ Top _(Shell commands)_](README.md)<br>

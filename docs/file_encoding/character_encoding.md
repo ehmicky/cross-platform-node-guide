@@ -74,6 +74,8 @@ When writing to a terminal the character encoding will almost always be
 [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
 print common symbols consistently across platforms.
 
+<hr>
+
 [➡ Next _(File encoding > Newlines)_](newlines.md)<br>
 [⬅️ Previous _(File encoding)_](README.md)<br>
 [⬆️ Top _(File encoding)_](README.md)<br>

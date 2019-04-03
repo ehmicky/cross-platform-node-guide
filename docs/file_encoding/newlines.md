@@ -18,6 +18,8 @@ don't, which is why when reading from or writing to a file the OS-specific
 newline [`os.EOL`](https://nodejs.org/api/os.html#os_os_eol) should be used
 instead of `\n`.
 
+<hr>
+
 [➡ Next _(File encoding > EOF and BOM)_](eof_bom.md)<br>
 [⬅️ Previous _(File encoding > Character encoding)_](character_encoding.md)<br>
 [⬆️ Top _(File encoding)_](README.md)<br>

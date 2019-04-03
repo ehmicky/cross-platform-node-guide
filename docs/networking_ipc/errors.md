@@ -17,6 +17,8 @@ can be fired on any OS. However few
 [start with `W`](https://nodejs.org/api/os.html#os_windows_specific_error_constants)
 and can only be fired on Windows.
 
+<hr>
+
 [➡ Next _(System)_](../system/README.md)<br>
 [⬅️ Previous _(Networking / IPC > Signals)_](signals.md)<br>
 [⬆️ Top _(Networking / IPC)_](README.md)<br>

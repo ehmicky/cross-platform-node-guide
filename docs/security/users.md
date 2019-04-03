@@ -35,6 +35,8 @@ triggered with different mechanisms. One can use
 [`is-admin`](https://github.com/sindresorhus/is-admin) and
 [`is-root`](https://github.com/sindresorhus/is-root)) to check it on any OS.
 
+<hr>
+
 [➡ Next _(Networking / IPC)_](../networking_ipc/README.md)<br>
 [⬅️ Previous _(Security > Permissions)_](permissions.md)<br>
 [⬆️ Top _(Security)_](README.md)<br>

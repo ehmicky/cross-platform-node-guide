@@ -16,6 +16,8 @@ Neither junctions nor hard links
 ([`fs.link()`](https://nodejs.org/api/fs.html#fs_fs_link_existingpath_newpath_callback))
 require permissions on Windows.
 
+<hr>
+
 [➡ Next _(Filesystem > File metadata)_](file_metadata.md)<br>
 [⬅️ Previous _(Filesystem > Filenames)_](filenames.md)<br>
 [⬆️ Top _(Filesystem)_](README.md)<br>

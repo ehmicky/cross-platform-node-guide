@@ -66,6 +66,8 @@ To summarize:
   OS-specific. However all Node.js core methods will properly handle it.
 - in all other cases using Unix paths will just work.
 
+<hr>
+
 [➡ Next _(Filesystem > Filenames)_](filenames.md)<br>
 [⬅️ Previous _(Filesystem > Directory locations)_](directory_locations.md)<br>
 [⬆️ Top _(Filesystem)_](README.md)<br>

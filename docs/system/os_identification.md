@@ -34,6 +34,8 @@ Some projects allow retrieving:
   Windows though
   [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
+<hr>
+
 [➡ Next _(System > System configuration)_](system_configuration.md)<br>
 [⬅️ Previous _(System)_](README.md)<br>
 [⬆️ Top _(System)_](README.md)<br>
