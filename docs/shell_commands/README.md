@@ -1,0 +1,12 @@
+# Shell commands
+
+## Table of contents
+
+- [Shell](shell.md)
+- [File execution](file_execution.md)
+- [Package binaries](package_binaries.md)
+- [Environment variables](environment_variables.md)
+
+[➡ Next _(Shell commands > Shell)_](shell.md)<br>
+[⬅️ Previous _(Filesystem > File metadata)_](../filesystem/file_metadata.md)<br>
+[⬆️ Top _(Table of contents)_](../../README.md)<br>
