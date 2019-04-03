@@ -1,4 +1,4 @@
-# Shell
+# 💻 Shell
 
 Unix usually comes with [Bash](https://www.gnu.org/software/bash/) but not
 always. Popular alternatives include [Fish](https://fishshell.com/),
@@ -55,6 +55,6 @@ However this is usually not necessary as colors library like
 
 <hr>
 
-[🡲 **Next** _(Terminal > File execution)_](file_execution.md)<br>
-[🡰 **Previous** _(Terminal)_](README.md)<br>
-[🡱 **Top** _(Terminal)_](README.md)<br>
+[🡲 **Next** _(💻 File execution)_](file_execution.md)<br>
+[🡰 **Previous** _(💻 Terminal)_](README.md)<br>
+[🡱 **Top**](README.md)<br>

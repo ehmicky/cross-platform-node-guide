@@ -1,4 +1,4 @@
-# Networking
+# 📡 Networking
 
 [`os.networkInterfaces()`](https://nodejs.org/api/os.html#os_os_networkinterfaces)
 and [`os.hostname()`](https://nodejs.org/api/os.html#os_os_networkinterfaces)
@@ -15,6 +15,6 @@ However on Windows:
 
 <hr>
 
-[🡲 **Next** _(Networking / IPC > Processes)_](processes.md)<br>
-[🡰 **Previous** _(Networking / IPC)_](README.md)<br>
-[🡱 **Top** _(Networking / IPC)_](README.md)<br>
+[🡲 **Next** _(📡 Processes)_](processes.md)<br>
+[🡰 **Previous** _(📡 Networking / IPC)_](README.md)<br>
+[🡱 **Top**](README.md)<br>

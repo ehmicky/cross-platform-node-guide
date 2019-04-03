@@ -1,4 +1,4 @@
-# Newlines
+# 📝 Newlines
 
 The character representation of a
 [newline](https://en.wikipedia.org/wiki/Newline) is OS-specific. On Unix it
@@ -20,6 +20,6 @@ instead of `\n`.
 
 <hr>
 
-[🡲 **Next** _(File encoding > EOF and BOM)_](eof_bom.md)<br>
-[🡰 **Previous** _(File encoding > Character encoding)_](character_encoding.md)<br>
-[🡱 **Top** _(File encoding)_](README.md)<br>
+[🡲 **Next** _(📝 EOF and BOM)_](eof_bom.md)<br>
+[🡰 **Previous** _(📝 Character encoding)_](character_encoding.md)<br>
+[🡱 **Top**](README.md)<br>

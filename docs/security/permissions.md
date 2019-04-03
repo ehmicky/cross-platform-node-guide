@@ -1,4 +1,4 @@
-# Permissions
+# 🔒 Permissions
 
 Unix uses [POSIX permissions](https://linux.die.net/man/1/chmod) but Windows is
 based on a combination of:
@@ -56,6 +56,6 @@ is only available on Mac.
 
 <hr>
 
-[🡲 **Next** _(Security > Users)_](users.md)<br>
-[🡰 **Previous** _(Security)_](README.md)<br>
-[🡱 **Top** _(Security)_](README.md)<br>
+[🡲 **Next** _(🔒 Users)_](users.md)<br>
+[🡰 **Previous** _(🔒 Security)_](README.md)<br>
+[🡱 **Top**](README.md)<br>

@@ -1,4 +1,4 @@
-# Environment variables
+# 💻 Environment variables
 
 The syntax to
 [reference environment variables](https://ss64.com/nt/syntax-variables.html) is
@@ -54,6 +54,6 @@ OS-specific environment variables names.
 
 <hr>
 
-[🡲 **Next** _(Security)_](../security/README.md)<br>
-[🡰 **Previous** _(Terminal > Package binaries)_](package_binaries.md)<br>
-[🡱 **Top** _(Terminal)_](README.md)<br>
+[🡲 **Next** _(🔒 Security)_](../security/README.md)<br>
+[🡰 **Previous** _(💻 Package binaries)_](package_binaries.md)<br>
+[🡱 **Top**](README.md)<br>

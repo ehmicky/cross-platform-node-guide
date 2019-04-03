@@ -1,4 +1,4 @@
-# Symlinks
+# 📂 Symlinks
 
 Windows (but not Unix) can use
 [junctions](https://docs.microsoft.com/en-us/windows/desktop/fileio/hard-links-and-junctions).
@@ -18,6 +18,6 @@ require permissions on Windows.
 
 <hr>
 
-[🡲 **Next** _(Filesystem > File metadata)_](file_metadata.md)<br>
-[🡰 **Previous** _(Filesystem > Filenames)_](filenames.md)<br>
-[🡱 **Top** _(Filesystem)_](README.md)<br>
+[🡲 **Next** _(📂 File metadata)_](file_metadata.md)<br>
+[🡰 **Previous** _(📂 Filenames)_](filenames.md)<br>
+[🡱 **Top**](README.md)<br>

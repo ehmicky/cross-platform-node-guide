@@ -1,4 +1,4 @@
-# Character encoding
+# 📝 Character encoding
 
 The [character encoding](https://en.wikipedia.org/wiki/Character_encoding) on
 Unix is usually [UTF-8](https://en.wikipedia.org/wiki/UTF-8). However on Windows
@@ -76,6 +76,6 @@ print common symbols consistently across platforms.
 
 <hr>
 
-[🡲 **Next** _(File encoding > Newlines)_](newlines.md)<br>
-[🡰 **Previous** _(File encoding)_](README.md)<br>
-[🡱 **Top** _(File encoding)_](README.md)<br>
+[🡲 **Next** _(📝 Newlines)_](newlines.md)<br>
+[🡰 **Previous** _(📝 File encoding)_](README.md)<br>
+[🡱 **Top**](README.md)<br>

@@ -1,4 +1,4 @@
-# Filenames
+# 📂 Filenames
 
 Each OS tends to use its own
 [file system](https://en.wikipedia.org/wiki/File_system):
@@ -40,6 +40,6 @@ Cross-platform file paths need to avoid:
 
 <hr>
 
-[🡲 **Next** _(Filesystem > Symlinks)_](symlinks.md)<br>
-[🡰 **Previous** _(Filesystem > File paths)_](file_paths.md)<br>
-[🡱 **Top** _(Filesystem)_](README.md)<br>
+[🡲 **Next** _(📂 Symlinks)_](symlinks.md)<br>
+[🡰 **Previous** _(📂 File paths)_](file_paths.md)<br>
+[🡱 **Top**](README.md)<br>

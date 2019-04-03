@@ -1,6 +1,6 @@
 # Summary
 
-## [Development environment](development_environment/README.md)
+## 🤖 [Development environment](development_environment/README.md)
 
 - Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
   or [core utilities](https://www.gnu.org/software/coreutils/) without using
@@ -16,7 +16,7 @@
   [`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
   on Windows when installing [C/C++ addons](https://nodejs.org/api/addons.html).
 
-## [File encoding](file_encoding/README.md)
+## 📝 [File encoding](file_encoding/README.md)
 
 - Use [`UTF-8`](https://en.wikipedia.org/wiki/UTF-8). File/terminal input
   should either be validated or converted to it
@@ -33,7 +33,7 @@
   [substitute character](https://en.wikipedia.org/wiki/Substitute_character)
   (`CTRL-Z`) in non-binary files.
 
-## [Filesystem](filesystem/README.md)
+## 📂 [Filesystem](filesystem/README.md)
 
 - Use
   [`path.normalize()`](https://nodejs.org/api/path.html#path_path_normalize_path)
@@ -53,7 +53,7 @@
   by
   [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback).
 
-## [Terminal](terminal/README.md)
+## 💻 [Terminal](terminal/README.md)
 
 - Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - Keep shell commands to simple `command arguments...` calls.
@@ -63,7 +63,7 @@
   [`stdio` option](https://nodejs.org/api/child_process.html#child_process_options_stdio)
   of [`child_process`](https://nodejs.org/api/child_process.html) methods.
 
-## [Security](security/README.md)
+## 🔒 [Security](security/README.md)
 
 - Avoid
   [`fs.chmod()`](https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback),
@@ -90,7 +90,7 @@
   [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
   [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
 
-## [Networking / IPC](networking_ipc/README.md)
+## 📡 [Networking / IPC](networking_ipc/README.md)
 
 - Use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
 - Only use
@@ -111,7 +111,7 @@
 - Do not use
   [`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
 
-## [System](system/README.md)
+## ⚙️ [System](system/README.md)
 
 - Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed.
   If it lacks some information, use

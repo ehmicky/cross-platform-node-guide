@@ -1,4 +1,4 @@
-# Processes
+# 📡 Processes
 
 [`process.pid`](https://nodejs.org/api/process.html#process_process_pid),
 [`process.ppid`](https://nodejs.org/api/process.html#process_process_ppid),
@@ -21,6 +21,6 @@ Other projects can be used to manipulate processes:
 
 <hr>
 
-[🡲 **Next** _(Networking / IPC > Signals)_](signals.md)<br>
-[🡰 **Previous** _(Networking / IPC > Networking)_](networking.md)<br>
-[🡱 **Top** _(Networking / IPC)_](README.md)<br>
+[🡲 **Next** _(📡 Signals)_](signals.md)<br>
+[🡰 **Previous** _(📡 Networking)_](networking.md)<br>
+[🡱 **Top**](README.md)<br>

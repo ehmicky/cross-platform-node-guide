@@ -1,4 +1,4 @@
-# Hardware
+# ⚙️ Hardware
 
 Uptime, memory and CPUs can be retrieved on any OS using
 [`os.uptime()`](https://nodejs.org/api/os.html#os_os_uptime),
@@ -21,6 +21,6 @@ be used for more information.
 
 <hr>
 
-[🡲 **Next** _(System > Time)_](time.md)<br>
-[🡰 **Previous** _(System > System configuration)_](system_configuration.md)<br>
-[🡱 **Top** _(System)_](README.md)<br>
+[🡲 **Next** _(⚙️ Time)_](time.md)<br>
+[🡰 **Previous** _(⚙️ System configuration)_](system_configuration.md)<br>
+[🡱 **Top**](README.md)<br>

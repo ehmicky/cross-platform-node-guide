@@ -1,4 +1,4 @@
-# File execution
+# 💻 File execution
 
 To decide which program should execute a file:
 
@@ -55,6 +55,6 @@ Many of those differences can be solved by using
 
 <hr>
 
-[🡲 **Next** _(Terminal > Package binaries)_](package_binaries.md)<br>
-[🡰 **Previous** _(Terminal > Shell)_](shell.md)<br>
-[🡱 **Top** _(Terminal)_](README.md)<br>
+[🡲 **Next** _(💻 Package binaries)_](package_binaries.md)<br>
+[🡰 **Previous** _(💻 Shell)_](shell.md)<br>
+[🡱 **Top**](README.md)<br>

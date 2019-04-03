@@ -1,4 +1,4 @@
-# File paths
+# 📂 File paths
 
 While `/` is used as a file path delimiter on Unix (`/file/to/path`), `\` is
 used on Windows instead (`\file\to\path`). The path delimiter can be retrieved
@@ -68,6 +68,6 @@ To summarize:
 
 <hr>
 
-[🡲 **Next** _(Filesystem > Filenames)_](filenames.md)<br>
-[🡰 **Previous** _(Filesystem > Directory locations)_](directory_locations.md)<br>
-[🡱 **Top** _(Filesystem)_](README.md)<br>
+[🡲 **Next** _(📂 Filenames)_](filenames.md)<br>
+[🡰 **Previous** _(📂 Directory locations)_](directory_locations.md)<br>
+[🡱 **Top**](README.md)<br>

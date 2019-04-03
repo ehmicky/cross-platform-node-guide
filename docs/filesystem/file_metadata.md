@@ -1,4 +1,4 @@
-# File metadata
+# 📂 File metadata
 
 The [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize) and
 [`blocks`](https://nodejs.org/api/fs.html#fs_stats_blocks) values of
@@ -21,6 +21,6 @@ cross-platform. For example the option `recursive` does not work on Linux.
 
 <hr>
 
-[🡲 **Next** _(Terminal)_](../terminal/README.md)<br>
-[🡰 **Previous** _(Filesystem > Symlinks)_](symlinks.md)<br>
-[🡱 **Top** _(Filesystem)_](README.md)<br>
+[🡲 **Next** _(💻 Terminal)_](../terminal/README.md)<br>
+[🡰 **Previous** _(📂 Symlinks)_](symlinks.md)<br>
+[🡱 **Top**](README.md)<br>

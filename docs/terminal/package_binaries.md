@@ -1,4 +1,4 @@
-# Package binaries
+# 💻 Package binaries
 
 Package binaries
 ([`package.json`'s `bin` field](https://docs.npmjs.com/files/package.json#bin))
@@ -18,6 +18,6 @@ purpose:
 
 <hr>
 
-[🡲 **Next** _(Terminal > Environment variables)_](environment_variables.md)<br>
-[🡰 **Previous** _(Terminal > File execution)_](file_execution.md)<br>
-[🡱 **Top** _(Terminal)_](README.md)<br>
+[🡲 **Next** _(💻 Environment variables)_](environment_variables.md)<br>
+[🡰 **Previous** _(💻 File execution)_](file_execution.md)<br>
+[🡱 **Top**](README.md)<br>

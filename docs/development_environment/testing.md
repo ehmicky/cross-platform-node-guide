@@ -1,4 +1,4 @@
-# Testing
+# 🤖 Testing
 
 Any OS can be run locally using
 [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine).
@@ -12,6 +12,6 @@ providers now do.
 
 <hr>
 
-[🡲 **Next** _(Development environment > C/C++ addons)_](cpp_addons.md)<br>
-[🡰 **Previous** _(Development environment > Core utilities)_](core_utilities.md)<br>
-[🡱 **Top** _(Development environment)_](README.md)<br>
+[🡲 **Next** _(🤖 C/C++ addons)_](cpp_addons.md)<br>
+[🡰 **Previous** _(🤖 Core utilities)_](core_utilities.md)<br>
+[🡱 **Top**](README.md)<br>

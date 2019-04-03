@@ -1,4 +1,4 @@
-# Errors
+# 📡 Errors
 
 Node errors can be identified with either:
 
@@ -19,6 +19,6 @@ and can only be fired on Windows.
 
 <hr>
 
-[🡲 **Next** _(System)_](../system/README.md)<br>
-[🡰 **Previous** _(Networking / IPC > Signals)_](signals.md)<br>
-[🡱 **Top** _(Networking / IPC)_](README.md)<br>
+[🡲 **Next** _(⚙️ System)_](../system/README.md)<br>
+[🡰 **Previous** _(📡 Signals)_](signals.md)<br>
+[🡱 **Top**](README.md)<br>

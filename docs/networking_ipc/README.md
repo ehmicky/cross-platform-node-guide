@@ -1,4 +1,4 @@
-# Networking / IPC
+# 📡 Networking / IPC
 
 ## Table of contents
 
@@ -9,6 +9,6 @@
 
 <hr>
 
-[🡲 **Next** _(Networking / IPC > Networking)_](networking.md)<br>
-[🡰 **Previous** _(Security > Users)_](../security/users.md)<br>
+[🡲 **Next** _(📡 Networking)_](networking.md)<br>
+[🡰 **Previous** _(🔒 Users)_](../security/users.md)<br>
 [🡱 **Top** _(Table of contents)_](../../README.md#table-of-contents)<br>

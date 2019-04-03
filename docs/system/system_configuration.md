@@ -1,4 +1,4 @@
-# System configuration
+# ⚙️ System configuration
 
 While Unix usually stores system configuration as files, Windows uses the
 [registry](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry),
@@ -13,6 +13,6 @@ configuration as files or remotely is easier and more cross-platform.
 
 <hr>
 
-[🡲 **Next** _(System > Hardware)_](hardware.md)<br>
-[🡰 **Previous** _(System > OS identification)_](os_identification.md)<br>
-[🡱 **Top** _(System)_](README.md)<br>
+[🡲 **Next** _(⚙️ Hardware)_](hardware.md)<br>
+[🡰 **Previous** _(⚙️ OS identification)_](os_identification.md)<br>
+[🡱 **Top**](README.md)<br>

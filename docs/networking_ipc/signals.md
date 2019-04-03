@@ -1,4 +1,4 @@
-# Signals
+# 📡 Signals
 
 Windows do not use signals like Unix does.
 
@@ -48,6 +48,6 @@ does not work on Windows.
 
 <hr>
 
-[🡲 **Next** _(Networking / IPC > Errors)_](errors.md)<br>
-[🡰 **Previous** _(Networking / IPC > Processes)_](processes.md)<br>
-[🡱 **Top** _(Networking / IPC)_](README.md)<br>
+[🡲 **Next** _(📡 Errors)_](errors.md)<br>
+[🡰 **Previous** _(📡 Processes)_](processes.md)<br>
+[🡱 **Top**](README.md)<br>

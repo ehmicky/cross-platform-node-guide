@@ -17,20 +17,20 @@ How to write cross-platform Node.js code.
 
 [Summary](docs/summary.md)
 
-## [Development environment](docs/development_environment/README.md)
+## 🤖 [Development environment](docs/development_environment/README.md)
 
 - [Node setup](docs/development_environment/node_setup.md)
 - [Core utilities](docs/development_environment/core_utilities.md)
 - [Testing](docs/development_environment/testing.md)
 - [C/C++ addons](docs/development_environment/cpp_addons.md)
 
-## [File encoding](docs/file_encoding/README.md)
+## 📝 [File encoding](docs/file_encoding/README.md)
 
 - [Character encoding](docs/file_encoding/character_encoding.md)
 - [Newlines](docs/file_encoding/newlines.md)
 - [EOF and BOM](docs/file_encoding/eof_bom.md)
 
-## [Filesystem](docs/filesystem/README.md)
+## 📂 [Filesystem](docs/filesystem/README.md)
 
 - [Directory locations](docs/filesystem/directory_locations.md)
 - [File paths](docs/filesystem/file_paths.md)
@@ -38,26 +38,26 @@ How to write cross-platform Node.js code.
 - [Symlinks](docs/filesystem/symlinks.md)
 - [File metadata](docs/filesystem/file_metadata.md)
 
-## [Terminal](docs/terminal/README.md)
+## 💻 [Terminal](docs/terminal/README.md)
 
 - [Shell](docs/terminal/shell.md)
 - [File execution](docs/terminal/file_execution.md)
 - [Package binaries](docs/terminal/package_binaries.md)
 - [Environment variables](docs/terminal/environment_variables.md)
 
-## [Security](docs/security/README.md)
+## 🔒 [Security](docs/security/README.md)
 
 - [Permissions](docs/security/permissions.md)
 - [Users](docs/security/users.md)
 
-## [Networking / IPC](docs/networking_ipc/README.md)
+## 📡 [Networking / IPC](docs/networking_ipc/README.md)
 
 - [Networking](docs/networking_ipc/networking.md)
 - [Processes](docs/networking_ipc/processes.md)
 - [Signals](docs/networking_ipc/signals.md)
 - [Errors](docs/networking_ipc/errors.md)
 
-## [System](docs/system/README.md)
+## ⚙️ [System](docs/system/README.md)
 
 - [OS identification](docs/system/os_identification.md)
 - [System configuration](docs/system/system_configuration.md)

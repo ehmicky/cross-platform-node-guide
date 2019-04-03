@@ -1,4 +1,4 @@
-# System
+# ⚙️ System
 
 ## Table of contents
 
@@ -9,6 +9,6 @@
 
 <hr>
 
-[🡲 **Next** _(System > OS identification)_](os_identification.md)<br>
-[🡰 **Previous** _(Networking / IPC > Errors)_](../networking_ipc/errors.md)<br>
+[🡲 **Next** _(⚙️ OS identification)_](os_identification.md)<br>
+[🡰 **Previous** _(📡 Errors)_](../networking_ipc/errors.md)<br>
 [🡱 **Top** _(Table of contents)_](../../README.md#table-of-contents)<br>

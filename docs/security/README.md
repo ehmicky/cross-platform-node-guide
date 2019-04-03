@@ -1,4 +1,4 @@
-# Security
+# 🔒 Security
 
 ## Table of contents
 
@@ -7,6 +7,6 @@
 
 <hr>
 
-[🡲 **Next** _(Security > Permissions)_](permissions.md)<br>
-[🡰 **Previous** _(Terminal > Environment variables)_](../terminal/environment_variables.md)<br>
+[🡲 **Next** _(🔒 Permissions)_](permissions.md)<br>
+[🡰 **Previous** _(💻 Environment variables)_](../terminal/environment_variables.md)<br>
 [🡱 **Top** _(Table of contents)_](../../README.md#table-of-contents)<br>
