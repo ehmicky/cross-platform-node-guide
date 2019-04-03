@@ -114,7 +114,7 @@
 ## [System](system/README.md)
 
 - Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed.
-  If it lacks some device information, use
+  If it lacks some information, use
   [`systeminformation`](https://github.com/sebhildebrandt/systeminformation)
   instead.
 - When using OS-specific logic, identify the current OS with

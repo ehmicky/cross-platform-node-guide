@@ -4,7 +4,7 @@
 
 - [OS identification](os_identification.md)
 - [System configuration](system_configuration.md)
-- [Device information](device_information.md)
+- [Hardware](hardware.md)
 - [Time](time.md)
 
 <hr>

@@ -13,6 +13,6 @@ configuration as files or remotely is easier and more cross-platform.
 
 <hr>
 
-[🡲 **Next** _(System > Device information)_](device_information.md)<br>
+[🡲 **Next** _(System > Hardware)_](hardware.md)<br>
 [🡰 **Previous** _(System > OS identification)_](os_identification.md)<br>
 [🡱 **Top** _(System)_](README.md)<br>

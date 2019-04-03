@@ -61,7 +61,7 @@ How to write cross-platform Node.js code.
 
 - [OS identification](docs/system/os_identification.md)
 - [System configuration](docs/system/system_configuration.md)
-- [Device information](docs/system/device_information.md)
+- [Hardware](docs/system/hardware.md)
 - [Time](docs/system/time.md)
 
 # See also

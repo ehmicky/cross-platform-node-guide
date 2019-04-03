@@ -1,4 +1,4 @@
-# Device information
+# Hardware
 
 Uptime, memory and CPUs can be retrieved on any OS using
 [`os.uptime()`](https://nodejs.org/api/os.html#os_os_uptime),
@@ -17,7 +17,7 @@ However:
   of `0` on Windows.
 
 [`systeminformation`](https://github.com/sebhildebrandt/systeminformation) can
-be used for more device information.
+be used for more information.
 
 <hr>
 
