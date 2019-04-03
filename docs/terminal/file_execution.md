@@ -55,6 +55,6 @@ Many of those differences can be solved by using
 
 <hr>
 
-[🡲 Next _(Terminal > Package binaries)_](package_binaries.md)<br>
-[🡰 Previous _(Terminal > Shell)_](shell.md)<br>
-[🡱 Top _(Terminal)_](README.md)<br>
+[🡲 **Next** _(Terminal > Package binaries)_](package_binaries.md)<br>
+[🡰 **Previous** _(Terminal > Shell)_](shell.md)<br>
+[🡱 **Top** _(Terminal)_](README.md)<br>

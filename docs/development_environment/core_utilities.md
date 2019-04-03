@@ -44,6 +44,6 @@ emulating or translating system calls:
 
 <hr>
 
-[🡲 Next _(Development environment > Testing)_](testing.md)<br>
-[🡰 Previous _(Development environment > Node setup)_](node_setup.md)<br>
-[🡱 Top _(Development environment)_](README.md)<br>
+[🡲 **Next** _(Development environment > Testing)_](testing.md)<br>
+[🡰 **Previous** _(Development environment > Node setup)_](node_setup.md)<br>
+[🡱 **Top** _(Development environment)_](README.md)<br>

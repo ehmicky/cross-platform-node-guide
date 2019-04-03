@@ -12,6 +12,6 @@ providers now do.
 
 <hr>
 
-[🡲 Next _(Development environment > C/C++ addons)_](cpp_addons.md)<br>
-[🡰 Previous _(Development environment > Core utilities)_](core_utilities.md)<br>
-[🡱 Top _(Development environment)_](README.md)<br>
+[🡲 **Next** _(Development environment > C/C++ addons)_](cpp_addons.md)<br>
+[🡰 **Previous** _(Development environment > Core utilities)_](core_utilities.md)<br>
+[🡱 **Top** _(Development environment)_](README.md)<br>
