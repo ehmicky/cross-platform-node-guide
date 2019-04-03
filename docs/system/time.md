@@ -1,4 +1,4 @@
-# Time resolution
+# Time
 
 The resolution of
 [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
