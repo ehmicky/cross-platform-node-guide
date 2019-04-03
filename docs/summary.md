@@ -53,7 +53,7 @@
   by
   [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback).
 
-## [Shell commands](shell_commands/README.md)
+## [Terminal](terminal/README.md)
 
 - Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - Keep shell commands to simple `command arguments...` calls.

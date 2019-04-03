@@ -38,12 +38,12 @@ How to write cross-platform Node.js code.
 - [Symlinks](docs/filesystem/symlinks.md)
 - [File metadata](docs/filesystem/file_metadata.md)
 
-## [Shell commands](docs/shell_commands/README.md)
+## [Terminal](docs/terminal/README.md)
 
-- [Shell](docs/shell_commands/shell.md)
-- [File execution](docs/shell_commands/file_execution.md)
-- [Package binaries](docs/shell_commands/package_binaries.md)
-- [Environment variables](docs/shell_commands/environment_variables.md)
+- [Shell](docs/terminal/shell.md)
+- [File execution](docs/terminal/file_execution.md)
+- [Package binaries](docs/terminal/package_binaries.md)
+- [Environment variables](docs/terminal/environment_variables.md)
 
 ## [Security](docs/security/README.md)
 

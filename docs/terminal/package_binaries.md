@@ -18,6 +18,6 @@ purpose:
 
 <hr>
 
-[🡲 Next _(Shell commands > Environment variables)_](environment_variables.md)<br>
-[🡰 Previous _(Shell commands > File execution)_](file_execution.md)<br>
-[🡱 Top _(Shell commands)_](README.md)<br>
+[🡲 Next _(Terminal > Environment variables)_](environment_variables.md)<br>
+[🡰 Previous _(Terminal > File execution)_](file_execution.md)<br>
+[🡱 Top _(Terminal)_](README.md)<br>
