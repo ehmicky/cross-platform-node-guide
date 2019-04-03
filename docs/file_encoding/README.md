@@ -10,4 +10,4 @@
 
 [🡲 **Next** _(📝 Character encoding)_](character_encoding.md)<br>
 [🡰 **Previous** _(🤖 C/C++ addons)_](../development_environment/cpp_addons.md)<br>
-[🡱 **Top** _(Table of contents)_](../../README.md#table-of-contents)<br>
+[🡱 **Top**](../../README.md#table-of-contents)<br>

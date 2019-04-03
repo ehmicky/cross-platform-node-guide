@@ -11,4 +11,4 @@
 
 [🡲 **Next** _(💻 Shell)_](shell.md)<br>
 [🡰 **Previous** _(📂 File metadata)_](../filesystem/file_metadata.md)<br>
-[🡱 **Top** _(Table of contents)_](../../README.md#table-of-contents)<br>
+[🡱 **Top**](../../README.md#table-of-contents)<br>
