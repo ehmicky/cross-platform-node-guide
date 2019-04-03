@@ -18,7 +18,7 @@ If you find this document too long, you can jump to the [summary](#summary).
 
 # Table of contents
 
-- [Installing and updating Node](#installing-and-updating-node)
+- [Node setup](#node-setup)
 - [Core utilities](#core-utilities)
 - [Testing](#testing)
 - [C/C++ addons](#cc-addons)
@@ -49,7 +49,7 @@ If you find this document too long, you can jump to the [summary](#summary).
 - [Support](#support)
 - [Contributing](#contributing)
 
-# Installing and updating Node
+# Node setup
 
 Installers for each major OS are available on the
 [Node.js website](https://nodejs.org/en/download/).
