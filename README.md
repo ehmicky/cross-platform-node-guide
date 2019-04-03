@@ -8,9 +8,8 @@
 How to write cross-platform Node.js code.
 
 **Why you should care**: according to the
-[2018 Node.js user survey](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro)
-(using the
-[raw data](https://nodejs.org/en/user-survey-report/2018-nodejs-user-survey-raw-data.xlsx)),
+[2018 Node.js](https://nodejs.org/en/user-survey-report/#Primary-OS-Distro)
+[user survey](https://nodejs.org/en/user-survey-report/2018-nodejs-user-survey-raw-data.xlsx),
 24% of Node.js developers use Windows locally and 41% use Mac. In production
 85% use Linux and 1% use BSD.
 
