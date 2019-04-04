@@ -68,6 +68,6 @@ To summarize:
 
 <hr>
 
-[→ **Next** _(📂 Filenames)_](filenames.md)<br>
-[← **Previous** _(📂 Directory locations)_](directory_locations.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(📂 Filenames)_](filenames.md)<br>
+[**Previous** _(📂 Directory locations)_](directory_locations.md)<br>
+[**Top**](README.md)<br>

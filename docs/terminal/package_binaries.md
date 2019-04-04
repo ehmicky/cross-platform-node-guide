@@ -18,6 +18,6 @@ purpose:
 
 <hr>
 
-[→ **Next** _(💻 Environment variables)_](environment_variables.md)<br>
-[← **Previous** _(💻 File execution)_](file_execution.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(💻 Environment variables)_](environment_variables.md)<br>
+[**Previous** _(💻 File execution)_](file_execution.md)<br>
+[**Top**](README.md)<br>

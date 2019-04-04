@@ -14,6 +14,6 @@ To upgrade `npm` on Windows, it is convenient to use
 
 <hr>
 
-[→ **Next** _(🤖 Core utilities)_](core_utilities.md)<br>
-[← **Previous** _(🤖 Development environment)_](README.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(🤖 Core utilities)_](core_utilities.md)<br>
+[**Previous** _(🤖 Development environment)_](README.md)<br>
+[**Top**](README.md)<br>

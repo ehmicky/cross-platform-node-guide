@@ -55,6 +55,6 @@ However this is usually not necessary as colors library like
 
 <hr>
 
-[→ **Next** _(💻 File execution)_](file_execution.md)<br>
-[← **Previous** _(💻 Terminal)_](README.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(💻 File execution)_](file_execution.md)<br>
+[**Previous** _(💻 Terminal)_](README.md)<br>
+[**Top**](README.md)<br>

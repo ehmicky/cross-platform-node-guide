@@ -20,6 +20,6 @@ instead of `\n`.
 
 <hr>
 
-[→ **Next** _(📝 EOF and BOM)_](eof_bom.md)<br>
-[← **Previous** _(📝 Character encoding)_](character_encoding.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(📝 EOF and BOM)_](eof_bom.md)<br>
+[**Previous** _(📝 Character encoding)_](character_encoding.md)<br>
+[**Top**](README.md)<br>

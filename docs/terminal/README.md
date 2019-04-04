@@ -9,6 +9,6 @@
 
 <hr>
 
-[→ **Next** _(💻 Shell)_](shell.md)<br>
-[← **Previous** _(📂 File metadata)_](../filesystem/file_metadata.md)<br>
-[↑ **Top**](../../README.md#table-of-contents)<br>
+[**Next** _(💻 Shell)_](shell.md)<br>
+[**Previous** _(📂 File metadata)_](../filesystem/file_metadata.md)<br>
+[**Top**](../../README.md#table-of-contents)<br>

@@ -44,6 +44,6 @@ emulating or translating system calls:
 
 <hr>
 
-[→ **Next** _(🤖 Testing)_](testing.md)<br>
-[← **Previous** _(🤖 Node setup)_](node_setup.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(🤖 Testing)_](testing.md)<br>
+[**Previous** _(🤖 Node setup)_](node_setup.md)<br>
+[**Top**](README.md)<br>

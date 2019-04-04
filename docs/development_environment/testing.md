@@ -12,6 +12,6 @@ providers now do.
 
 <hr>
 
-[→ **Next** _(🤖 C/C++ addons)_](cpp_addons.md)<br>
-[← **Previous** _(🤖 Core utilities)_](core_utilities.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(🤖 C/C++ addons)_](cpp_addons.md)<br>
+[**Previous** _(🤖 Core utilities)_](core_utilities.md)<br>
+[**Top**](README.md)<br>

@@ -21,6 +21,6 @@ be used for more information.
 
 <hr>
 
-[→ **Next** _(🎛️ Time)_](time.md)<br>
-[← **Previous** _(🎛️ System configuration)_](system_configuration.md)<br>
-[↑ **Top**](README.md)<br>
+[**Next** _(🎛️ Time)_](time.md)<br>
+[**Previous** _(🎛️ System configuration)_](system_configuration.md)<br>
+[**Top**](README.md)<br>
