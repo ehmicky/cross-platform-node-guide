@@ -1,5 +1,7 @@
 # 💻 File execution
 
+## Program selection
+
 To decide which program should execute a file:
 
 - Unix uses [shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) like
@@ -16,16 +18,22 @@ Cross-platform file execution must either:
   which polyfills shebangs on Windows.
 - use [`open`](https://github.com/sindresorhus/open).
 
+## File extensions
+
 During file execution the extension can be omitted on Windows if it is listed
 in the [`PATHEXT`](http://environmentvariables.org/PathExt) environment
 variable, which defaults to
 `.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC`. This won't work on
 Unix.
 
+## `PATH` variable
+
 The [`PATH`](<https://en.wikipedia.org/wiki/PATH_(variable)>) environment
 variable uses `;` instead of `:` as delimiter on Windows. This can be retrieved
 with
 [`path.delimiter`](https://nodejs.org/api/path.html#path_path_delimiter).
+
+## child_process.spawn()
 
 When the option
 [`detached: false`](https://nodejs.org/api/child_process.html#child_process_options_detached)
@@ -52,6 +60,10 @@ is
 
 Many of those differences can be solved by using
 [`execa`](https://github.com/sindresorhus/execa).
+
+## Summary
+
+Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 
 <hr>
 

@@ -12,6 +12,6 @@ providers now do.
 
 <hr>
 
-[**Next** _(🤖 C/C++ addons)_](cpp_addons.md)<br>
+[**Next** _(📝 File encoding)_](../file_encoding/README.md)<br>
 [**Previous** _(🤖 Core utilities)_](core_utilities.md)<br>
 [**Top**](README.md)<br>

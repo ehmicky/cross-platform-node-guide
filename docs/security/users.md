@@ -1,5 +1,7 @@
 # 🔒 Users
 
+## User identifier
+
 Unix users are identified with a
 [`UID`](https://en.wikipedia.org/wiki/User_identifier) and a
 [`GID`](https://en.wikipedia.org/wiki/Group_identifier) while Windows users
@@ -29,11 +31,21 @@ Consequently all methods based on
 - [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
   does not do anything.
 
+## Privileged user
+
 The privileged user is `root` on Unix and `Administrator` on Windows. Those are
-triggered with different mechanisms. One can use
+triggered with different mechanisms.
+
+One can use
 [`is-elevated`](https://github.com/sindresorhus/is-elevated) (and the related
 [`is-admin`](https://github.com/sindresorhus/is-admin) and
 [`is-root`](https://github.com/sindresorhus/is-root)) to check it on any OS.
+
+## Summary
+
+Do not rely on
+[`UID`](https://en.wikipedia.org/wiki/User_identifier) or
+[`GID`](https://en.wikipedia.org/wiki/Group_identifier).
 
 <hr>
 

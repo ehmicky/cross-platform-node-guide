@@ -1,5 +1,7 @@
 # 🔒 Permissions
 
+## Core concepts
+
 Unix uses [POSIX permissions](https://linux.die.net/man/1/chmod) but Windows is
 based on a combination of:
 
@@ -11,6 +13,8 @@ based on a combination of:
 - [ACLs](https://docs.microsoft.com/en-us/windows/desktop/secauthz/access-control-lists)
   (also called NTFS permissions or just "file permissions").
 - share permissions.
+
+## Lack of support
 
 Node.js does not support Windows permissions.
 [`fs.chmod()`](https://nodejs.org/api/fs.html#fs_fs_chmod_path_mode_callback),
@@ -39,13 +43,14 @@ works correctly on Windows where
 [flags](https://nodejs.org/api/fs.html#fs_file_system_flags) are being
 translated to Windows-specific file attributes and permissions.
 
-Another difference on Windows: to execute files their extension must be listed
-in the environment variable
-[`PATHEXT`](http://environmentvariables.org/PathExt).
+## Other differences
+
+On Windows, to execute files their extension must be listed in the environment
+variable [`PATHEXT`](http://environmentvariables.org/PathExt).
 
 Directories can
-[be locked](https://github.com/isaacs/node-graceful-fs/pull/97) on Windows
-which make erasing or removing them fail.
+[be locked](https://github.com/isaacs/node-graceful-fs/pull/97) on Windows.
+Erasing or removing them will fail.
 [`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
 [`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
 milliseconds later.
@@ -53,6 +58,10 @@ milliseconds later.
 Finally
 [`fs.lchmod()`](https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback)
 is only available on Mac.
+
+## Summary
+
+File permissions are not cross-platform in Node.js.
 
 <hr>
 

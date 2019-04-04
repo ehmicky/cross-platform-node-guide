@@ -12,6 +12,11 @@ but [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
 To upgrade `npm` on Windows, it is convenient to use
 [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade).
 
+Windows users must first run
+[`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
+as an admin before being able to install
+[C/C++ addons](https://nodejs.org/api/addons.html).
+
 <hr>
 
 [**Next** _(🤖 Core utilities)_](core_utilities.md)<br>

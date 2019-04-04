@@ -1,9 +1,13 @@
 # 📂 Symlinks
 
+## Junctions
+
 Windows (but not Unix) can use
 [junctions](https://docs.microsoft.com/en-us/windows/desktop/fileio/hard-links-and-junctions).
 [`fs.symlink()`](https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback)
 allows creating these.
+
+## Permissions
 
 Creating regular symlinks on Windows will most likely fail because it requires a
 ["create symlink" permission](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links)
@@ -15,6 +19,10 @@ symlinking them.
 Neither junctions nor hard links
 ([`fs.link()`](https://nodejs.org/api/fs.html#fs_fs_link_existingpath_newpath_callback))
 require permissions on Windows.
+
+## Summary
+
+Copy files instead of symlinking them.
 
 <hr>
 

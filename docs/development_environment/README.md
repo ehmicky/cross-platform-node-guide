@@ -5,7 +5,6 @@
 - [Node setup](node_setup.md)
 - [Core utilities](core_utilities.md)
 - [Testing](testing.md)
-- [C/C++ addons](cpp_addons.md)
 
 <hr>
 

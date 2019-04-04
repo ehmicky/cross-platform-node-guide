@@ -1,5 +1,7 @@
 # 🤖 Core utilities
 
+## Platform-specific utilities
+
 Each OS has its own set of (from the lowest to the highest level):
 
 - [system calls](https://en.wikipedia.org/wiki/System_call) like
@@ -9,28 +11,32 @@ Each OS has its own set of (from the lowest to the highest level):
 - common user applications like [`vim`](https://www.vim.org/) or
   [`Notepad`](https://en.wikipedia.org/wiki/Microsoft_Notepad).
 
-Directly executing one of those binaries (e.g. calling `sed`) won't usually
-work on every OS.
+Directly executing one of those (e.g. calling `sed`) won't usually work on every
+OS.
 
-There are several approaches to solve this:
+## Cross-platform solutions
 
-- Most Node.js API core modules abstract this (mostly through
-  [libuv](http://libuv.org)). E.g. the
-  [`child_process`](https://nodejs.org/api/child_process.html) methods are
-  executing OS-specific system calls under the hood.
-- some projects abstract OS-specific core utilities like:
-  - [`MinGW`](http://www.mingw.org/) for
-    [gcc](https://www.gnu.org/software/gcc/) on Windows.
-  - [`msys`](http://www.mingw.org/wiki/msys) for
-    [Bash](https://www.gnu.org/software/bash/) on Windows.
-    Shipped with [Git for Windows](https://gitforwindows.org/).
-  - [`shelljs`](https://github.com/shelljs/shelljs)
-  - [`node-windows`](https://github.com/coreybutler/node-windows)
-- some projects abstract common user applications:
-  - [`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli) for
-    copy/pasting.
+Most Node.js API core modules abstract this (mostly through
+[libuv](http://libuv.org)). For example, the
+[`child_process`](https://nodejs.org/api/child_process.html) methods are
+executing OS-specific system calls under the hood.
 
-Few lower-level tools attempt to bring cross-platform compatibility by
+Some projects abstract OS-specific core utilities like:
+
+- [`MinGW`](http://www.mingw.org/) for
+  [gcc](https://www.gnu.org/software/gcc/) on Windows.
+- [`msys`](http://www.mingw.org/wiki/msys) for
+  [Bash](https://www.gnu.org/software/bash/) on Windows.
+  Shipped with [Git for Windows](https://gitforwindows.org/).
+- [`shelljs`](https://github.com/shelljs/shelljs)
+- [`node-windows`](https://github.com/coreybutler/node-windows)
+
+Other projects provide with cross-platform features like copy/pasting, such as
+[`clipboard-cli`](https://github.com/sindresorhus/clipboard-cli).
+
+## Low-level solutions
+
+Finally, some lower-level tools attempt to bring cross-platform compatibility by
 emulating or translating system calls:
 
 - [Wine](https://www.winehq.org/): to run Windows API calls on Linux, Mac, BSD
@@ -41,6 +47,12 @@ emulating or translating system calls:
   ([ELF binary execution](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format),
   system calls, filesystem, [Bash](https://www.gnu.org/software/bash/),
   core utilities, common applications).
+
+## Summary
+
+Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
+or [core utilities](https://www.gnu.org/software/coreutils/) without using
+an abstraction layer.
 
 <hr>
 

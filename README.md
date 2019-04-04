@@ -22,7 +22,6 @@ How to write cross-platform Node.js code.
 - [Node setup](docs/development_environment/node_setup.md)
 - [Core utilities](docs/development_environment/core_utilities.md)
 - [Testing](docs/development_environment/testing.md)
-- [C/C++ addons](docs/development_environment/cpp_addons.md)
 
 ## 📝 [File encoding](docs/file_encoding/README.md)
 

@@ -34,6 +34,11 @@ Some projects allow retrieving:
   Windows though
   [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
+## Summary
+
+When using OS-specific logic, identify the current OS with
+[`process.platform`](https://nodejs.org/api/process.html#process_process_platform).
+
 <hr>
 
 [**Next** _(🎛️ System configuration)_](system_configuration.md)<br>

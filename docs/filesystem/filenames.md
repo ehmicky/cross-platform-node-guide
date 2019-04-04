@@ -1,15 +1,22 @@
 # 📂 Filenames
 
+## File systems
+
 Each OS tends to use its own
 [file system](https://en.wikipedia.org/wiki/File_system):
-Windows uses [NTFS](https://en.wikipedia.org/wiki/NTFS), Mac
-uses [APFS](https://en.wikipedia.org/wiki/Apple_File_System)
-(previously [HFS+](https://en.wikipedia.org/wiki/HFS_Plus)) and
-Linux tends to use [ext4](https://en.wikipedia.org/wiki/Ext4),
-[Btrfs](https://en.wikipedia.org/wiki/Btrfs) or
-[XFS](https://en.wikipedia.org/wiki/XFS). Each file system has its
+
+- Windows uses [NTFS](https://en.wikipedia.org/wiki/NTFS).
+- Mac uses [APFS](https://en.wikipedia.org/wiki/Apple_File_System)
+  (previously [HFS+](https://en.wikipedia.org/wiki/HFS_Plus)).
+- Linux tends to use [ext4](https://en.wikipedia.org/wiki/Ext4),
+  [Btrfs](https://en.wikipedia.org/wiki/Btrfs) or
+  [XFS](https://en.wikipedia.org/wiki/XFS).
+
+Each file system has its
 [own restrictions](https://en.wikipedia.org/wiki/Comparison_of_file_systems#Limits)
 when it comes to naming files and paths.
+
+## Filenames constraints
 
 Cross-platform filenames need to avoid:
 
@@ -28,15 +35,17 @@ Cross-platform filenames need to avoid:
   `com8`, `com9`, `lpt1`, `lpt2`, `lpt3`, `lpt4`, `lpt5`,
   `lpt6`, `lpt7`, `lpt8`, `lpt9`, `con`, `nul`, `prn`, `aux`.
 
-Cross-platform file paths need to avoid:
+## Paths contraints
 
-- being
-  [more than 260
-  characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
-  This used to
-  [create issues](https://github.com/nodejs/node-v0.x-archive/issues/6960)
-  with `npm` deeply nesting `node_modules` but not anymore with the latest
-  `npm` versions.
+Cross-platform file paths need to avoid being
+[more than 260
+characters long](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file#maximum-path-length-limitation).
+
+## Summary
+
+Only use lowercase `a-z`, `0-9` and `-._,=()` in filenames.
+
+Avoid paths longer than 260 characters.
 
 <hr>
 

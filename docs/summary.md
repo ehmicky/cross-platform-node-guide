@@ -8,7 +8,7 @@
 - Test each OS with
   [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine) and
   [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
-- Instead of [`nvm`](https://github.com/creationix/nvm) use
+- Instead of [`nvm`](https://github.com/creationix/nvm), use
   [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
   [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
   on Windows.
@@ -18,8 +18,8 @@
 
 ## 📝 [File encoding](file_encoding/README.md)
 
-- Use [`UTF-8`](https://en.wikipedia.org/wiki/UTF-8). File/terminal input
-  should either be validated or converted to it
+- Keep the default encoding as [`UTF-8`](https://en.wikipedia.org/wiki/UTF-8).
+  File/terminal input should either be validated or converted to it
   ([`node-chardet`](https://github.com/runk/node-chardet)).
 - Use [editorconfig](https://editorconfig.org/).
 - Avoid printing Unicode characters (including
@@ -57,6 +57,7 @@
 
 - Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - Keep shell commands to simple `command arguments...` calls.
+- Use [`npx`](https://github.com/zkat/npx) to fire package binaries.
 - Reference and pass environment variables to shell commands using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - Avoid redirecting to a file descriptor with the
@@ -92,6 +93,9 @@
 
 ## 📡 [Networking / IPC](networking_ipc/README.md)
 
+- Use [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
+  instead of
+  [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 - Use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
 - Only use
   [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
@@ -122,8 +126,6 @@
 - Do not assume
   [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
   is nanoseconds-precise.
-- Prefer [`error.code`](https://nodejs.org/api/errors.html#errors_error_code)
-  over [`error.errno`](https://nodejs.org/api/errors.html#errors_error_errno).
 - Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice` and
   [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
 
