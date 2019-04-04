@@ -56,6 +56,6 @@ is only available on Mac.
 
 <hr>
 
-[🡲 **Next** _(🔒 Users)_](users.md)<br>
-[🡰 **Previous** _(🔒 Security)_](README.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(🔒 Users)_](users.md)<br>
+[← **Previous** _(🔒 Security)_](README.md)<br>
+[↑ **Top**](README.md)<br>

@@ -9,6 +9,6 @@
 
 <hr>
 
-[🡲 **Next** _(🤖 Node setup)_](node_setup.md)<br>
-[🡰 **Previous** _(Summary)_](../summary.md)<br>
-[🡱 **Top**](../../README.md#table-of-contents)<br>
+[→ **Next** _(🤖 Node setup)_](node_setup.md)<br>
+[← **Previous** _(Summary)_](../summary.md)<br>
+[↑ **Top**](../../README.md#table-of-contents)<br>

@@ -9,6 +9,6 @@
 
 <hr>
 
-[🡲 **Next** _(📡 Networking)_](networking.md)<br>
-[🡰 **Previous** _(🔒 Users)_](../security/users.md)<br>
-[🡱 **Top**](../../README.md#table-of-contents)<br>
+[→ **Next** _(📡 Networking)_](networking.md)<br>
+[← **Previous** _(🔒 Users)_](../security/users.md)<br>
+[↑ **Top**](../../README.md#table-of-contents)<br>

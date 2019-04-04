@@ -48,6 +48,6 @@ does not work on Windows.
 
 <hr>
 
-[🡲 **Next** _(📡 Errors)_](errors.md)<br>
-[🡰 **Previous** _(📡 Processes)_](processes.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📡 Errors)_](errors.md)<br>
+[← **Previous** _(📡 Processes)_](processes.md)<br>
+[↑ **Top**](README.md)<br>

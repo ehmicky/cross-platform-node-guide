@@ -21,6 +21,6 @@ Other projects can be used to manipulate processes:
 
 <hr>
 
-[🡲 **Next** _(📡 Signals)_](signals.md)<br>
-[🡰 **Previous** _(📡 Networking)_](networking.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📡 Signals)_](signals.md)<br>
+[← **Previous** _(📡 Networking)_](networking.md)<br>
+[↑ **Top**](README.md)<br>

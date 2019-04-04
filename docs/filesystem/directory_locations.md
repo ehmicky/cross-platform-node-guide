@@ -29,6 +29,6 @@ does not have any effects on Windows.
 
 <hr>
 
-[🡲 **Next** _(📂 File paths)_](file_paths.md)<br>
-[🡰 **Previous** _(📂 Filesystem)_](README.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📂 File paths)_](file_paths.md)<br>
+[← **Previous** _(📂 Filesystem)_](README.md)<br>
+[↑ **Top**](README.md)<br>

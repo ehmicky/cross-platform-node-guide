@@ -18,6 +18,6 @@ require permissions on Windows.
 
 <hr>
 
-[🡲 **Next** _(📂 File metadata)_](file_metadata.md)<br>
-[🡰 **Previous** _(📂 Filenames)_](filenames.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📂 File metadata)_](file_metadata.md)<br>
+[← **Previous** _(📂 Filenames)_](filenames.md)<br>
+[↑ **Top**](README.md)<br>

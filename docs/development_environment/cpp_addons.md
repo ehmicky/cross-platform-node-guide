@@ -7,6 +7,6 @@ as an admin before being able to install
 
 <hr>
 
-[🡲 **Next** _(📝 File encoding)_](../file_encoding/README.md)<br>
-[🡰 **Previous** _(🤖 Testing)_](testing.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📝 File encoding)_](../file_encoding/README.md)<br>
+[← **Previous** _(🤖 Testing)_](testing.md)<br>
+[↑ **Top**](README.md)<br>

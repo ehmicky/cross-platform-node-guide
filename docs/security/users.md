@@ -37,6 +37,6 @@ triggered with different mechanisms. One can use
 
 <hr>
 
-[🡲 **Next** _(📡 Networking / IPC)_](../networking_ipc/README.md)<br>
-[🡰 **Previous** _(🔒 Permissions)_](permissions.md)<br>
-[🡱 **Top**](README.md)<br>
+[→ **Next** _(📡 Networking / IPC)_](../networking_ipc/README.md)<br>
+[← **Previous** _(🔒 Permissions)_](permissions.md)<br>
+[↑ **Top**](README.md)<br>
