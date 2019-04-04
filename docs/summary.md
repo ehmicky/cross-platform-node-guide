@@ -111,7 +111,7 @@
 - Do not use
   [`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
 
-## ⚙️ [System](system/README.md)
+## 🎛️ [System](system/README.md)
 
 - Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed.
   If it lacks some information, use

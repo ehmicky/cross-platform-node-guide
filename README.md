@@ -57,7 +57,7 @@ How to write cross-platform Node.js code.
 - [Signals](docs/networking_ipc/signals.md)
 - [Errors](docs/networking_ipc/errors.md)
 
-## ⚙️ [System](docs/system/README.md)
+## 🎛️ [System](docs/system/README.md)
 
 - [OS identification](docs/system/os_identification.md)
 - [System configuration](docs/system/system_configuration.md)
