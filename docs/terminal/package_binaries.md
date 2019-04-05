@@ -16,7 +16,9 @@ purpose:
 - a Unix shell file with no file extension which can be executed with `sh` or
   `bash`.
 
-To fire package binaries on any OS: use [`npx`](https://github.com/zkat/npx).
+To fire local binaries on any OS: use [`npx`](https://github.com/zkat/npx)
+(in the shell) or [`execa`](https://github.com/sindresorhus/execa) (in
+JavaScript).
 
 <hr>
 

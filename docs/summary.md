@@ -57,7 +57,8 @@
 
 - Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 - Keep shell commands to simple `command arguments...` calls.
-- Use [`npx`](https://github.com/zkat/npx) to fire package binaries.
+- Use [`npx`](https://github.com/zkat/npx) or
+  [`execa`](https://github.com/sindresorhus/execa) to fire local binaries.
 - Reference and pass environment variables to shell commands using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - Avoid redirecting to a file descriptor with the
