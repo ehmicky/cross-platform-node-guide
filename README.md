@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ehmicky/design/master/cross-platform-nodejs/cross-platform-nodejs.svg?sanitize=true" width="500"/>
 
-[![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-4cc61e.svg?logo=github)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License](https://img.shields.io/github/license/ehmicky/cross-platform-node-guide.svg?color=4cc61e&logo=github)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Gitter](https://img.shields.io/gitter/room/ehmicky/cross-platform-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/cross-platform-node-guide)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
