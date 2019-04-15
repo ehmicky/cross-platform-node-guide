@@ -3,6 +3,7 @@
   "version": "1.5.0",
   "files": [
     "README.md",
+    "docs",
     "!~"
   ],
   "description": "🕮 How to write cross-platform Node.js code",
