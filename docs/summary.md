@@ -59,7 +59,8 @@
 - Keep shell commands to simple `command arguments...` calls.
 - Use [`npx`](https://github.com/zkat/npx) or
   [`execa`](https://github.com/sindresorhus/execa) to fire local binaries.
-- Reference and pass environment variables to shell commands using
+- Outside Node.js (e.g. in `npm` scripts), environment variables should be
+  referenced and passed using
   [`cross-env`](https://github.com/kentcdodds/cross-env).
 - Avoid redirecting to a file descriptor with the
   [`stdio` option](https://nodejs.org/api/child_process.html#child_process_options_stdio)
