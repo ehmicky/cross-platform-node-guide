@@ -25,8 +25,8 @@ The user's home directory could for example be:
 - `/Users/USER` on Mac.
 - `C:\Users\USER` on Windows.
 
-[`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used
-to retrieve it on any OS.
+[`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir) can be used to
+retrieve it on any OS.
 
 Application-specific settings are stored into
 [subdirectories on Windows](<https://msdn.microsoft.com/en-us/library/windows/desktop/bb776892(v=vs.85).aspx>):
@@ -47,5 +47,4 @@ Use [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) and
 <hr>
 
 [**Next** _(📂 File paths)_](file_paths.md)<br>
-[**Previous** _(📂 Filesystem)_](README.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📂 Filesystem)_](README.md)<br> [**Top**](README.md)<br>

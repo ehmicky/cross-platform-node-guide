@@ -25,15 +25,15 @@ Node.js does not support Windows permissions.
 `mode`,
 [`fs.mkdir()`](https://nodejs.org/api/fs.html#fs_fs_mkdir_path_options_callback)'s
 `options.mode` and
-[`process.umask()`](https://nodejs.org/api/process.html#process_process_umask_mask) only work on
-Unix with some minor exceptions:
+[`process.umask()`](https://nodejs.org/api/process.html#process_process_umask_mask)
+only work on Unix with some minor exceptions:
 
 - [`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
   [`F_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants) works.
 - [`fs.access()`](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
-  [`W_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants) checks
-  the `readonly` file attribute on Windows. This is quite limited as it does
-  not check other file attributes nor ACLs.
+  [`W_OK`](https://nodejs.org/api/fs.html#fs_file_access_constants) checks the
+  `readonly` file attribute on Windows. This is quite limited as it does not
+  check other file attributes nor ACLs.
 - The `readonly` file attribute is checked on Windows when the `write` POSIX
   permission is missing for any user class (`user`, `group` or `others`).
 
@@ -48,9 +48,8 @@ translated to Windows-specific file attributes and permissions.
 On Windows, to execute files their extension must be listed in the environment
 variable [`PATHEXT`](http://environmentvariables.org/PathExt).
 
-Directories can
-[be locked](https://github.com/isaacs/node-graceful-fs/pull/97) on Windows.
-Erasing or removing them will fail.
+Directories can [be locked](https://github.com/isaacs/node-graceful-fs/pull/97)
+on Windows. Erasing or removing them will fail.
 [`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
 [`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
 milliseconds later.
@@ -66,5 +65,4 @@ File permissions are not cross-platform in Node.js.
 <hr>
 
 [**Next** _(🔒 Users)_](users.md)<br>
-[**Previous** _(🔒 Security)_](README.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(🔒 Security)_](README.md)<br> [**Top**](README.md)<br>

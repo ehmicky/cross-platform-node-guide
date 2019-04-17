@@ -23,11 +23,11 @@ executing OS-specific system calls under the hood.
 
 Some projects abstract OS-specific core utilities like:
 
-- [`MinGW`](http://www.mingw.org/) for
-  [gcc](https://www.gnu.org/software/gcc/) on Windows.
+- [`MinGW`](http://www.mingw.org/) for [gcc](https://www.gnu.org/software/gcc/)
+  on Windows.
 - [`msys`](http://www.mingw.org/wiki/msys) for
-  [Bash](https://www.gnu.org/software/bash/) on Windows.
-  Shipped with [Git for Windows](https://gitforwindows.org/).
+  [Bash](https://www.gnu.org/software/bash/) on Windows. Shipped with
+  [Git for Windows](https://gitforwindows.org/).
 - [`shelljs`](https://github.com/shelljs/shelljs)
 - [`node-windows`](https://github.com/coreybutler/node-windows)
 
@@ -42,20 +42,19 @@ emulating or translating system calls:
 - [Wine](https://www.winehq.org/): to run Windows API calls on Linux, Mac, BSD
   and Solaris.
 - [Cygwin](https://www.cygwin.com/): to run POSIX on Windows.
-- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
-  to run the Linux command line on Windows
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10): to run the
+  Linux command line on Windows
   ([ELF binary execution](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format),
-  system calls, filesystem, [Bash](https://www.gnu.org/software/bash/),
-  core utilities, common applications).
+  system calls, filesystem, [Bash](https://www.gnu.org/software/bash/), core
+  utilities, common applications).
 
 ## Summary
 
-Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
-or [core utilities](https://www.gnu.org/software/coreutils/) without using
-an abstraction layer.
+Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call) or
+[core utilities](https://www.gnu.org/software/coreutils/) without using an
+abstraction layer.
 
 <hr>
 
 [**Next** _(🤖 Testing)_](testing.md)<br>
-[**Previous** _(🤖 Node setup)_](node_setup.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(🤖 Node setup)_](node_setup.md)<br> [**Top**](README.md)<br>

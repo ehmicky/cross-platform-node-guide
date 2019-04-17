@@ -11,10 +11,10 @@ Uptime, memory and CPUs can be retrieved on any OS using
 
 However:
 
-- [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus)'s `times.nice` is
+- [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus)'s `times.nice` is `0`
+  on Windows.
+- [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg) is an array of
   `0` on Windows.
-- [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg) is an array
-  of `0` on Windows.
 
 [`systeminformation`](https://github.com/sebhildebrandt/systeminformation) can
 be used for more information.

@@ -17,11 +17,11 @@ Absolute paths always start with `/` on Unix, but on Windows they can take
 [many shapes](https://docs.microsoft.com/en-us/windows/desktop/fileio/naming-a-file):
 
 - `\`: the current drive.
-- `C:\`: a specific drive (here `C:`). This can also be used with relative
-  paths like `C:file\to\path`.
+- `C:\`: a specific drive (here `C:`). This can also be used with relative paths
+  like `C:file\to\path`.
 - `\\HOST\`: UNC path, for remote hosts.
-- `\\?\`: allows to overcome file path length limit of 260 characters.
-  Those can be produced in Node.js with
+- `\\?\`: allows to overcome file path length limit of 260 characters. Those can
+  be produced in Node.js with
   [`path.toNamespacedPath()`](https://nodejs.org/api/path.html#path_path_tonamespacedpath_path).
 - `\\.\`: device path.
 
@@ -51,22 +51,19 @@ This includes the return values of
 [`path.*()`](https://nodejs.org/api/path.html) methods,
 [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd),
 [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir),
-[`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir)
-or the value of
+[`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) or the value of
 [`__dirname`](https://nodejs.org/api/globals.html#globals_dirname),
-[`process.argv`](https://nodejs.org/api/process.html#process_process_argv)
-and [`process.execPath`](https://nodejs.org/api/process.html#process_process_execpath).
+[`process.argv`](https://nodejs.org/api/process.html#process_process_argv) and
+[`process.execPath`](https://nodejs.org/api/process.html#process_process_execpath).
 
 Exceptions:
 
-- using
-  [`path.win32.*()`](https://nodejs.org/api/path.html#path_path_win32) or
-  [`path.posix.*()`](https://nodejs.org/api/path.html#path_path_posix)
-  instead of [`path.*()`](https://nodejs.org/api/path.html) will return
-  Windows or Unix paths.
-- methods where the path is present both as argument and as return value
-  depend on whether the input path is Windows-like or Unix-like. This
-  includes
+- using [`path.win32.*()`](https://nodejs.org/api/path.html#path_path_win32) or
+  [`path.posix.*()`](https://nodejs.org/api/path.html#path_path_posix) instead
+  of [`path.*()`](https://nodejs.org/api/path.html) will return Windows or Unix
+  paths.
+- methods where the path is present both as argument and as return value depend
+  on whether the input path is Windows-like or Unix-like. This includes
   [`fs.createReadStream()`](https://nodejs.org/api/fs.html#fs_fs_createreadstream_path_options)
   and
   [`fs.mkdtemp()`](https://nodejs.org/api/fs.html#fs_fs_mkdtemp_prefix_options_callback).

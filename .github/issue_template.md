@@ -8,7 +8,8 @@ assignees: ''
 
 Thanks for reporting this issue!
 
-Please search other issues to make sure this issue has not already been reported.
+Please search other issues to make sure this issue has not already been
+reported.
 
 Please make sure the title is clear and descriptive.
 

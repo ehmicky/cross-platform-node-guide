@@ -10,8 +10,8 @@ always. Popular alternatives include [Fish](https://fishshell.com/),
 
 Writing interoperable shell code can be somewhat achieved by using either:
 
-- [sh](https://en.wikipedia.org/wiki/Bourne_shell) the ancestor of most of
-  those shells.
+- [sh](https://en.wikipedia.org/wiki/Bourne_shell) the ancestor of most of those
+  shells.
 - projects like [modernish](https://github.com/modernish/modernish).
 
 However this won't work on Windows which uses two other shells:
@@ -25,10 +25,10 @@ However this won't work on Windows which uses two other shells:
 
 `cmd.exe` is very different from Bash and has quite many limitations:
 
-- `;` cannot be used to separate statements. However `&&` can be used like
-  in Bash.
-- CLI flags often use slashes (`/opt`) instead of dashes (`-opt`). But
-  Node.js binaries can still use `-opt`.
+- `;` cannot be used to separate statements. However `&&` can be used like in
+  Bash.
+- CLI flags often use slashes (`/opt`) instead of dashes (`-opt`). But Node.js
+  binaries can still use `-opt`.
 - Globbing (e.g. wildcard `*`) does not work.
 - [Exit code](https://en.wikipedia.org/wiki/Exit_status) are accessed with
   `%errorlevel%` instead of `$?`.
@@ -58,8 +58,9 @@ How many colors a terminal supports (if any) depends on both the operating
 system and the terminal itself.
 
 You can use
-[`process.stdout.getColorsDepth()`](https://nodejs.org/api/tty.html#tty_writestream_getcolordepth_env), [`process.stdout.hasColors()`](https://nodejs.org/api/tty.html#tty_writestream_hascolors_count_env) or
-[`supports-color`](https://github.com/chalk/supports-color) to detect these.
+[`process.stdout.getColorsDepth()`](https://nodejs.org/api/tty.html#tty_writestream_getcolordepth_env),
+[`process.stdout.hasColors()`](https://nodejs.org/api/tty.html#tty_writestream_hascolors_count_env)
+or [`supports-color`](https://github.com/chalk/supports-color) to detect these.
 However this is usually not necessary as colors library like
 [`chalk`](https://github.com/chalk/chalk) automatically do this.
 
@@ -70,5 +71,4 @@ Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 <hr>
 
 [**Next** _(💻 File execution)_](file_execution.md)<br>
-[**Previous** _(💻 Terminal)_](README.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(💻 Terminal)_](README.md)<br> [**Top**](README.md)<br>

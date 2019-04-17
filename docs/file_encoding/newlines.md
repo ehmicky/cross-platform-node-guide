@@ -1,9 +1,9 @@
 # 📝 Newlines
 
 The character representation of a
-[newline](https://en.wikipedia.org/wiki/Newline) is OS-specific. On Unix it
-is `\n` (line feed) while on Windows it is `\r\n` (carriage return followed by
-line feed).
+[newline](https://en.wikipedia.org/wiki/Newline) is OS-specific. On Unix it is
+`\n` (line feed) while on Windows it is `\r\n` (carriage return followed by line
+feed).
 
 Newlines inside a template string translate to `\n` on any OS.
 

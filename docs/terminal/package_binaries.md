@@ -11,14 +11,13 @@ On Windows, each package binary
 [creates instead two files](https://github.com/npm/cmd-shim) for the same
 purpose:
 
-- a Windows batch file ending with `.cmd` which can be executed directly
-  inside `cmd.exe`.
+- a Windows batch file ending with `.cmd` which can be executed directly inside
+  `cmd.exe`.
 - a Unix shell file with no file extension which can be executed with `sh` or
   `bash`.
 
-To fire local binaries on any OS: use [`npx`](https://github.com/zkat/npx)
-(in the shell) or [`execa`](https://github.com/sindresorhus/execa) (in
-JavaScript).
+To fire local binaries on any OS: use [`npx`](https://github.com/zkat/npx) (in
+the shell) or [`execa`](https://github.com/sindresorhus/execa) (in JavaScript).
 
 <hr>
 

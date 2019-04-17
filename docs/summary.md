@@ -2,9 +2,9 @@
 
 ## 🤖 [Development environment](development_environment/README.md)
 
-- Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call)
-  or [core utilities](https://www.gnu.org/software/coreutils/) without using
-  an abstraction layer.
+- Do not rely on [OS system calls](https://en.wikipedia.org/wiki/System_call) or
+  [core utilities](https://www.gnu.org/software/coreutils/) without using an
+  abstraction layer.
 - Test each OS with
   [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine) and
   [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
@@ -90,7 +90,8 @@
   [`setgid()`](https://nodejs.org/api/process.html#process_process_setgid_id),
   [`setegid()`](https://nodejs.org/api/process.html#process_process_setegid_id),
   [`getgroups()`](https://nodejs.org/api/process.html#process_process_getgroups),
-  [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups) and
+  [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups)
+  and
   [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
 
 ## 📡 [Networking / IPC](networking_ipc/README.md)
@@ -108,8 +109,8 @@
   `SIGABRT`, `SIGHUP` and `SIGBREAK`.
 - Use [`ps-list`](https://github.com/sindresorhus/ps-list),
   [`pid-from-port`](https://github.com/kevva/pid-from-port) and
-  [`process-exists`](https://github.com/sindresorhus/process-exists) to find
-  and check for processes.
+  [`process-exists`](https://github.com/sindresorhus/process-exists) to find and
+  check for processes.
 - Sockets / named pipes must be prefixed with `\\.\pipe\` on Windows.
 - TCP servers should not
   [`listen()`](https://nodejs.org/api/net.html#net_server_listen_handle_backlog_callback)
@@ -119,8 +120,8 @@
 
 ## 🎛️ [System](system/README.md)
 
-- Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed.
-  If it lacks some information, use
+- Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed. If
+  it lacks some information, use
   [`systeminformation`](https://github.com/sebhildebrandt/systeminformation)
   instead.
 - When using OS-specific logic, identify the current OS with
@@ -128,8 +129,8 @@
 - Do not assume
   [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
   is nanoseconds-precise.
-- Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice` and
-  [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
+- Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice`
+  and [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
 
 <hr>
 

@@ -16,5 +16,4 @@ However on Windows:
 <hr>
 
 [**Next** _(📡 Processes)_](processes.md)<br>
-[**Previous** _(📡 Networking / IPC)_](README.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📡 Networking / IPC)_](README.md)<br> [**Top**](README.md)<br>

@@ -12,15 +12,14 @@ Other projects can be used to manipulate processes:
 - [`ps-list`](https://github.com/sindresorhus/ps-list) or
   [`ps-tree`](https://github.com/indexzero/ps-tree): list processes.
   [`tasklist`](https://github.com/sindresorhus/tasklist) and
-  [`fastlist`](https://github.com/MarkTiedemann/fastlist) can also be used
-  for Windows only.
-- [`pid-from-port`](https://github.com/kevva/pid-from-port): find processes
-  by port.
-- [`process-exists`](https://github.com/sindresorhus/process-exists): check
-  if a process is running.
+  [`fastlist`](https://github.com/MarkTiedemann/fastlist) can also be used for
+  Windows only.
+- [`pid-from-port`](https://github.com/kevva/pid-from-port): find processes by
+  port.
+- [`process-exists`](https://github.com/sindresorhus/process-exists): check if a
+  process is running.
 
 <hr>
 
 [**Next** _(📡 Signals)_](signals.md)<br>
-[**Previous** _(📡 Networking)_](networking.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📡 Networking)_](networking.md)<br> [**Top**](README.md)<br>

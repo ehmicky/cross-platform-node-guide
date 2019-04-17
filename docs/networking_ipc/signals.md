@@ -28,8 +28,8 @@ Which signals can be used is OS-specific:
   - `SIGHUP`: closing `cmd.exe`
   - `SIGBREAK`: `CTRL-BREAK` on `cmd.exe`
   - `SIGWINCH`: resizing the terminal. This will only
-    [be triggered](https://nodejs.org/api/process.html#process_signal_events)
-    on Windows when the cursor moves on when a terminal in raw mode is used.
+    [be triggered](https://nodejs.org/api/process.html#process_signal_events) on
+    Windows when the cursor moves on when a terminal in raw mode is used.
   - `SIGILL`, `SIGFPE` and `SIGSEGV` but listening to those signals is
     [not recommended](https://nodejs.org/api/process.html#process_signal_events)
 - `SIGPOLL`, `SIGPWR` and `SIGUNUSED` can only be used on Linux.
@@ -61,11 +61,10 @@ Only use:
 - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
   with `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  with the `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`, `SIGABRT`,
-  `SIGHUP` and `SIGBREAK`.
+  with the `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`, `SIGABRT`, `SIGHUP`
+  and `SIGBREAK`.
 
 <hr>
 
 [**Next** _(📡 Errors)_](errors.md)<br>
-[**Previous** _(📡 Processes)_](processes.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📡 Processes)_](processes.md)<br> [**Top**](README.md)<br>

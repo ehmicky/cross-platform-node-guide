@@ -11,8 +11,8 @@ or one of the
 non-[Unicode](https://unicode.org/) character encodings are also popular in some
 countries. This can result in characters not being printed properly, especially
 high
-[Unicode code points](https://en.wikipedia.org/wiki/Unicode#Code_point_planes_and_blocks) and
-[emoji](https://en.wikipedia.org/wiki/Emoji).
+[Unicode code points](https://en.wikipedia.org/wiki/Unicode#Code_point_planes_and_blocks)
+and [emoji](https://en.wikipedia.org/wiki/Emoji).
 
 ## Specifying an encoding
 
@@ -47,8 +47,7 @@ Node.js
 [`TextDecoder`](https://nodejs.org/api/util.html#util_class_util_textdecoder)
 and
 [`TextEncoder`](https://nodejs.org/api/util.html#util_class_util_textencoder)
-support
-[UTF-8](https://en.wikipedia.org/wiki/UTF-8) and
+support [UTF-8](https://en.wikipedia.org/wiki/UTF-8) and
 [UTF-16 little/big endian](https://en.wikipedia.org/wiki/UTF-16) by default. If
 Node.js is built with
 [full internationalization support](https://nodejs.org/api/intl.html#intl_internationalization_support)
@@ -78,10 +77,9 @@ When writing to a terminal the character encoding will almost always be
 [CP437](https://en.wikipedia.org/wiki/Code_page_437) /
 [CP850](https://en.wikipedia.org/wiki/Code_page_850) /
 [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252) on Windows
-(`cmd.exe`).
-[figures](https://github.com/sindresorhus/figures) and
-[log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
-print common symbols consistently across platforms.
+(`cmd.exe`). [figures](https://github.com/sindresorhus/figures) and
+[log-symbols](https://github.com/sindresorhus/log-symbols) can be used to print
+common symbols consistently across platforms.
 
 ## Summary
 
@@ -97,5 +95,4 @@ Avoid printing Unicode characters (including
 <hr>
 
 [**Next** _(📝 Newlines)_](newlines.md)<br>
-[**Previous** _(📝 File encoding)_](README.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📝 File encoding)_](README.md)<br> [**Top**](README.md)<br>

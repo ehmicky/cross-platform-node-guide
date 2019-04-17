@@ -10,10 +10,8 @@ This is only an issue when executing shell commands outside Node.js, for example
 in `npm` scripts. In Node.js,
 [`process.env`](https://nodejs.org/api/process.html#process_process_env) and the
 [`env` option](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
-of
-[`child_process`](https://nodejs.org/api/child_process.html) /
-[`execa`](https://github.com/sindresorhus/execa)
-should be used instead.
+of [`child_process`](https://nodejs.org/api/child_process.html) /
+[`execa`](https://github.com/sindresorhus/execa) should be used instead.
 
 ### Listing
 
@@ -62,8 +60,7 @@ Most environment variables names are OS-specific:
   returns `null` on Windows.
 - `PS1` on Unix is `PROMPT` on Windows.
 - `PWD` on Unix is `CD` on Windows.
-  [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd)
-  and
+  [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd) and
   [`process.chdir()`](https://nodejs.org/api/process.html#process_process_chdir_directory)
   should be used instead.
 - `HOME` on Unix is `USERPROFILE` on Windows.

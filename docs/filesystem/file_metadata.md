@@ -13,8 +13,7 @@ properly work on Linux as they always reflect the
 
 ## fs.open()
 
-The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag
-of
+The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag of
 [`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)
 only works on Linux. Access times can also be disabled on Windows but through
 [the registry](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior#remarks).
@@ -28,5 +27,4 @@ cross-platform. For example the option `recursive` does not work on Linux.
 <hr>
 
 [**Next** _(💻 Terminal)_](../terminal/README.md)<br>
-[**Previous** _(📂 Symlinks)_](symlinks.md)<br>
-[**Top**](README.md)<br>
+[**Previous** _(📂 Symlinks)_](symlinks.md)<br> [**Top**](README.md)<br>

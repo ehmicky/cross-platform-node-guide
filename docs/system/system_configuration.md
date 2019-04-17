@@ -1,8 +1,8 @@
 # 🎛️ System configuration
 
 While Unix usually stores system configuration as files, Windows uses the
-[registry](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry),
-a central key-value database. Some projects like
+[registry](https://docs.microsoft.com/en-us/windows/desktop/sysinfo/registry), a
+central key-value database. Some projects like
 [node-winreg](https://github.com/fresc81/node-winreg),
 [rage-edit](https://github.com/MikeKovarik/rage-edit) or
 [windows-registry-node](https://github.com/CatalystCode/windows-registry-node)
