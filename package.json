@@ -30,7 +30,7 @@
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "dependencies": {
-    "gulp-shared-tasks": "^0.27.48"
+    "gulp-shared-tasks": "^0.27.49"
   },
   "devDependencies": {}
 }
