@@ -42,9 +42,6 @@ can use either. It is possible to convert between both using
 However it is more cross-platform to use signal names instead of integer
 constants.
 
-[`--diagnostic-report-on-signal`](https://nodejs.org/api/report.html#report_usage)
-does not work on Windows.
-
 ## Process groups
 
 Using a negative argument with
