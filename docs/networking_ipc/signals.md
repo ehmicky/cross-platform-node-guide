@@ -15,15 +15,12 @@ builds on it to terminate processes on any OS.
 Which signals can be used is OS-specific:
 
 - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
-  and
-  [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
   can
   [only use the following signals on Windows](https://nodejs.org/api/process.html#process_signal_events):
   `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  (but not
-  [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal))
   can be used on Windows with:
+  - `SIGINT`: but only when hitting `CTRL-C` on `cmd.exe`
   - `SIGABRT`
   - `SIGHUP`: closing `cmd.exe`
   - `SIGBREAK`: `CTRL-BREAK` on `cmd.exe`
