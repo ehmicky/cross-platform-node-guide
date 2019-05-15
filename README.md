@@ -92,7 +92,7 @@ button (pencil icon) and suggest a correction.
 If you would like to help us fix an error or add more information, please check
 our [guidelines](CONTRIBUTING.md). Pull requests are welcome!
 
-Thanks goes to these wonderful people:
+Thanks go to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
