@@ -129,8 +129,10 @@
 - Do not assume
   [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time)
   is nanoseconds-precise.
-- Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus) `times.nice`
-  and [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg).
+- Avoid [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus)'s `times.nice`,
+  [`os.loadavg()`](https://nodejs.org/api/os.html#os_os_loadavg) and
+  [`process.resourceUsage()`](https://nodejs.org/api/all.html#process_process_resourceusage)'s
+  `voluntaryContextSwitches` and `involuntaryContextSwitches`.
 
 <hr>
 
