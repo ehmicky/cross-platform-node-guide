@@ -87,6 +87,15 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "niktekusho",
+      "name": "Nicola Dal Maso",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18280135?v=4",
+      "profile": "https://github.com/niktekusho",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
