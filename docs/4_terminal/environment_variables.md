@@ -93,6 +93,6 @@ variables.
 
 <hr>
 
-[**Next** _(🔒 Security)_](../security/README.md)<br>
+[**Next** _(🔒 Security)_](../5_security/README.md)<br>
 [**Previous** _(💻 Package binaries)_](package_binaries.md)<br>
 [**Top**](README.md)<br>

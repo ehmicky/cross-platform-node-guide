@@ -17,51 +17,51 @@ use Linux and 1% use BSD.
 
 [Summary](docs/summary.md)
 
-## 🤖 [Development environment](docs/development_environment/README.md)
+## 🤖 [Development environment](docs/1_development_environment/README.md)
 
-- [Node setup](docs/development_environment/node_setup.md)
-- [Core utilities](docs/development_environment/core_utilities.md)
-- [Testing](docs/development_environment/testing.md)
+- [Node setup](docs/1_development_environment/node_setup.md)
+- [Core utilities](docs/1_development_environment/core_utilities.md)
+- [Testing](docs/1_development_environment/testing.md)
 
-## 📝 [File encoding](docs/file_encoding/README.md)
+## 📝 [File encoding](docs/2_file_encoding/README.md)
 
-- [Character encoding](docs/file_encoding/character_encoding.md)
-- [Newlines](docs/file_encoding/newlines.md)
-- [EOF and BOM](docs/file_encoding/eof_bom.md)
+- [Character encoding](docs/2_file_encoding/character_encoding.md)
+- [Newlines](docs/2_file_encoding/newlines.md)
+- [EOF and BOM](docs/2_file_encoding/eof_bom.md)
 
-## 📂 [Filesystem](docs/filesystem/README.md)
+## 📂 [Filesystem](docs/3_filesystem/README.md)
 
-- [Directory locations](docs/filesystem/directory_locations.md)
-- [File paths](docs/filesystem/file_paths.md)
-- [Filenames](docs/filesystem/filenames.md)
-- [Symlinks](docs/filesystem/symlinks.md)
-- [File metadata](docs/filesystem/file_metadata.md)
+- [Directory locations](docs/3_filesystem/directory_locations.md)
+- [File paths](docs/3_filesystem/file_paths.md)
+- [Filenames](docs/3_filesystem/filenames.md)
+- [Symlinks](docs/3_filesystem/symlinks.md)
+- [File metadata](docs/3_filesystem/file_metadata.md)
 
-## 💻 [Terminal](docs/terminal/README.md)
+## 💻 [Terminal](docs/4_terminal/README.md)
 
-- [Shell](docs/terminal/shell.md)
-- [File execution](docs/terminal/file_execution.md)
-- [Package binaries](docs/terminal/package_binaries.md)
-- [Environment variables](docs/terminal/environment_variables.md)
+- [Shell](docs/4_terminal/shell.md)
+- [File execution](docs/4_terminal/file_execution.md)
+- [Package binaries](docs/4_terminal/package_binaries.md)
+- [Environment variables](docs/4_terminal/environment_variables.md)
 
-## 🔒 [Security](docs/security/README.md)
+## 🔒 [Security](docs/5_security/README.md)
 
-- [Permissions](docs/security/permissions.md)
-- [Users](docs/security/users.md)
+- [Permissions](docs/5_security/permissions.md)
+- [Users](docs/5_security/users.md)
 
-## 📡 [Networking / IPC](docs/networking_ipc/README.md)
+## 📡 [Networking / IPC](docs/6_networking_ipc/README.md)
 
-- [Networking](docs/networking_ipc/networking.md)
-- [Processes](docs/networking_ipc/processes.md)
-- [Signals](docs/networking_ipc/signals.md)
-- [Errors](docs/networking_ipc/errors.md)
+- [Networking](docs/6_networking_ipc/networking.md)
+- [Processes](docs/6_networking_ipc/processes.md)
+- [Signals](docs/6_networking_ipc/signals.md)
+- [Errors](docs/6_networking_ipc/errors.md)
 
-## 🎛️ [System](docs/system/README.md)
+## 🎛️ [System](docs/7_system/README.md)
 
-- [OS identification](docs/system/os_identification.md)
-- [System configuration](docs/system/system_configuration.md)
-- [Hardware](docs/system/hardware.md)
-- [Time](docs/system/time.md)
+- [OS identification](docs/7_system/os_identification.md)
+- [System configuration](docs/7_system/system_configuration.md)
+- [Hardware](docs/7_system/hardware.md)
+- [Time](docs/7_system/time.md)
 
 # See also
 

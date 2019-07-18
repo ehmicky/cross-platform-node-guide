@@ -11,5 +11,5 @@
 <hr>
 
 [**Next** _(📂 Directory locations)_](directory_locations.md)<br>
-[**Previous** _(📝 EOF and BOM)_](../file_encoding/eof_bom.md)<br>
+[**Previous** _(📝 EOF and BOM)_](../2_file_encoding/eof_bom.md)<br>
 [**Top**](../../README.md#table-of-contents)<br>

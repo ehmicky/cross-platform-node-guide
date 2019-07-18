@@ -9,5 +9,5 @@
 <hr>
 
 [**Next** _(📝 Character encoding)_](character_encoding.md)<br>
-[**Previous** _(🤖 Testing)_](../development_environment/testing.md)<br>
+[**Previous** _(🤖 Testing)_](../1_development_environment/testing.md)<br>
 [**Top**](../../README.md#table-of-contents)<br>
