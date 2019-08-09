@@ -33,6 +33,12 @@ Application-specific settings are stored into
 `Roaming` (`APPDATA` environment variable) and `Local` (`LOCALAPPDATA`
 environment variable).
 
+## Cache directory
+
+This is also OS-specific.
+[`global-cache-dir`](https://github.com/ehmicky/global-cache-dir) can be used to
+retrieve it on any OS.
+
 ## Man pages
 
 [Man pages](https://www.kernel.org/doc/man-pages/) are Unix-specific so the
