@@ -29,8 +29,8 @@
     "url": "https://github.com/ehmicky/cross-platform-node-guide/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
-  "dependencies": {
-    "gulp-shared-tasks": "^0.30.40"
-  },
-  "devDependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@ehmicky/dev-tasks": "^0.30.40"
+  }
 }
