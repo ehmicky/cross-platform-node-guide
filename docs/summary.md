@@ -43,6 +43,10 @@
 - Avoid paths longer than 260 characters.
 - Copy files instead of symlinking them.
 - Use [`chokidar`](https://github.com/paulmillr/chokidar) to watch files.
+- Avoid the [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants)
+  and [`UV_FS_O_FILEMAP`](https://nodejs.org/api/fs.html#fs_file_open_constants)
+  flags of
+  [`fs.open()`](https://nodejs.org/api/fs.html#fs_fs_open_path_flags_mode_callback)
 - Avoid [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize),
   [`blocks`](https://nodejs.org/api/fs.html#fs_stats_blocks),
   [`mode`](https://nodejs.org/api/fs.html#fs_stats_mode),

@@ -34,6 +34,9 @@ The [`O_NOATIME`](https://nodejs.org/api/fs.html#fs_file_open_constants) flag of
 only works on Linux. Access times can also be disabled on Windows but through
 [the registry](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior#remarks).
 
+The [`UV_FS_O_FILEMAP`](https://nodejs.org/api/fs.html#fs_file_open_constants)
+flag only works on Windows.
+
 ## fs.watch()
 
 [`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very
