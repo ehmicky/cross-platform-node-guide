@@ -48,6 +48,10 @@
   [`mode`](https://nodejs.org/api/fs.html#fs_stats_mode),
   [`uid`](https://nodejs.org/api/fs.html#fs_stats_uid),
   [`gid`](https://nodejs.org/api/fs.html#fs_stats_gid),
+  [`atime`](https://nodejs.org/api/fs.html#fs_stats_atime),
+  [`atimeMs`](https://nodejs.org/api/fs.html#fs_stats_atimems),
+  [`ctime`](https://nodejs.org/api/fs.html#fs_stats_ctime),
+  [`ctimeMs`](https://nodejs.org/api/fs.html#fs_stats_ctimems),
   [`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
   [`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) returned
   by

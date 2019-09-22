@@ -5,11 +5,27 @@
 The [`blksize`](https://nodejs.org/api/fs.html#fs_stats_blksize) and
 [`blocks`](https://nodejs.org/api/fs.html#fs_stats_blocks) values of
 [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback)
-are `undefined` on Windows. On the other hand the
-[`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
-[`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) do not
-properly work on Linux as they always reflect the
-[`ctime`](https://nodejs.org/api/fs.html#fs_stat_time_values) field instead.
+are `undefined` on Windows.
+
+The timestamps have inconsistent behavior across OS:
+
+- [`birthtime`](https://nodejs.org/api/fs.html#fs_stats_birthtime) and
+  [`birthtimeMs`](https://nodejs.org/api/fs.html#fs_stats_birthtimems) can be
+  `1970-01-01` or the
+  [same as `ctime`](https://nodejs.org/api/fs.html#fs_stat_time_values) on some
+  platforms
+- [`atime`](https://nodejs.org/api/fs.html#fs_stats_atime) and
+  [`atimeMs`](https://nodejs.org/api/fs.html#fs_stats_atimems) can be disabled
+  at the partition-level, especially on
+  [Unix](https://wiki.archlinux.org/index.php/fstab#atime_options) but on
+  [Windows](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior)
+  as well
+- Windows handles [`ctime`](https://nodejs.org/api/fs.html#fs_stats_ctime) and
+  [`ctimeMs`](https://nodejs.org/api/fs.html#fs_stats_ctimems) differently than
+  Unix
+- [`mtime`](https://nodejs.org/api/fs.html#fs_stats_mtime) and
+  [`mtimeMs`](https://nodejs.org/api/fs.html#fs_stats_mtimems) are also not
+  completely [reliable](https://apenwarr.ca/log/20181113)
 
 ## fs.open()
 
