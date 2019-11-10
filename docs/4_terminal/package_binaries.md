@@ -8,13 +8,12 @@ On Unix those are symlinks pointing to the executable files. They can be
 executed directly inside a terminal.
 
 On Windows, each package binary
-[creates instead two files](https://github.com/npm/cmd-shim) for the same
+[creates instead three files](https://github.com/npm/cmd-shim) for the same
 purpose:
 
-- a Windows batch file ending with `.cmd` which can be executed directly inside
-  `cmd.exe`.
-- a Unix shell file with no file extension which can be executed with `sh` or
-  `bash`.
+- a Windows batch file ending with `.cmd` executed when using `cmd.exe`.
+- a Bash file with no file extension executed when using Cygwin or MSYS2.
+- a Powershell file ending with `.ps1` executed when using Powershell.
 
 To fire local binaries on any OS: use [`npx`](https://github.com/zkat/npx) (in
 the shell) or [`execa`](https://github.com/sindresorhus/execa) (in JavaScript).
