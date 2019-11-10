@@ -39,6 +39,12 @@ This is also OS-specific.
 [`global-cache-dir`](https://github.com/ehmicky/global-cache-dir) can be used to
 retrieve it on any OS.
 
+## Other directories
+
+[`env-paths`](https://github.com/sindresorhus/env-paths) can be used to retrieve
+other common directories for logging, configuration or application data on any
+OS.
+
 ## Man pages
 
 [Man pages](https://www.kernel.org/doc/man-pages/) are Unix-specific so the
@@ -47,8 +53,10 @@ does not have any effects on Windows.
 
 ## Summary
 
-Use [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) and
-[`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir).
+Use [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir),
+[`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir),
+[`global-cache-dir`](https://github.com/ehmicky/global-cache-dir) and
+[`env-paths`](https://github.com/sindresorhus/env-paths).
 
 <hr>
 

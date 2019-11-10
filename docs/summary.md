@@ -62,6 +62,8 @@
   [`fs.stat()`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback).
 - Use [`global-cache-dir`](https://github.com/ehmicky/global-cache-dir) to
   retrieve the global cache directory.
+- Use [`env-paths`](https://github.com/sindresorhus/env-paths) for other common
+  directories.
 
 ## 💻 [Terminal](4_terminal/README.md)
 
