@@ -45,5 +45,6 @@ cross-platform. For example the option `recursive` does not work on Linux.
 
 <hr>
 
-[**Next** _(💻 Terminal)_](../4_terminal/README.md)<br>
-[**Previous** _(📂 Symlinks)_](symlinks.md)<br> [**Top**](README.md)<br>
+[**Next** _(💻 Terminal)_](../4_terminal/README.md)\
+[**Previous** _(📂 Symlinks)_](symlinks.md)\
+[**Top**](README.md)

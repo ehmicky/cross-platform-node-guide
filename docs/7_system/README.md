@@ -9,6 +9,6 @@
 
 <hr>
 
-[**Next** _(🎛️ OS identification)_](os_identification.md)<br>
-[**Previous** _(📡 Errors)_](../6_networking_ipc/errors.md)<br>
-[**Top**](../../README.md#table-of-contents)<br>
+[**Next** _(🎛️ OS identification)_](os_identification.md)\
+[**Previous** _(📡 Errors)_](../6_networking_ipc/errors.md)\
+[**Top**](../../README.md#table-of-contents)

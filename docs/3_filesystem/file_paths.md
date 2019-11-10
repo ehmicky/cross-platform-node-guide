@@ -91,6 +91,6 @@ when writing a file path to a terminal or file. Otherwise use Unix paths
 
 <hr>
 
-[**Next** _(📂 Filenames)_](filenames.md)<br>
-[**Previous** _(📂 Directory locations)_](directory_locations.md)<br>
-[**Top**](README.md)<br>
+[**Next** _(📂 Filenames)_](filenames.md)\
+[**Previous** _(📂 Directory locations)_](directory_locations.md)\
+[**Top**](README.md)

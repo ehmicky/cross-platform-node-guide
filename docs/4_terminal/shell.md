@@ -70,5 +70,6 @@ Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 
 <hr>
 
-[**Next** _(💻 File execution)_](file_execution.md)<br>
-[**Previous** _(💻 Terminal)_](README.md)<br> [**Top**](README.md)<br>
+[**Next** _(💻 File execution)_](file_execution.md)\
+[**Previous** _(💻 Terminal)_](README.md)\
+[**Top**](README.md)

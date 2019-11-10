@@ -64,5 +64,6 @@ File permissions are not cross-platform in Node.js.
 
 <hr>
 
-[**Next** _(🔒 Users)_](users.md)<br>
-[**Previous** _(🔒 Security)_](README.md)<br> [**Top**](README.md)<br>
+[**Next** _(🔒 Users)_](users.md)\
+[**Previous** _(🔒 Security)_](README.md)\
+[**Top**](README.md)

@@ -66,5 +66,6 @@ Fire shell commands with [`execa`](https://github.com/sindresorhus/execa).
 
 <hr>
 
-[**Next** _(💻 Package binaries)_](package_binaries.md)<br>
-[**Previous** _(💻 Shell)_](shell.md)<br> [**Top**](README.md)<br>
+[**Next** _(💻 Package binaries)_](package_binaries.md)\
+[**Previous** _(💻 Shell)_](shell.md)\
+[**Top**](README.md)

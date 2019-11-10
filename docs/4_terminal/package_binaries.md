@@ -21,6 +21,6 @@ the shell) or [`execa`](https://github.com/sindresorhus/execa) (in JavaScript).
 
 <hr>
 
-[**Next** _(💻 Environment variables)_](environment_variables.md)<br>
-[**Previous** _(💻 File execution)_](file_execution.md)<br>
-[**Top**](README.md)<br>
+[**Next** _(💻 Environment variables)_](environment_variables.md)\
+[**Previous** _(💻 File execution)_](file_execution.md)\
+[**Top**](README.md)

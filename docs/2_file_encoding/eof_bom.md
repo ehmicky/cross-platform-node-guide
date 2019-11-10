@@ -52,5 +52,6 @@ Use [editorconfig](https://editorconfig.org/).
 
 <hr>
 
-[**Next** _(📂 Filesystem)_](../3_filesystem/README.md)<br>
-[**Previous** _(📝 Newlines)_](newlines.md)<br> [**Top**](README.md)<br>
+[**Next** _(📂 Filesystem)_](../3_filesystem/README.md)\
+[**Previous** _(📝 Newlines)_](newlines.md)\
+[**Top**](README.md)

@@ -148,5 +148,5 @@
 
 <hr>
 
-[**Next** _(🤖 Development environment)_](1_development_environment/README.md)<br>
-[**Top**](../README.md#table-of-contents)<br>
+[**Next** _(🤖 Development environment)_](1_development_environment/README.md)\
+[**Top**](../README.md#table-of-contents)

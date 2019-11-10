@@ -60,5 +60,6 @@ Use [`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir),
 
 <hr>
 
-[**Next** _(📂 File paths)_](file_paths.md)<br>
-[**Previous** _(📂 Filesystem)_](README.md)<br> [**Top**](README.md)<br>
+[**Next** _(📂 File paths)_](file_paths.md)\
+[**Previous** _(📂 Filesystem)_](README.md)\
+[**Top**](README.md)

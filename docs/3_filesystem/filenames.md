@@ -48,5 +48,6 @@ Avoid paths longer than 260 characters.
 
 <hr>
 
-[**Next** _(📂 Symlinks)_](symlinks.md)<br>
-[**Previous** _(📂 File paths)_](file_paths.md)<br> [**Top**](README.md)<br>
+[**Next** _(📂 Symlinks)_](symlinks.md)\
+[**Previous** _(📂 File paths)_](file_paths.md)\
+[**Top**](README.md)

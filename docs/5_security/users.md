@@ -49,5 +49,6 @@ Do not rely on [`UID`](https://en.wikipedia.org/wiki/User_identifier) or
 
 <hr>
 
-[**Next** _(📡 Networking / IPC)_](../6_networking_ipc/README.md)<br>
-[**Previous** _(🔒 Permissions)_](permissions.md)<br> [**Top**](README.md)<br>
+[**Next** _(📡 Networking / IPC)_](../6_networking_ipc/README.md)\
+[**Previous** _(🔒 Permissions)_](permissions.md)\
+[**Top**](README.md)

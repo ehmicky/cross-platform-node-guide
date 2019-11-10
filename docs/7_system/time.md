@@ -6,4 +6,5 @@ is hardware-specific and varies between 1 nanosecond and 1 millisecond.
 
 <hr>
 
-[**Previous** _(🎛️ Hardware)_](hardware.md)<br> [**Top**](README.md)<br>
+[**Previous** _(🎛️ Hardware)_](hardware.md)\
+[**Top**](README.md)

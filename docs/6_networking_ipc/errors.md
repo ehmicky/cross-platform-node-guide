@@ -19,5 +19,6 @@ and can only be fired on Windows.
 
 <hr>
 
-[**Next** _(🎛️ System)_](../7_system/README.md)<br>
-[**Previous** _(📡 Signals)_](signals.md)<br> [**Top**](README.md)<br>
+[**Next** _(🎛️ System)_](../7_system/README.md)\
+[**Previous** _(📡 Signals)_](signals.md)\
+[**Top**](README.md)

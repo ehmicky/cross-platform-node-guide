@@ -8,6 +8,6 @@
 
 <hr>
 
-[**Next** _(📝 Character encoding)_](character_encoding.md)<br>
-[**Previous** _(🤖 Testing)_](../1_development_environment/testing.md)<br>
-[**Top**](../../README.md#table-of-contents)<br>
+[**Next** _(📝 Character encoding)_](character_encoding.md)\
+[**Previous** _(🤖 Testing)_](../1_development_environment/testing.md)\
+[**Top**](../../README.md#table-of-contents)
