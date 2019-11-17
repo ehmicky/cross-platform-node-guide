@@ -46,7 +46,14 @@ to a command:
 
 ## Case sensitivity
 
-Environment variables are case insensitive on Windows but not on Unix.
+Environment variables are case sensitive on Unix. However this is not the case
+on Windows (except inside [`msys`](http://www.mingw.org/wiki/msys)): if the same
+environment variable is defined twice but with different cases, the last defined
+prevails. This includes the
+[`env` option](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+passed to
+[`child_process` methods](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+such as `spawn()`.
 
 [`path-key`](https://github.com/sindresorhus/path-key) can be used to solve this
 for the `PATH` environment variable.
