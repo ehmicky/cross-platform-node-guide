@@ -13,6 +13,11 @@ identification methods but those are rarely needed:
 - [`os.release()`](https://nodejs.org/api/os.html#os_os_release) returns the OS
   version number, e.g. `3.11.0-14-generic` (Linux), `18.0.0` (Mac) or
   `10.0.17763` (Windows).
+- [`os.version()`](https://nodejs.org/api/os.html#os_os_version) returns a more
+  detailed OS version number, e.g. `#32-Ubuntu SMP Fri Jan 31 20:24:34 UTC 2020`
+  (Linux),
+  `Darwin Kernel Version 18.0.0: Wed Aug 22 20:13:40 PDT 2018; root:xnu-4903.201.2~1/RELEASE_X86_64`
+  (Mac) or `Windows 10 Home` (Windows).
 - [`os.arch()`](https://nodejs.org/api/os.html#os_os_arch) (or the identical
   [`process.arch`](https://nodejs.org/api/process.html#process_process_arch))
   returns the CPU architecture, e.g. `arm` or `x64`.
