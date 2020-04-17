@@ -4,7 +4,7 @@
   "files": [
     "README.md",
     "docs",
-    "!~"
+    "!*~"
   ],
   "description": "🕮 How to write cross-platform Node.js code",
   "keywords": [
