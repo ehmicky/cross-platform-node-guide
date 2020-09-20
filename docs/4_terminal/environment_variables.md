@@ -95,7 +95,7 @@ referenced and passed using
 [`cross-env`](https://github.com/kentcdodds/cross-env).
 
 Use [`os` methods](https://nodejs.org/api/os.html) or
-[`osenv`](https://github.com/npm/osenv) to rerieve specific environment
+[`osenv`](https://github.com/npm/osenv) to retrieve specific environment
 variables.
 
 <hr>
