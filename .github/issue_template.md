@@ -18,7 +18,7 @@ the relevant page's `Edit` button (pencil icon) and suggest a correction
 instead.
 
 Pull requests are welcome! If you would like to help us fix this issue, please
-check our [contributions guidelines](../blob/master/CONTRIBUTING.md).
+check our [contributions guidelines](../blob/main/CONTRIBUTING.md).
 
 We invite you to submit links to related projects but only if:
 

@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ehmicky/design/master/cross-platform-nodejs/cross-platform-nodejs.svg?sanitize=true" width="500"/>
+<img src="https://raw.githubusercontent.com/ehmicky/design/main/cross-platform-nodejs/cross-platform-nodejs.svg?sanitize=true" width="500"/>
 
 [![License](https://img.shields.io/badge/license-CC%20BY%204.0-4cc61e.svg?logo=github)](https://creativecommons.org/licenses/by/4.0/)
 [![Gitter](https://img.shields.io/gitter/room/ehmicky/cross-platform-node-guide.svg?logo=gitter)](https://gitter.im/ehmicky/cross-platform-node-guide)

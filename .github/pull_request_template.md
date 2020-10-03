@@ -18,4 +18,4 @@ Example: This fixes #5012
 
 Please add a `x` inside each checkbox:
 
-- [ ] I have read the [contribution guidelines](../blob/master/CONTRIBUTING.md).
+- [ ] I have read the [contribution guidelines](../blob/main/CONTRIBUTING.md).
