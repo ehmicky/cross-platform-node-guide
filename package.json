@@ -29,7 +29,6 @@
     "url": "https://github.com/ehmicky/cross-platform-node-guide/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
-  "dependencies": {},
   "devDependencies": {
     "@ehmicky/dev-tasks": "^0.31.79"
   }
