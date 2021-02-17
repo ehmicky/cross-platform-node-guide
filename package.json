@@ -2,9 +2,7 @@
   "name": "cross-platform-node-guide",
   "version": "1.5.2",
   "files": [
-    "README.md",
-    "docs",
-    "!*~"
+    "docs/**/*.md"
   ],
   "description": "🕮 How to write cross-platform Node.js code",
   "keywords": [
