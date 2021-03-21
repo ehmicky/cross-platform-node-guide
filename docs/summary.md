@@ -12,6 +12,9 @@
   [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
   [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
   on Windows.
+- [`nve`](https://github.com/ehmicky/nve) and
+  [`nvexeca`](https://github.com/ehmicky/nvexeca) can be used to run a single
+  command with one or several different Node.js versions.
 - Run
   [`npm install -g windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
   on Windows when installing [C/C++ addons](https://nodejs.org/api/addons.html).

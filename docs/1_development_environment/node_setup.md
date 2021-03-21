@@ -11,6 +11,11 @@ To install, switch and update Node.js versions
 [`ps-nvm`](https://github.com/aaronpowell/ps-nvm) (for PowerShell) are
 alternatives that do.
 
+[`nve`](https://github.com/ehmicky/nve) can be used to run a single command with
+one or several different Node.js versions.
+[`nvexeca`](https://github.com/ehmicky/nvexeca) can be used to do the same
+programmatically.
+
 To upgrade `npm` on Windows, it is convenient to use
 [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade).
 
