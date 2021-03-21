@@ -25,6 +25,8 @@
   File/terminal input should either be validated or converted to it
   ([`node-chardet`](https://github.com/runk/node-chardet)).
 - Use [editorconfig](https://editorconfig.org/).
+- Use any character from
+  [cross-platform-terminal-characters](https://github.com/ehmicky/cross-platform-terminal-characters)
 - Avoid printing Unicode characters (including
   [emoji](https://en.wikipedia.org/wiki/Emoji)) except through projects like
   [figures](https://github.com/sindresorhus/figures) and

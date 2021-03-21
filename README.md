@@ -64,12 +64,13 @@ use Linux and 1% use BSD.
 
 # See also
 
+- [cross-platform-terminal-characters](https://github.com/ehmicky/cross-platform-terminal-characters):
+  All the characters that work on any terminal and any operating system
 - https://github.com/bcoe/awesome-cross-platform-nodejs
 - https://github.com/Microsoft/nodejs-guidelines
 - https://shapeshed.com/writing-cross-platform-node/
 
 # Support
-
 
 For any question, _don't hesitate_ to [submit an issue on GitHub](../../issues).
 

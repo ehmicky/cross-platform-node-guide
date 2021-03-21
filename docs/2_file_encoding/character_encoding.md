@@ -72,14 +72,33 @@ When reading from a file or terminal, one should either:
   [`jschardet`](https://github.com/aadsm/jschardet) and convert to
   [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
-When writing to a terminal the character encoding will almost always be
-[UTF-8](https://en.wikipedia.org/wiki/UTF-8) on Unix and
-[CP437](https://en.wikipedia.org/wiki/Code_page_437) /
-[CP850](https://en.wikipedia.org/wiki/Code_page_850) /
-[Windows-1252](https://en.wikipedia.org/wiki/Windows-1252) on Windows
-(`cmd.exe`). [figures](https://github.com/sindresorhus/figures) and
-[log-symbols](https://github.com/sindresorhus/log-symbols) can be used to print
-common symbols consistently across platforms.
+## Characters
+
+While [ASCII characters](https://en.wikipedia.org/wiki/ASCII) display correctly
+on all terminals, this is not the case of all characters. When building a
+terminal application or tool, it is common to experience cross-platform issues
+like:
+
+<img src="https://raw.githubusercontent.com/ehmicky/cross-platform-terminal-characters/main/invalid_terminal_characters.png" width="259"/>
+
+The main reasons are:
+
+- The terminal font might not include this specific character.
+- The terminal encoding may not support
+  [Unicode](https://en.wikipedia.org/wiki/Unicode). For example,
+  [`cmd.exe`](https://en.wikipedia.org/wiki/Cmd.exe) on Windows often use
+  specific encodings like [CP437](https://en.wikipedia.org/wiki/Code_page_437),
+  [CP850](https://en.wikipedia.org/wiki/Code_page_850) or
+  [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252).
+
+This can be solved by using characters known to display correctly on most
+terminals and environments:
+
+- [cross-platform-terminal-characters](https://github.com/ehmicky/cross-platform-terminal-characters)
+  is a list of all of those characters.
+- [figures](https://github.com/sindresorhus/figures) and
+  [log-symbols](https://github.com/sindresorhus/log-symbols) can be used to
+  print common symbols consistently across platforms.
 
 ## Summary
 
