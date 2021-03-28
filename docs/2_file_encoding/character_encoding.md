@@ -86,7 +86,7 @@ The main reasons are:
 - The terminal font might not include this specific character.
 - The terminal encoding may not support
   [Unicode](https://en.wikipedia.org/wiki/Unicode). For example,
-  [`cmd.exe`](https://en.wikipedia.org/wiki/Cmd.exe) on Windows often use
+  [Windows terminal](https://en.wikipedia.org/wiki/Windows_Terminal) often use
   specific encodings like [CP437](https://en.wikipedia.org/wiki/Code_page_437),
   [CP850](https://en.wikipedia.org/wiki/Code_page_850) or
   [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252).

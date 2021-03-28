@@ -14,7 +14,7 @@ Writing interoperable shell code can be somewhat achieved by using either:
   shells.
 - projects like [modernish](https://github.com/modernish/modernish).
 
-However this won't work on Windows which uses two other shells:
+However this won't work on Windows which uses two other shells by default:
 
 - [`cmd.exe`](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
   which comes by default.
