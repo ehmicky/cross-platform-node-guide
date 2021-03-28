@@ -65,7 +65,7 @@ use Linux and 1% use BSD.
 # See also
 
 - [cross-platform-terminal-characters](https://github.com/ehmicky/cross-platform-terminal-characters):
-  All the characters that work on any terminal and any operating system
+  All the characters that work on most terminals and most operating systems
 - https://github.com/bcoe/awesome-cross-platform-nodejs
 - https://github.com/Microsoft/nodejs-guidelines
 - https://shapeshed.com/writing-cross-platform-node/
