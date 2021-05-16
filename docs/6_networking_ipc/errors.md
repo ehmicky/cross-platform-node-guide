@@ -8,8 +8,10 @@ Node errors can be identified with either:
   OS-specific integer constant.
 
 It is possible to convert between both using
-[`os.constants.errno`](https://nodejs.org/api/os.html#os_error_constants) and
+[`os.constants.errno`](https://nodejs.org/api/os.html#os_error_constants),
 [`util.getSystemErrorName`](https://nodejs.org/api/util.html#util_util_getsystemerrorname_err).
+and
+[`util.getSystemErrorMap`](https://nodejs.org/api/util.html#util_util_getsystemerrormap).
 
 Most available `error.code`
 [start with `E`](https://nodejs.org/api/os.html#os_posix_error_constants) and
