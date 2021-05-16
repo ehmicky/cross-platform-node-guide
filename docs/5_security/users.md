@@ -42,6 +42,11 @@ One can use [`is-elevated`](https://github.com/sindresorhus/is-elevated) (and
 the related [`is-admin`](https://github.com/sindresorhus/is-admin) and
 [`is-root`](https://github.com/sindresorhus/is-root)) to check it on any OS.
 
+## Other differences
+
+The [`--secure-heap`](https://nodejs.org/api/cli.html#cli_secure_heap_n) CLI
+flag does not do anything on Windows.
+
 ## Summary
 
 Do not rely on [`UID`](https://en.wikipedia.org/wiki/User_identifier) or

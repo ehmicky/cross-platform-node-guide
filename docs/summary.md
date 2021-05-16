@@ -110,6 +110,7 @@
   [`setgroups()`](https://nodejs.org/api/process.html#process_process_setgroups_groups)
   and
   [`initgroups()`](https://nodejs.org/api/process.html#process_process_initgroups_user_extragroup).
+- Avoid [`--secure-heap`](https://nodejs.org/api/cli.html#cli_secure_heap_n)
 
 ## 📡 [Networking / IPC](6_networking_ipc/README.md)
 
