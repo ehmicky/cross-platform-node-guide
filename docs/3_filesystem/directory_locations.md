@@ -39,6 +39,12 @@ This is also OS-specific.
 [`global-cache-dir`](https://github.com/ehmicky/global-cache-dir) can be used to
 retrieve it on any OS.
 
+## Null device
+
+This is `/dev/null` on Unix and `\\.\nul` on Windows.
+[`os.devNull`](https://nodejs.org/api/all.html#os_os_devnull) can be used to
+retrieve it on any OS.
+
 ## Other directories
 
 [`env-paths`](https://github.com/sindresorhus/env-paths) can be used to retrieve

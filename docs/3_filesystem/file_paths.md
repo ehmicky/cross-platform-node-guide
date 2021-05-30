@@ -51,7 +51,8 @@ This includes the return values of
 [`path.*()`](https://nodejs.org/api/path.html) methods,
 [`process.cwd()`](https://nodejs.org/api/process.html#process_process_cwd),
 [`os.homedir()`](https://nodejs.org/api/os.html#os_os_homedir),
-[`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir) or the value of
+[`os.tmpdir()`](https://nodejs.org/api/os.html#os_os_tmpdir),
+[`os.devNull()`](https://nodejs.org/api/all.html#os_os_devnull) or the value of
 [`__dirname`](https://nodejs.org/api/globals.html#globals_dirname),
 [`process.argv`](https://nodejs.org/api/process.html#process_process_argv) and
 [`process.execPath`](https://nodejs.org/api/process.html#process_process_execpath).
