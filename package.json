@@ -1,6 +1,7 @@
 {
   "name": "cross-platform-node-guide",
   "version": "1.5.3",
+  "type": "module",
   "files": [
     "docs/**/*.md"
   ],
