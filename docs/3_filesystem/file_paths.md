@@ -36,6 +36,8 @@ When file paths are used as arguments to Node.js core methods:
 
 This includes arguments to
 [`require(path)`](https://nodejs.org/api/modules.html#modules_require_id),
+[`import(path)`](https://nodejs.org/api/esm.html#esm_import_expressions),
+[`import from "path"`](https://nodejs.org/api/esm.html#esm_import_statements),
 [`fs.*(path)`](https://nodejs.org/api/fs.html) methods,
 [`path.*()`](https://nodejs.org/api/path.html) methods or
 [`process.chdir(path)`](https://nodejs.org/api/process.html#process_process_chdir_directory).
