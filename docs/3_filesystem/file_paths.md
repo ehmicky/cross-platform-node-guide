@@ -83,12 +83,36 @@ or a file, its syntax is OS-specific.
   OS-specific. However all Node.js core methods will properly handle it.
 - in all other cases using Unix paths will just work.
 
+## import.meta.url
+
+ES modules require using
+[`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url) instead
+of [`__filename`](https://nodejs.org/api/modules.html#modules_filename) and
+[`__dirname`](https://nodejs.org/api/modules.html#modules_dirname).
+
+`import.meta.url` is a `file:///...` URL. For backward compatibility, you
+should:
+
+- If possible, use the `file:///...` URL without converting it to a file path.
+  Most Node.js core methods (
+  [including all the `fs` methods](https://nodejs.org/api/fs.html#fs_file_url_paths))
+  support those URLs.
+- Otherwise, convert the URL using
+  [`url.fileURLToPath()`](https://nodejs.org/api/url.html#url_url_fileurltopath_url),
+  as opposed to using
+  [`URL.pathname`](https://nodejs.org/api/url.html#url_url_pathname). This will
+  ensure the file path is valid on Windows.
+
 ## Summary
 
 Use
 [`path.normalize()`](https://nodejs.org/api/path.html#path_path_normalize_path)
 when writing a file path to a terminal or file. Otherwise use Unix paths
 (slashes).
+
+Use
+[`url.fileURLToPath()`](https://nodejs.org/api/url.html#url_url_fileurltopath_url)
+with [`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url).
 
 <hr>
 

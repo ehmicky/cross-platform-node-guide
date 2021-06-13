@@ -44,6 +44,9 @@
   [`path.normalize()`](https://nodejs.org/api/path.html#path_path_normalize_path)
   when writing a file path to a terminal or file. Otherwise use Unix paths
   (slashes).
+- Use
+  [`url.fileURLToPath()`](https://nodejs.org/api/url.html#url_url_fileurltopath_url)
+  with [`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url).
 - Only use lowercase `a-z`, `0-9` and `-._,=()` in filenames.
 - Avoid paths longer than 260 characters.
 - Copy files instead of symlinking them.
