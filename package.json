@@ -29,6 +29,6 @@
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^1.0.10"
+    "@ehmicky/dev-tasks": "^1.0.11"
   }
 }
