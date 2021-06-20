@@ -7,8 +7,6 @@ feed).
 
 Newlines inside a template string translate to `\n` on any OS.
 
-<!-- eslint-disable import/unambiguous -->
-
 ```js
 const string = `this is
 an example`
