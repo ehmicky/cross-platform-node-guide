@@ -49,10 +49,11 @@ On Windows, to execute files their extension must be listed in the environment
 variable [`PATHEXT`](http://environmentvariables.org/PathExt).
 
 Directories can [be locked](https://github.com/isaacs/node-graceful-fs/pull/97)
-on Windows. Erasing or removing them will fail.
+on Windows. Erasing or removing them will fail. This can be solved by retrying
+few milliseconds later using the
+[`maxRetries` option of `fs.rm()`](https://nodejs.org/api/fs.html#fsrmpath-options-callback),
 [`graceful-fs`](https://github.com/isaacs/node-graceful-fs) or
-[`rimraf`](https://github.com/isaacs/rimraf) solves this by retrying few
-milliseconds later.
+[`rimraf`](https://github.com/isaacs/rimraf).
 
 Finally
 [`fs.lchmod()`](https://nodejs.org/api/fs.html#fs_fs_lchmod_path_mode_callback)
