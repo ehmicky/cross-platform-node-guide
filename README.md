@@ -1,8 +1,8 @@
 <img src="https://raw.githubusercontent.com/ehmicky/design/main/cross-platform-nodejs/cross-platform-nodejs.svg?sanitize=true" width="500"/>
 
-[![License](https://img.shields.io/badge/license-CC%20BY%204.0-4cc61e.svg?logo=github)](https://creativecommons.org/licenses/by/4.0/)
-[![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-4cc61e.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
-[![Medium](https://img.shields.io/badge/%E2%80%8B-medium-4cc61e.svg?logo=medium)](https://medium.com/@ehmicky)
+[![License](https://img.shields.io/badge/license-CC%20BY%204.0-brightgreen.svg?logo=github)](https://creativecommons.org/licenses/by/4.0/)
+[![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-brightgreen.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
+[![Medium](https://img.shields.io/badge/%E2%80%8B-medium-brightgreen.svg?logo=medium)](https://medium.com/@ehmicky)
 
 How to write cross-platform Node.js code.
 
