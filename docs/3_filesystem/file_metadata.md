@@ -43,6 +43,9 @@ flag only works on Windows.
 cross-platform. For example the option `recursive` does not work on Linux.
 [`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
 
+The [`--watch-path`](https://nodejs.org/api/cli.html#--watch-path) CLI flag does
+not work on Linux either.
+
 <hr>
 
 [**Next** _(💻 Terminal)_](../4_terminal/README.md)\
