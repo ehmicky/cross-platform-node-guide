@@ -40,8 +40,9 @@ flag only works on Windows.
 ## fs.watch()
 
 [`fs.watch()`](https://nodejs.org/api/fs.html#fs_caveats) is not very
-cross-platform. For example the option `recursive` does not work on Linux.
-[`chokidar`](https://github.com/paulmillr/chokidar) can be used instead.
+cross-platform. For example the option `recursive` does not work on Linux in
+Node.js `<19.1.0`. [`chokidar`](https://github.com/paulmillr/chokidar) can be
+used instead.
 
 The [`--watch-path`](https://nodejs.org/api/cli.html#--watch-path) CLI flag does
 not work on Linux either.
