@@ -7,6 +7,7 @@ Uptime, memory and CPUs can be retrieved on any OS using
 [`os.totalmem()`](https://nodejs.org/api/os.html#os_os_totalmem),
 [`process.memoryUsage()`](https://nodejs.org/api/process.html#process_process_memoryusage),
 [`os.cpus()`](https://nodejs.org/api/os.html#os_os_cpus),
+[`os.availableParallelism()`](https://nodejs.org/api/os.html#osavailableparallelism),
 [`process.cpuUsage()`](https://nodejs.org/api/process.html#process_process_cpuusage_previousvalue).
 and
 [`process.resourceUsage()`](https://nodejs.org/api/all.html#process_process_resourceusage).
