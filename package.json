@@ -23,7 +23,10 @@
   ],
   "license": "CC-BY-4.0",
   "homepage": "https://www.github.com/ehmicky/cross-platform-node-guide",
-  "repository": "ehmicky/cross-platform-node-guide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/cross-platform-node-guide.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/cross-platform-node-guide/issues"
   },
