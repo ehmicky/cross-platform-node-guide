@@ -16,7 +16,6 @@ How to write cross-platform Node.js code.
 24% of Node.js developers use Windows locally and 41% use Mac. In production 85%
 use Linux and 1% use BSD.
 
-
 # Table of contents
 
 [Summary](docs/summary.md)
