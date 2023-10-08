@@ -32,6 +32,8 @@ Consequently all methods based on
   throw an error.
 - [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
   does not do anything.
+- [`child_process`](https://nodejs.org/api/child_process.html#child_processspawncommand-args-options)'s
+  `uid` and `gid` options throw an error.
 
 ## Privileged user
 

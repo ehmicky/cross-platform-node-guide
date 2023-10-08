@@ -100,6 +100,8 @@
   [`process.umask()`](https://nodejs.org/api/process.html#process_process_umask_mask).
 - Avoid
   [`os.userInfo().uid|gid`](https://nodejs.org/api/os.html#os_os_userinfo_options),
+  [`child_process`](https://nodejs.org/api/child_process.html#child_processspawncommand-args-options)'s
+  `uid` and `gid`,
   [`fs.chown()`](https://nodejs.org/api/fs.html#fs_fs_chown_path_uid_gid_callback)
   and the [`process`](https://nodejs.org/api/process.html) methods
   [`getuid()`](https://nodejs.org/api/process.html#process_process_getuid),
