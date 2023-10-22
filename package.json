@@ -35,6 +35,6 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^2.0.101"
+    "@ehmicky/dev-tasks": "^2.0.102"
   }
 }
