@@ -88,9 +88,11 @@ or a file, its syntax is OS-specific.
 ## import.meta.url
 
 ES modules require using
-[`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url) instead
-of [`__filename`](https://nodejs.org/api/modules.html#modules_filename) and
-[`__dirname`](https://nodejs.org/api/modules.html#modules_dirname).
+[`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url),
+[`import.meta.filename`](https://nodejs.org/api/esm.html#importmetafilename) and
+[`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname)
+instead of [`__filename`](https://nodejs.org/api/modules.html#modules_filename)
+and [`__dirname`](https://nodejs.org/api/modules.html#modules_dirname).
 
 `import.meta.url` is a `file:///...` URL. For backward compatibility, you
 should:
@@ -99,6 +101,9 @@ should:
   Most Node.js core methods (
   [including all the `fs` methods](https://nodejs.org/api/fs.html#fs_file_url_paths))
   support those URLs.
+- If using Node.js `>= 21.2.0`, use
+  [`import.meta.filename`](https://nodejs.org/api/esm.html#importmetafilename)
+  and [`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname).
 - Otherwise, convert the URL using
   [`url.fileURLToPath()`](https://nodejs.org/api/url.html#url_url_fileurltopath_url),
   as opposed to using
