@@ -23,6 +23,8 @@ identification methods but those are rarely needed:
   returns the CPU architecture, e.g. `arm` or `x64`.
 - [`os.endianness()`](https://nodejs.org/api/os.html#os_os_endianness) returns
   the CPU endianness, i.e. `BE` or `LE`.
+- [`navigator.platform`](https://nodejs.org/api/globals.html#navigatorplatform)
+  can also be used, which combines `process.platform` and `process.arch`.
 
 Some projects allow retrieving:
 

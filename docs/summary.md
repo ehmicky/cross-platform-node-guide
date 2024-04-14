@@ -144,7 +144,8 @@
 
 ## 🎛️ [System](7_system/README.md)
 
-- Use [`os`](https://nodejs.org/api/os.html) Node.js core module when needed. If
+- Use [`os`](https://nodejs.org/api/os.html) Node.js core module and
+  [`navigator`](https://nodejs.org/api/globals.html#navigator) when needed. If
   it lacks some information, use
   [`systeminformation`](https://github.com/sebhildebrandt/systeminformation)
   instead.
