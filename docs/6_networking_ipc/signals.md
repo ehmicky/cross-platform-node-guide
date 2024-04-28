@@ -17,7 +17,7 @@ Which signals can be used is OS-specific:
 - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
   can
   [only use the following signals on Windows](https://nodejs.org/api/process.html#process_signal_events):
-  `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
+  `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT` and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
   can be used on Windows with:
   - `SIGINT`: but only when hitting `CTRL-C` on `cmd.exe`
@@ -53,9 +53,9 @@ Use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
 Only use:
 
 - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
-  with `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
+  with `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  with the `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`, `SIGABRT`, `SIGHUP`
+  with the `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, `0`, `SIGWINCH`, `SIGABRT`, `SIGHUP`
   and `SIGBREAK`.
 
 <hr>

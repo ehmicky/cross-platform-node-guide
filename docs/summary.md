@@ -129,10 +129,10 @@
 - Use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
 - Only use
   [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
-  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL` and `0`.
+  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT` and `0`.
 - Only use
   [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `0`, `SIGWINCH`,
+  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, `0`, `SIGWINCH`,
   `SIGABRT`, `SIGHUP` and `SIGBREAK`.
 - Use [`ps-list`](https://github.com/sindresorhus/ps-list),
   [`pid-from-port`](https://github.com/kevva/pid-from-port) and
