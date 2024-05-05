@@ -13,9 +13,8 @@ To decide which program should execute a file:
 Cross-platform file execution must either:
 
 - explicitly specify the program, e.g. `node ./file.js` instead of `./file.js`.
-- use [`cross-spawn`](https://github.com/moxystudio/node-cross-spawn) (which is
-  included in [`execa`](https://github.com/sindresorhus/execa)) which polyfills
-  shebangs on Windows.
+- use [`execa`](https://github.com/sindresorhus/execa) which polyfills shebangs
+  on Windows.
 - use [`open`](https://github.com/sindresorhus/open).
 
 ## File extensions

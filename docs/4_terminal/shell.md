@@ -41,8 +41,8 @@ However this won't work on Windows which uses two other shells by default:
 As a consequence it is recommended to:
 
 - keep shell commands to simple `command arguments...` calls
-- use [`execa()`](https://github.com/sindresorhus/execa) (not `execa.shell()`)
-  to fire those.
+- use [`execa()`](https://github.com/sindresorhus/execa) (without its `shell`
+  option) to fire those.
 
 ## Command execution
 
