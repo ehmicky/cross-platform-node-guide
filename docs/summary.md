@@ -49,7 +49,8 @@
   with [`import.meta.url`](https://nodejs.org/api/esm.html#esm_import_meta_url).
   Alternatively, use
   [`import.meta.filename`](https://nodejs.org/api/esm.html#importmetafilename)
-  and [`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname).
+  and
+  [`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname).
 - Only use lowercase `a-z`, `0-9` and `-._,=()` in filenames.
 - Avoid paths longer than 260 characters.
 - Copy files instead of symlinking them.
@@ -132,8 +133,7 @@
   with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT` and `0`.
 - Only use
   [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  with the following signals: `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, `0`, `SIGWINCH`,
-  `SIGABRT`, `SIGHUP` and `SIGBREAK`.
+  with the following signals: `SIGINT`, `SIGHUP` and `SIGWINCH`.
 - Use [`ps-list`](https://github.com/sindresorhus/ps-list),
   [`pid-from-port`](https://github.com/kevva/pid-from-port) and
   [`process-exists`](https://github.com/sindresorhus/process-exists) to find and

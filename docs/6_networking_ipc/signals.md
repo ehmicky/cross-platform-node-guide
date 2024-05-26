@@ -19,17 +19,14 @@ Which signals can be used is OS-specific:
   [only use the following signals on Windows](https://nodejs.org/api/process.html#process_signal_events):
   `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT` and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  can be used on Windows with:
-  - `SIGINT`: but only when hitting `CTRL-C` on `cmd.exe`
-  - `SIGABRT`
-  - `SIGHUP`: closing `cmd.exe`
-  - `SIGBREAK`: `CTRL-BREAK` on `cmd.exe`
+  can be used on Windows `cmd.exe` with:
+  - `SIGINT`: but only when hitting `CTRL-C`
+  - `SIGBREAK`: `CTRL-BREAK`. However, this signal only works on Windows.
+  - `SIGHUP`: closing the window. The process is terminated after 10 seconds.
   - `SIGWINCH`: resizing the terminal. This will only
     [be triggered](https://nodejs.org/api/process.html#process_signal_events) on
     Windows when the cursor moves on when a terminal in raw mode is used.
-  - `SIGILL`, `SIGFPE` and `SIGSEGV` but listening to those signals is
-    [not recommended](https://nodejs.org/api/process.html#process_signal_events)
-- `SIGPOLL`, `SIGPWR` and `SIGUNUSED` can only be used on Linux.
+- `SIGPOLL`, `SIGPWR` and `SIGSTKFLT` can only be used on Linux.
 - `SIGINFO` can only be used on Mac.
 
 Each signal has both an OS-agnostic name and an OS-specific integer constant.
@@ -53,10 +50,9 @@ Use [`fkill`](https://github.com/sindresorhus/fkill) to terminate processes.
 Only use:
 
 - [`process.kill()`](https://nodejs.org/api/process.html#process_process_kill_pid_signal)
-  with `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, and `0`.
+  with `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT` and `0`.
 - [`process.on(signal)`](https://nodejs.org/api/process.html#process_signal_events)
-  with the `SIGINT`, `SIGTERM`, `SIGKILL`, `SIGQUIT`, `0`, `SIGWINCH`, `SIGABRT`, `SIGHUP`
-  and `SIGBREAK`.
+  with `SIGINT`, `SIGHUP` and `SIGWINCH`.
 
 <hr>
 
