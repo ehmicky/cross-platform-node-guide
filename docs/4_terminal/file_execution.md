@@ -20,9 +20,11 @@ Cross-platform file execution must either:
 ## File extensions
 
 During file execution the extension can be omitted on Windows if it is listed in
-the [`PATHEXT`](http://environmentvariables.org/PathExt) environment variable,
-which defaults to `.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC`. This
-won't work on Unix.
+the
+[`PATHEXT`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4#path-information)
+environment variable, which defaults to
+`.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC`. This won't work on
+Unix.
 
 ## `PATH` variable
 

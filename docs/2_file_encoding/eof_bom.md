@@ -14,7 +14,7 @@ As a consequence that character should be avoided in non-binary files.
 
 As opposed to Windows, Unix
 [requires text files](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_206)
-to end with a [newline character](#newlines).
+to end with a [newline character](newlines.md).
 
 However please remember that Windows might print these as if two newlines were
 present instead.

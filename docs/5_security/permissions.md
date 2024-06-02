@@ -46,7 +46,8 @@ translated to Windows-specific file attributes and permissions.
 ## Other differences
 
 On Windows, to execute files their extension must be listed in the environment
-variable [`PATHEXT`](http://environmentvariables.org/PathExt).
+variable
+[`PATHEXT`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.4#path-information).
 
 Directories can [be locked](https://github.com/isaacs/node-graceful-fs/pull/97)
 on Windows. Erasing or removing them will fail. This can be solved by retrying
