@@ -103,7 +103,8 @@ should:
   support those URLs.
 - If using Node.js `>= 21.2.0`, use
   [`import.meta.filename`](https://nodejs.org/api/esm.html#importmetafilename)
-  and [`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname).
+  and
+  [`import.meta.dirname`](https://nodejs.org/api/esm.html#importmetadirname).
 - Otherwise, convert the URL using
   [`url.fileURLToPath()`](https://nodejs.org/api/url.html#url_url_fileurltopath_url),
   as opposed to using
