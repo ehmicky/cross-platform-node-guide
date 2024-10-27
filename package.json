@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^3.0.19",
-    "@ehmicky/eslint-config": "^20.0.2"
+    "@ehmicky/eslint-config": "^20.0.3"
   }
 }
