@@ -1,7 +1,7 @@
 # 🤖 Node setup
 
 Installers for each major OS are available on the
-[Node.js website](https://nodejs.org/en/download/).
+[Node.js website](https://nodejs.org/en/download).
 
 To install, switch and update Node.js versions
 [`nvm`](https://github.com/creationix/nvm) can be used on Linux/Mac. It
