@@ -35,7 +35,7 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^3.0.26",
+    "@ehmicky/dev-tasks": "^3.0.27",
     "@ehmicky/eslint-config": "^20.0.19",
     "@ehmicky/prettier-config": "^1.0.4"
   }
