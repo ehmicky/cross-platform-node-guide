@@ -4,8 +4,8 @@ Installers for each major OS are available on the
 [Node.js website](https://nodejs.org/en/download).
 
 To install, switch and update Node.js versions
-[`nvm`](https://github.com/creationix/nvm) can be used on Linux/Mac. It
-[does not support Windows](https://github.com/creationix/nvm/issues/284) but
+[`nvm`](https://github.com/nvm-sh/nvm) can be used on Linux/Mac. It
+[does not support Windows](https://github.com/nvm-sh/nvm/issues/284) but
 [`nvm-windows`](https://github.com/coreybutler/nvm-windows),
 [`nvs`](https://github.com/jasongin/nvs) and
 [`ps-nvm`](https://github.com/aaronpowell/ps-nvm) (for PowerShell) are

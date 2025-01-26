@@ -8,7 +8,7 @@
 - Test each OS with
   [virtual machines](https://en.wikipedia.org/wiki/Virtual_machine) and
   [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
-- Instead of [`nvm`](https://github.com/creationix/nvm), use
+- Instead of [`nvm`](https://github.com/nvm-sh/nvm), use
   [`nvm-windows`](https://github.com/coreybutler/nvm-windows) and
   [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
   on Windows.
