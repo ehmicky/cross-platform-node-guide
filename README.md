@@ -16,15 +16,6 @@ How to write cross-platform Node.js code.
 24% of Node.js developers use Windows locally and 41% use Mac. In production 85%
 use Linux and 1% use BSD.
 
-# Hire me
-
-Please
-[reach out](https://www.linkedin.com/feed/update/urn:li:activity:7117265228068716545/)
-if you're looking for a Node.js API or CLI engineer (11 years of experience).
-Most recently I have been [Netlify Build](https://github.com/netlify/build)'s
-and [Netlify Plugins](https://www.netlify.com/products/build/plugins/)'
-technical lead for 2.5 years. I am available for full-time remote positions.
-
 # Table of contents
 
 [Summary](docs/summary.md)
